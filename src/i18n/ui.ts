@@ -2,8 +2,8 @@ import zh from './zh.json';
 import en from './en.json';
 import th from './th.json';
 
-export const defaultLang = 'zh';
-export const languagesList = ['zh', 'en', 'th'] as const;
+export const defaultLang = 'th';
+export const languagesList = ['th', 'zh', 'en'] as const;
 
 export const languages: Record<string, string> = {
   zh: '中文',
@@ -39,7 +39,7 @@ export function buildAlternates(path = ''): Record<string, string> {
     zh: mk('zh'),
     en: mk('en'),
     th: mk('th'),
-    xDefault: mk('zh'),
+    xDefault: mk('th'),
   };
 }
 
