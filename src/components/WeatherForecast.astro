@@ -1,0 +1,209 @@
+---
+import { getI18n } from '../i18n/ui';
+import { entity, sceneProfile } from '../config';
+import { getWeather, weatherCodeKey, weatherIcon, clockTime, isRainy, windScale } from '../lib/weather';
+import { buildAdvice, fillAdvice } from '../lib/advice';
+
+const { messages } = getI18n(Astro.url);
+const w = messages.weather;
+
+// 服务端获取：数据在服务器端拉取并在边缘缓存 30 分钟，同时保留内存缓存兜底。
+const data = await getWeather({ latitude: entity.latitude, longitude: entity.longitude, days: 7 });
+
+const codeLabel = (code: number) => w.codes[weatherCodeKey(code)] ?? w.codes.other;
+const weekdayIndex = (date: string) => new Date(`${date}T00:00:00+07:00`).getUTCDay();
+const dayLabel = (date: string, i: number) => (i === 0 ? w.today : w.weekdayShort[weekdayIndex(date)]);
+const shortDate = (date: string) => {
+  const parts = date.split('-');
+  return parts.length === 3 ? `${Number(parts[1])}/${Number(parts[2])}` : date;
+};
+
+const today = data?.days?.[0];
+
+// 当前风力以蒲福风级展示（普通游客更关心「几级风」而不是 km/h）
+const currentWindScale = data ? windScale(data.current.wind) : 0;
+
+// 建议引擎：按天气组合动态命中条目，未命中的不渲染
+const advice = data ? buildAdvice(data, sceneProfile) : null;
+
+// 建议分组（空组直接隐藏）
+const adviceGroups = advice
+  ? [
+      { key: 'outfit', icon: '👕', title: w.adviceGroups?.outfit, items: advice.outfit },
+      { key: 'plan', icon: '🗺️', title: w.adviceGroups?.plan, items: advice.plan },
+      { key: 'pack', icon: '🎒', title: w.adviceGroups?.pack, items: advice.pack },
+    ].filter((group) => group.items.length > 0)
+  : [];
+
+const tipText = (group: string, item: { key: string; params?: Record<string, string | number> }) =>
+  fillAdvice(w.tips?.[group]?.[item.key], item.params);
+
+const bangkokTime = data
+  ? new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Asia/Bangkok',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false,
+    }).format(new Date(data.fetchedAt))
+  : '';
+---
+
+<section id="weather" class="section-padding" style="background: var(--bg-tertiary);">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">
+      {w.title}
+    </h2>
+    <p class="text-center text-base max-w-3xl mx-auto mb-10" style="color: var(--text-secondary);">{w.subtitle}</p>
+
+    {data ? (
+      <>
+        <div class="weather-now rounded-3xl border p-6 sm:p-8 mb-6" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <div class="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
+            <div class="flex items-center gap-5 shrink-0">
+              <div class="weather-now-icon text-6xl leading-none" aria-hidden="true">
+                {weatherIcon(data.current.code, data.current.isDay)}
+              </div>
+              <div>
+                <div class="flex items-end gap-2">
+                  <span class="text-5xl font-bold font-display leading-none" style="color: var(--text-primary);">
+                    {Math.round(data.current.temperature)}
+                  </span>
+                  <span class="text-xl font-semibold pb-1" style="color: var(--text-secondary);">{w.unitTemp}</span>
+                </div>
+                <div class="mt-1 font-semibold" style="color: var(--text-primary);">{codeLabel(data.current.code)}</div>
+                <div class="text-sm mt-0.5" style="color: var(--text-muted);">
+                  {w.currentLabel} · {entity.attractionShortName}
+                </div>
+              </div>
+            </div>
+
+            <dl class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 flex-1">
+              <div class="weather-metric">
+                <dt>{w.feelsLike}</dt>
+                <dd>{Math.round(data.current.apparent)}{w.unitTemp}</dd>
+              </div>
+              <div class="weather-metric">
+                <dt>{w.humidity}</dt>
+                <dd>{Math.round(data.current.humidity)}%</dd>
+              </div>
+              <div class="weather-metric">
+                <dt>{w.wind}</dt>
+                <dd>
+                  {currentWindScale}
+                  <span class="text-xs font-normal">{w.unitWindScale}</span>
+                </dd>
+              </div>
+              <div class="weather-metric">
+                <dt>{w.uvIndex}</dt>
+                <dd>
+                  {Math.round(today?.uvIndexMax ?? 0)}
+                  <span class="text-xs font-normal">{w.uvLevels?.[advice?.highlights.uvLevel ?? 'low']}</span>
+                </dd>
+              </div>
+              <div class="weather-metric">
+                <dt>{w.rainChance}</dt>
+                <dd>{Math.round(today?.precipitationProbability ?? 0)}%</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-5 pt-4 text-xs sm:text-sm border-t" style="border-color: var(--border-color); color: var(--text-muted);">
+            <span>🌅 {w.sunrise} {clockTime(today?.sunrise ?? '')}</span>
+            <span>🌇 {w.sunset} {clockTime(today?.sunset ?? '')}</span>
+            <span class="ml-auto">{w.updatedAtLabel} {bangkokTime} · {w.refreshedLabel}</span>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border p-6 sm:p-8 mb-6" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <h3 class="font-display text-xl sm:text-2xl font-semibold mb-1" style="color: var(--text-primary);">{w.forecastTitle}</h3>
+          <p class="text-sm mb-6" style="color: var(--text-muted);">{w.forecastSubtitle}</p>
+
+          <ul class="forecast-grid">
+            {data.days.map((day, i) => (
+              <li class={`forecast-day${i === 0 ? ' is-today' : ''}`}>
+                <span class="forecast-day-name">{dayLabel(day.date, i)}</span>
+                <span class="forecast-day-date">{shortDate(day.date)}</span>
+                <span class="forecast-day-icon" aria-hidden="true">{weatherIcon(day.code, true)}</span>
+                <span class="forecast-day-label">{codeLabel(day.code)}</span>
+                <span class="forecast-day-temp">
+                  <strong>{Math.round(day.temperatureMax)}°</strong>
+                  <em>{Math.round(day.temperatureMin)}°</em>
+                </span>
+                <span class="forecast-day-rain" class:list={[{ 'is-wet': isRainy(day) }]}>
+                  💧 {Math.round(day.precipitationProbability)}%
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="rounded-3xl p-6 sm:p-8 border" style="background: color-mix(in srgb, var(--accent) 8%, var(--card-bg)); border-color: var(--border-color);">
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 mb-4">
+            <h3 class="font-display text-xl sm:text-2xl font-semibold" style="color: var(--text-primary);">{w.adviceTitle}</h3>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="advice-chip">
+                {codeLabel(today?.code ?? 0)} {Math.round(today?.temperatureMin ?? 0)}–{Math.round(today?.temperatureMax ?? 0)}
+                {w.unitTemp}
+              </span>
+              {advice && (
+                <span class="advice-chip">
+                  ☀️ {w.uvIndex} {w.uvLevels?.[advice.highlights.uvLevel]}
+                </span>
+              )}
+              <span class="advice-chip">💨 {w.windLevels?.[currentWindScale]}</span>
+            </div>
+          </div>
+
+          {advice && advice.alerts.length > 0 && (
+            <div
+              class="advice-alert rounded-2xl p-4 sm:p-5 mb-5"
+              style="background: var(--alert-bg); border: 1px solid var(--alert-border); color: var(--alert-text);"
+            >
+              <p class="font-semibold mb-2 flex items-center gap-2">
+                <span aria-hidden="true">⚠️</span>
+                <span>{w.riskTitle}</span>
+              </p>
+              <ul class="space-y-1.5 text-sm sm:text-base leading-relaxed">
+                {advice.alerts.map((item) => (
+                  <li class="flex gap-2">
+                    <span aria-hidden="true">·</span>
+                    <span>{tipText('alerts', item)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {adviceGroups.map((group) => (
+              <div class="advice-card rounded-2xl p-4 sm:p-5" style="background: var(--card-bg); border: 1px solid var(--border-color);">
+                <p class="advice-card-title">
+                  <span aria-hidden="true">{group.icon}</span>
+                  <span>{group.title}</span>
+                </p>
+                <ul class="advice-list">
+                  {group.items.map((item) => (
+                    <li>
+                      <span class="advice-check" aria-hidden="true">✓</span>
+                      <span>{tipText(group.key, item)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-xs mt-5 leading-relaxed" style="color: var(--text-muted);">{w.sceneNote}</p>
+          <p class="text-xs mt-1.5 leading-relaxed" style="color: var(--text-muted);">{w.sourceNote}</p>
+        </div>
+      </>
+    ) : (
+      <div class="rounded-3xl border p-6 sm:p-8" style="background: var(--card-bg); border-color: var(--border-color);">
+        <p class="text-base leading-relaxed" style="color: var(--text-secondary);">{w.unavailableNote}</p>
+        <a href="#season" class="inline-block mt-4 font-semibold underline underline-offset-4" style="color: var(--accent);">
+          {messages.nav?.season ?? ''}
+        </a>
+      </div>
+    )}
+  </div>
+</section>

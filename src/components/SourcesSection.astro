@@ -1,0 +1,72 @@
+---
+import { getI18n } from '../i18n/ui';
+import { entity } from '../config';
+const { messages } = getI18n(Astro.url);
+const s = messages.sources;
+const f = messages.footer;
+const links = f.officialLinksList ?? [];
+const ratingSourceUrl = messages.reviews?.sourceUrl ?? entity.ratingSourceUrl;
+---
+
+<section id="sources" class="section-padding" style="background: var(--bg-tertiary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{s.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{s.subtitle}</p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-6">
+      <!-- 评分与评价来源 -->
+      <article class="rounded-2xl p-6 border h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <h3 class="font-semibold text-lg mb-3" style="color: var(--text-primary);">⭐ {s.ratingTitle}</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">{s.ratingText}</p>
+        <dl class="text-sm space-y-2">
+          <div class="flex gap-2">
+            <dt class="shrink-0" style="color: var(--text-muted);">{s.ratingSourceLabel}：</dt>
+            <dd><a href={ratingSourceUrl} target="_blank" rel="noopener noreferrer nofollow" class="underline underline-offset-2 hover:opacity-70 break-words" style="color: var(--accent);">{s.ratingSourceName} ↗</a></dd>
+          </div>
+          <div class="flex gap-2">
+            <dt class="shrink-0" style="color: var(--text-muted);">{s.ratingSyncedLabel}：</dt>
+            <dd style="color: var(--text-secondary);">{s.ratingSyncedValue}</dd>
+          </div>
+          <div class="flex gap-2">
+            <dt class="shrink-0" style="color: var(--text-muted);">{s.lastUpdatedLabel}：</dt>
+            <dd style="color: var(--text-secondary);">{s.lastUpdatedValue}</dd>
+          </div>
+        </dl>
+      </article>
+
+      <!-- 权威门户外链 -->
+      <article class="rounded-2xl p-6 border h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <h3 class="font-semibold text-lg mb-3" style="color: var(--text-primary);">🏛️ {s.authorityTitle}</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">{s.authorityText}</p>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href={entity.govtTourismUrl} target="_blank" rel="noopener noreferrer" class="hover:opacity-70 break-words" style="color: var(--accent);">
+              {entity.countryName} / {entity.cityName} Official Tourism Portal ↗
+            </a>
+          </li>
+          {links.map((link) => (
+            <li>
+              <a href={link.url} target="_blank" rel="noopener noreferrer" class="hover:opacity-70 break-words" style="color: var(--accent);">
+                {link.name} ↗
+              </a>
+            </li>
+          ))}
+        </ul>
+      </article>
+
+      <!-- 图片版权 + 数据说明 -->
+      <article class="rounded-2xl p-6 border h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <h3 class="font-semibold text-lg mb-3" style="color: var(--text-primary);">© {s.imageTitle}</h3>
+        <p class="text-sm leading-relaxed mb-5" style="color: var(--text-secondary);">{s.imageText}</p>
+        <h4 class="font-semibold text-sm mb-3" style="color: var(--text-primary);">{s.dataTitle}</h4>
+        <ul class="space-y-2 text-sm" style="color: var(--text-secondary);">
+          {(s.dataPoints ?? []).map((point) => (
+            <li class="flex gap-2"><span style="color: var(--accent);">•</span><span>{point}</span></li>
+          ))}
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>

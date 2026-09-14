@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sanam Luang (Bangkok) | The Historic Heart and Royal Square of Thailand",
-    "description": "The complete guide to Sanam Luang (สนามหลวง): a vast oval-shaped public square located north of the Grand Palace in Bangkok. Originally known as 'Thung Phra Men' (Royal Cremation Ground), it is now the core landmark for major royal ceremonies (like the Royal Ploughing Ceremony) and public gatherings. Surrounded by the Grand Palace, Wat Phra Kaew, and the National Museum."
+    "title": "Sanam Luang Bangkok: Royal Field Park Guide, Location & Nearby Attractions",
+    "description": "Plan your visit to Sanam Luang (สนามหลวง), Bangkok's iconic Royal Field park located right next to the Grand Palace. View 4.6-star ratings, map directions, photos & opening info."
   },
   "header": {
     "siteName": "Sanam Luang (สนามหลวง)",
@@ -22,7 +22,7 @@
   },
   "nonprofitBanner": {
     "text": "This is a non-profit independent guide put together by travel enthusiasts, offering the most objective visitor information on Sanam Luang free of charge, affiliated with no organization.",
-    "dataSource": "All information on this site is cross-checked against public materials from the Ministry of Hotels and Tourism (Thailand) and the Bangkok Region Government, with no commercial endorsements."
+    "dataSource": "All information on this site is cross-checked against public materials from the Tourism Authority of Thailand (TAT) and the Bangkok Metropolitan Administration (BMA), with no commercial endorsements."
   },
   "mission": {
     "title": "Our Mission",
@@ -30,9 +30,20 @@
   },
   "breadcrumb": {
     "home": "Home",
-    "region": "Bangkok Region",
+    "region": "Bangkok",
     "city": "Downtown Bangkok",
     "current": "Sanam Luang"
+  },
+  "entityStatement": {
+    "statement": "Welcome to Sanam Luang (สนามหลวง), widely recognized as the central Sanam Luang Bangkok. Located in the heart of Phra Nakhon, Bangkok, Thailand, this destination serves as a primary hub for travelers visiting the region.",
+    "hierarchyLabel": "Geographic hierarchy",
+    "hierarchy": ["Sanam Luang (สนามหลวง)", "Phra Nakhon", "Bangkok", "Thailand"],
+    "aboutTitle": "About Sanam Luang (สนามหลวง)",
+    "aboutText": "Sanam Luang (สนามหลวง) is the historic royal square of Bangkok, Thailand — an oval public space covering roughly 74.5 rai (about 119,200 sq.m) immediately north of the Grand Palace. Host of the Royal Ploughing Ceremony and the site of major royal cremations, it works today as the city's open-air living room.",
+    "landmarksTitle": "Landmarks & Attractions Around Sanam Luang",
+    "landmarksText": "When visiting Sanam Luang (สนามหลวง), visitors can easily explore surrounding historical landmarks and points of interest, including The Grand Palace & Wat Phra Kaew and Bangkok National Museum.",
+    "historyTitle": "History & Significance of Sanam Luang (สนามหลวง)",
+    "historyText": "Originally known as Thung Phra Men (the royal cremation ground), Sanam Luang (สนามหลวง) has sat at the heart of Bangkok since the founding of the capital. It takes its present name from the grounds of the royal ceremony, and for more than two centuries it has hosted the kingdom's most important state and royal rituals."
   },
   "stickyNav": {
     "facts": "Key Facts",
@@ -46,14 +57,14 @@
   "hero": {
     "title": "Sanam Luang (Bangkok, Thailand)",
     "subtitle": "A vast oval-shaped public square located just north of the Grand Palace in Bangkok. Historically used as the royal cremation ground, it now serves as the central stage for major royal ceremonies (such as the Royal Ploughing Ceremony) and public gatherings. Surrounded by the Grand Palace, Wat Phra Kaew, and the National Museum, it is the perfect starting point to explore Bangkok's history.",
-    "rating": "4.6 (27,114)",
-    "reviewCount": "27,114 reviews",
-    "hours": "08:30–15:30 (free hours; foreign visitors pay a ticket)",
+    "rating": "4.6 (27,260)",
+    "reviewCount": "27,260 reviews",
+    "hours": "Open all day · Free (the adjacent Grand Palace and Wat Phra Kaew require separate tickets)",
     "openMaps": "View location on Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/U8tk6HUgtabaEVnV8",
     "legend": {
-      "quote": "'Sanam Luang' is named after the guardian spirit (Nat) of this place. Standing at the exact center of the city, the square is like Bangkok's beating heart — for over centuries it has quietly gathered the city's noise and prayers.",
-      "attribution": "— The origin of Sanam Luang"
+      "quote": "'Sanam Luang' means 'royal field': the flat ground north of the Grand Palace was kept clear for royal ceremonies and has never been built on. Standing at the centre of the old city, the square has quietly gathered the city's noise and its ceremonies for more than two centuries.",
+      "attribution": "— The origin of the name Sanam Luang"
     },
     "tags": [
       "Oval Public Square",
@@ -66,7 +77,7 @@
     },
     "historyCta": {
       "label": "Learn the history",
-      "href": "#history"
+      "href": "#heritage"
     },
     "quickFacts": [
       {
@@ -94,8 +105,8 @@
       "href": "#gallery"
     },
     "factsSource": {
-      "label": "Hours & tickets per Bangkok City / on-site info",
-      "url": "https://www.tourism.gov.mm"
+      "label": "Hours & tickets follow Bangkok City and on-site notices",
+      "url": "https://www.tourismthailand.org"
     },
     "liveInfo": {
       "weather": "Current weather",
@@ -105,10 +116,10 @@
       "eyebrow": "Golden Hour Calculator · Light Tool",
       "title": "Arrive just before sunset. The soft light is perfect for capturing the sweeping views of the square against the backdrop of the Grand Palace's golden spires.",
       "note": "The square is completely open and lacks shade. Early morning or late afternoon provides the most comfortable weather and the best lighting.",
-      "seaGlare": "Sunset tip: Sanam Luang stands at an open downtown junction, a convenient spot to watch the city sunset. The first warm light on the gilded spire and Grand Palace Park at dusk is the golden window for photography; Bangkok is hot year-round, so bring water and sun protection.",
+      "seaGlare": "Sunset tip: Sanam Luang sits on open ground in the middle of the old town — a convenient place to watch the city sunset. The first warm light of dusk falls on the lawns and the golden roofs of the Grand Palace, making it a prime photography window. Bangkok is hot year-round, so bring water and sun protection.",
       "arriveLabel": "Arrive by",
       "blueHourLabel": "Blue hour",
-      "lightCaption": "Light calculated live by Open-Meteo"
+      "lightCaption": "Lighting advice updates with live weather"
     }
   },
   "quickFactsDashboard": {
@@ -163,8 +174,8 @@
     ]
   },
   "hiddenRules": {
-    "title": "square Visiting Tips",
-    "subtitle": "Sanam Luang is in a busy downtown and a religious site. Sorting out etiquette, safety, and budget in advance turns the experience from a 'check-in rush' into a 'relaxed visit'.",
+    "title": "Sanam Luang Visiting Tips",
+    "subtitle": "Sanam Luang sits in a busy downtown area and is the city's ceremonial ground. Sorting out etiquette, safety and budget in advance turns a rushed photo stop into a relaxed visit.",
     "highlights": [
       {
         "icon": "👕",
@@ -187,46 +198,46 @@
     ],
     "panels": [
       {
-        "q": "Is a ticket needed for Sanam Luang?",
-        "a": "Local devotees enter free; foreign visitors buy a ticket at the entrance (a few USD), subject to on-site notice. Praying on the platform is free.",
+        "q": "Is there an entrance fee for Sanam Luang?",
+        "a": "No. As public green space the square is open all day, free, with the lawns and walkways open to everyone. The adjacent Grand Palace and Wat Phra Kaew are separate ticketed sites with their own admission.",
         "items": [
-          "Foreign visitors buy at the entrance ticket booth.",
-          "The platform and base area are free; daytime visits recommended."
+          "The square itself is free, has no ticket office and needs no booking.",
+          "The Grand Palace and Wat Phra Kaew are separate attractions requiring tickets and a dress code."
         ]
       },
       {
-        "q": "Is it convenient with kids or seniors?",
-        "a": "The platform is gentle and the main path is accessible; but the downtown junction is busy and the platform is hot in the sun — hold children, assist seniors, and avoid the midday heat."
+        "q": "Is it manageable with children or older visitors?",
+        "a": "The square is flat with very gentle slopes, so prams and wheelchairs are broadly workable. However there is almost no shade, midday sun is intense and old-town streets carry heavy traffic — hold children's hands, support older companions and avoid the 11 am – 3 pm heat."
       },
       {
-        "q": "Can I still go on a rainy day?",
-        "a": "Light rain is fine; the platform is slippery but you can still pray. On heavy rain or extreme heat, choose the cooler dawn or dusk hours."
+        "q": "Can I still visit in the rain?",
+        "a": "Yes. The rainy season mostly brings short afternoon downpours, and afterwards the lawns reflect light and contrast improves. During thunderstorms leave the open lawn and avoid standing under isolated trees; when the surface is wet, slow down and wear shoes with grip."
       }
     ]
   },
   "complianceGuide": {
-    "title": "Sanam Luang · Etiquette & Religious-site Manners",
-    "subtitle": "This is both a visitor's downtown landmark and a religious site where devotees pray. Following these rules is double respect for history, others, and faith.",
+    "title": "Sanam Luang · Etiquette for a Ceremonial Ground",
+    "subtitle": "This is both a visitor landmark in the heart of the city and a national ceremonial ground. Following these rules is respect for the history, for other visitors and for the setting at the same time.",
     "rules": [
       {
         "badge": "👕",
-        "title": "Follow Royal Area Dress Codes",
-        "text": "Due to its proximity to the Grand Palace and Wat Phra Kaew, this area commands high respect. Please dress modestly (covering shoulders and knees)."
+        "title": "Follow the royal-area dress code",
+        "text": "Because the square sits next to the Grand Palace and Wat Phra Kaew, the whole area carries a strong royal and religious character. Dress appropriately — shoulders and knees covered — and avoid sleeveless tops and very short shorts that are unsuitable for royal grounds."
       },
       {
         "badge": "🪞",
-        "title": "Platform manners",
-        "text": "Remove shoes and dress modestly on the platform. Don't point at sacred objects with a finger during prayer. Check whether photography is allowed and don't photograph practitioners up close."
+        "title": "Etiquette inside temple areas",
+        "text": "Remove your shoes before entering temple halls, dress respectfully and keep quiet. Check whether photography is permitted, avoid close-up shots of monks, guards and children, and never point at Buddha images or sacred objects with your hands or feet."
       },
       {
         "badge": "🚮",
-        "title": "Take your trash with you",
-        "text": "Bins on the platform are limited. Bring a small trash bag and take everything with you when you leave — cigarette butts, plastics, and food scraps — keeping the square and surroundings clean."
+        "title": "Take your litter with you",
+        "text": "Bins on the square are limited. Carry a small bag and take your rubbish with you, especially cigarette butts, plastic bottles and food packaging, keeping the lawns and surrounding streets clean."
       },
       {
         "badge": "🌱",
-        "title": "Protect heritage & urban environment",
-        "text": "Sanam Luang and the surrounding colonial buildings are public urban heritage. Don't carve or step on them, and don't throw things onto the platform, keeping this city heart safe and alive."
+        "title": "Protect the public green space and its history",
+        "text": "The lawns, tamarind trees and surrounding Rattanakosin-era buildings are public assets. Do not step into fenced areas, break branches, carve into trunks or drop litter — help keep this heart of the city safe and alive."
       }
     ]
   },
@@ -235,47 +246,47 @@
     "subtitle": "Not just 'who it's for,' but a walkable half-day route you can follow directly. Centered on the downtown square and colonial landmarks, linking city history and faith.",
     "steps": [
       {
-        "title": "[Start] Platform & gilded spire",
-        "meta": "Settle the mind · ~30 min",
-        "text": "Enter slowly from the Sanam Luang Road entrance, remove shoes and pray at the base platform, look up at the octagonal gilded body, align your pace with the city, then head to the surrounding streets.",
+        "title": "[Start] The lawn and the Grand Palace roofs",
+        "meta": "0 – 20 min · South entrance",
+        "text": "Enter slowly and walk a stretch of the wide oval lawn, looking south towards the golden roofs of the Grand Palace and Wat Phra Kaew. Slow the pace here, align your eye with the city, and only then decide the rest of the route.",
         "tips": [
-          "Morning and dusk have the best light and fewer crowds."
+          "There is almost no shade — apply sun protection before you set off."
         ]
       },
       {
-        "title": "[Main] Octagonal gilded spire",
-        "meta": "Core experience · ~40 min",
-        "text": "Circle the square on the platform and look up at the octagonal gilded structure running from base to finial. Sanam Luang's most famous landmark and the best vantage for reading 'city and faith'.",
+        "title": "[Main] One full lap of the perimeter",
+        "meta": "20 – 60 min · Perimeter walkway",
+        "text": "Walk one complete circuit of the walkway along the edge. It shows the oval boundary of the lawn, the Grand Palace roofs to the south and the rows of century-old tamarind trees that form the old town's densest canopy.",
         "tips": [
-          "Platform is hot in the sun; allow time for photos and mind scorching feet."
+          "Walking anticlockwise keeps the light behind you, especially at dusk."
         ]
       },
       {
-        "title": "[Extend] Grand Palace Park & Independence Monument",
-        "meta": "Local story · ~40 min",
-        "text": "Walk to the adjacent Grand Palace Park and read the Independence Monument to understand Thailand's independence history, collecting city narrative and square faith together.",
+        "title": "[Extend] City Pillar Shrine & National Museum",
+        "meta": "60 – 120 min · West of the square",
+        "text": "About 10 minutes west on foot are the City Pillar Shrine (Lak Mueang), the symbol of Bangkok's founding, and the Bangkok National Museum, which sets out Thai history and art systematically. This is the key stop for understanding why the square matters.",
         "tips": [
-          "Rest in the park's shade; avoid the midday sun."
+          "Some museum galleries close on fixed days — check ahead."
         ]
       },
       {
-        "title": "[Refuel] Rest & light meal",
-        "meta": "Leisurely refuel · ~40 min",
-        "text": "Hydrate at a teahouse or stall around the square or in the downtown streets, then look back at the gilded spire and skyline, packing square, park, and city into one walk.",
+        "title": "[Refresh] Old-town streets and the river",
+        "meta": "120 – 150 min · Around the square",
+        "text": "Top up on water in the commercial streets, convenience stores or markets around the square, then walk along Ratchadamnoen Avenue or towards the river. Looking back at the lawn and the Grand Palace roofs ties 'palace–square–city' into one walk.",
         "tips": [
-          "Supplies are plentiful, but mind drinking-water hygiene."
+          "At midday, choose an air-conditioned indoor space to rest."
         ]
       },
       {
-        "title": "[End] Bangkok City Hall & colonial buildings",
-        "meta": "Wrap-up · ~60 min+",
-        "text": "If energy allows, visit Bangkok City Hall opposite the park and the surrounding colonial buildings, or extend to Bogyoke Aung San Market; otherwise return along the street, completing the 'square—park—city' half-day package.",
+        "title": "[Finish] Democracy Monument & Tha Maharaj",
+        "meta": "150 – 210 min · North-east of the square",
+        "text": "If you still have energy, walk north-east along Ratchadamnoen Avenue to Democracy Monument, then on to the Tha Maharaj riverside quarter for dinner and night views. Otherwise head back along the street to complete a full 'royal square half-day'.",
         "tips": [
-          "Light is best at dusk; save photos for the end."
+          "Returning to the lawn 60 minutes before sunset gives the best light of the day."
         ]
       }
     ],
-    "disclaimer": "The route above emphasizes a self-contained loop you can follow as-is. If you only want the square, keep the first two segments and treat the park and buildings as optional add-ons."
+    "disclaimer": "Durations include stops and exclude queuing and ticket time. Adjust to the day's weather, crowds and your own energy."
   },
   "intro": {
     "title": "Getting to Know Sanam Luang",
@@ -285,19 +296,19 @@
       "eyebrow": "Practical Planning",
       "description": "The square is completely open with no shade. It is highly recommended to visit in the early morning or late afternoon to avoid the intense midday heat and to capture the stunning silhouettes of the Grand Palace against the sunset.",
       "items": [
-        "Morning or dusk first: city light is softest, gilded spire most photogenic.",
-        "Best views are from the Grand Palace Park side and street corners.",
-        "A short walk from Bangkok Central Railway Station or surrounding downtown blocks; metro/bus/taxi are all convenient.",
-        "The platform is surrounded by the city; water, restrooms, and breaks are best at nearby shops."
+        "Go at dawn or dusk: the light is softest, the crowds smallest, and the Grand Palace roofs look best against a clear sky.",
+        "The south-west corner and the central walkway are the best photography spots, with the lawn as a clean foreground.",
+        "The square has almost no shade — bring a sun hat, sunscreen and at least a litre of water.",
+        "There are no public toilets or shops on the square; sort out water, toilets and rest in the surrounding streets before you enter."
       ]
     },
     "alsoKnownAs": {
       "title": "Highlights",
       "items": [
-        "【Two-Millennia Ancient Shrine】 Believed to share the same origin as Wat Phra Kaew square, named after the guardian spirit 'Sanam Luang Nat' who helped locate the sacred hill, enshrining a precious hair relic of the Buddha.",
-        "【Historic Landmark】 A unique octagonal gilded stupa rising expansive green fields. The open landscape offers unobstructed views of the majestic Grand Palace and Wat Phra Kaew, serving as the sacred venue for major royal and state ceremonies.",
-        "【Geometric Origin】 In the mid-19th century, it was selected as the absolute geometric center of Bangkok's urban planning. This square is not only a religious sanctuary but a miraculous intersection of the Western colonial grid and ancient Eastern faith.",
-        "【City Memory】 The rallying point for the 1988 and 2007 major historical events, surrounded by Grand Palace Park, Bangkok City Hall, and the Independence Monument."
+        "【Royal field】Sanam Luang translates literally as 'royal field': sanam means an open ground, luang means royal. Its old name Thung Phra Men meant 'cremation field'.",
+        "【Oval lawn】The square is a regular oval of about 74.5 rai (roughly 119,200 sq m) — the largest open public green space in the old town.",
+        "【National ceremonial ground】A royal cremation site since the founding of Bangkok in 1782, and today the venue for national rites such as the Royal Ploughing Ceremony.",
+        "【The city's open-air living room】Everyday space for morning exercise, strolling and kite flying — and a stage for Bangkok's civic memory."
       ]
     }
   },
@@ -309,9 +320,9 @@
     "overviewText2": "Around Sanam Luang is the city core with limited parking. Plan transport, parking, and walking together — especially with seniors, young children, or luggage, parking at a nearby mall or hotel then walking greatly reduces hassle.",
     "arrivalTitle": "Remember before departure",
     "arrivalItems": [
-      "The square is at a central junction; about a 5–15 min walk from surrounding blocks to the platform.",
-      "Foreign visitors need a ticket; platform prayer is free. Night lighting is limited; daytime or dusk visits are more comfortable.",
-      "The downtown junction is crowded; avoid peak times. Nearby mall parking is available."
+      "The square sits in the middle of the old town — about 5–15 minutes on foot from MRT Sanam Chai station or nearby accommodation.",
+      "Take a Chao Phraya express boat to Tha Chang (N9) or Tha Phra Chan pier and walk in, avoiding old-town traffic.",
+      "Roads around the square jam badly on holidays and ceremony days — prefer rail or river transport."
     ],
     "modes": [
       {
@@ -371,24 +382,24 @@
       "colPrice": "Price",
       "options": [
         {
-          "name": "Nearby mall parking",
-          "distance": "about 200–500 m (to platform)",
-          "price": "Commercial, hourly"
+          "name": "Nearby mall car park",
+          "distance": "About 200–500 m to the square",
+          "price": "Commercial parking, charged by time"
         },
         {
-          "name": "Nearby hotel/office parking",
-          "distance": "about 200–600 m",
-          "price": "Public / commercial, more spaces but tight at peak"
+          "name": "Hotel / office parking",
+          "distance": "About 200–600 m",
+          "price": "Public or commercial parking; plenty of bays but tight at peaks"
         },
         {
-          "name": "Roadside temporary",
-          "distance": "about 50–200 m",
-          "price": "Short stop only, restricted and congested"
+          "name": "Street parking",
+          "distance": "About 50–200 m",
+          "price": "Short-stay kerbside only; restricted and easily congested"
         },
         {
-          "name": "Bangkok Central Station parking",
-          "distance": "about 500–800 m",
-          "price": "Station parking, needs walk"
+          "name": "Parking near rail stations",
+          "distance": "About 500–800 m",
+          "price": "Station car parks; requires a connecting walk"
         }
       ],
       "disclaimer": "Roads near the square congest on holidays and clear days; don't occupy bus or fire lanes for long. EV chargers are mostly in mall parking; rates and limits may change — check posted signs."
@@ -402,15 +413,15 @@
     ],
     "localTipsTitle": "Practical visiting tips",
     "localTips": [
-      "Mornings and dusk remain golden; set arrival about 60 minutes before sunset for the best light on the gilded spire and colonial buildings.",
-      "Weekends and clear days draw crowds; with kids or gear, allow buffer and avoid peaks.",
-      "Best pair Sanam Luang with Grand Palace Park, Bangkok City Hall, and Bogyoke Market; a single stop underestimates its urban value."
+      "Dawn and dusk remain the golden hours, but set 'on the square 60 minutes before sunset' as your benchmark — the best light for the palace roofs and the lawn.",
+      "Weekends and clear days are busier; if you have children or camera gear, build in buffer time and go off-peak.",
+      "Sanam Luang is best linked with the Grand Palace exterior, the Bangkok National Museum and the City Pillar Shrine — stopping here alone underrates its civic value."
     ],
     "mapsCta": "View map & route",
     "mapsUrl": "https://maps.app.goo.gl/U8tk6HUgtabaEVnV8",
     "bestTime": {
       "title": "Best time to arrive",
-      "text": "Sanam Luang is reachable by day, but what truly sets the photo ceiling is the dawn city waking and the dusk light window. Arrive about 60 minutes before sunset; if weather isn't good for photos, shift focus to platform prayer or a surrounding street stroll."
+      "text": "The square is visitable by day, but what decides your photos is the waking city at dawn and the light window at dusk. Aim to arrive about 60 minutes before sunset; if the weather is unhelpful, shift the focus to indoor stops such as the National Museum or City Pillar Shrine, or a walk through the surrounding streets."
     }
   },
   "officialManagement": {
@@ -418,153 +429,105 @@
     "text": "Sanam Luang is maintained by the Bangkok Metropolitan Administration (BMA) alongside royal agencies. It serves not only as an urban park where locals stroll and fly kites, but also as the sacred venue for major national events, such as the Royal Ploughing Ceremony and the King's Birthday celebrations."
   },
   "knowledge": {
-    "title": "History & Origins of Sanam Luang",
+    "title": "Going deeper: geography, ecology and belief",
     "sections": [
       {
-        "id": "history",
-        "title": "Royal Cremation Ground and Ploughing Ceremony: The Evolution of Thung Phra Men",
-        "content": "Originally known as Thung Phra Men (Royal Cremation Ground), Sanam Luang was established during the reign of King Rama I as a site for royal cremations. In 1855, King Rama IV officially renamed it \"Sanam Luang\" (Royal Field) and decreed that it be used for agricultural activities when not hosting cremations. Today, it hosts the annual Royal Ploughing Ceremony, an ancient Brahmanic ritual aimed at ensuring a bountiful harvest, symbolizing the monarchy's deep care for the nation's agriculture."
-      },
-      {
         "id": "name",
-        "title": "Urban Origin: The Historic Heart of Bangkok",
-        "content": "Sanam Luang is not just a vast green expanse; it is the historical center of Rattanakosin Island. It is surrounded by landmark structures such as the Grand Palace, Wat Phra Kaew, the National Museum, and Thammasat University. During the modernization of the city in the 19th and early 20th centuries, the square was expanded and planted with hundreds of tamarind trees. It represents the geographical nexus where Western urban planning met Eastern royal majesty, making it the perfect starting point for exploring Bangkok's history."
+        "title": "A city's origin: the heart of Rattanakosin",
+        "content": "Sanam Luang occupies the core of Rattanakosin Island, with the Grand Palace and Wat Phra Kaew to the south, the Bangkok National Museum and City Pillar Shrine to the west, Thammasat University to the north and Ratchadamnoen Avenue running north-east to Democracy Monument. It is both the starting point for understanding how Bangkok was founded and a spatial model of the relationship between monarchy, religion and city."
       },
       {
-        "id": "reclining",
-        "title": "Hair relic & faith center",
-        "content": "The square is said to enshrine a hair relic of the Buddha, sharing the same origin as Bangkok's other great shrine, Wat Phra Kaew square. This relic makes Sanam Luang a key node of Buddhist faith, lifting it from a city old tower to a sanctuary visited by devotees and travelers."
-      },
-      {
-        "id": "yeonhwa",
-        "title": "Octagonal body & Burmese zodiac astrology",
-        "content": "Sanam Luang's distinctive octagonal structure is not just an aesthetic design but a physical manifestation of Burmese traditional Buddhist astrology (Mahabote). In the Burmese calendar, a week is divided into eight days (Wednesday is split into morning and afternoon), each represented by a specific direction, planet, and guardian animal sign. The eight faces of the square correspond exactly to these eight astrological directions. The base platform features prayer shrines in all eight directions, where devotees find the animal sign corresponding to their birth day and pour water over the Buddha image and guardian beast to pray for blessings, making the architecture the most intuitive expression of faith."
-      },
-      {
-        "id": "faith",
-        "title": "Urban movements & collective memory",
-        "content": "In modern times, because of its central location, Sanam Luang has repeatedly been a rallying point for major historical events: the 1988 democracy movement and the 2007 Saffron Revolution both centered here. It is both a religious shrine and a witness to modern Burmese history."
-      },
-      {
-        "id": "halls",
-        "title": "Platform & prayer space",
-        "content": "The base platform surrounds the gilded main stupa, with shrines, bells, and drums at the corners. Devotees circumambulate, offer flowers, and light candles; the bell and chanting are Sanam Luang's most iconic soundscape."
-      },
-      {
-        "id": "statues",
-        "title": "Surrounding urban landmarks",
-        "content": "The square faces Grand Palace Park and the Independence Monument, near Bangkok City Hall and the colonial High Court, forming a 'square—park—city' spatial narrative."
-      },
-      {
-        "id": "sea",
-        "title": "Urban ecology & street environment",
-        "content": "Sanam Luang is in a busy downtown, surrounded by urban greenery, corner shrines, and colonial buildings. Here you see citizens exercising, devotees praying, and tourists strolling — a natural classroom for observing Bangkok city life.",
+        "id": "ecology",
+        "title": "Urban ecology and the surrounding streets",
+        "content": "The square is an open lawn with almost no shade cover. The tamarind line along its edges is a gathering point for birds — mynas and spotted doves are common, and monitor lizards occasionally cross the lawn edges. Residents exercise here, students pass through and visitors stroll: it is the most direct window onto Bangkok's urban life. Please do not feed or chase the wildlife.",
         "cards": [
           {
-            "title": "Urban base & form",
-            "text": "The square sits at an open downtown junction; the octagonal gilded body stands out between City Hall and the park, with gentle platforms letting visitors approach the base without harming the heritage."
+            "title": "Where lawn meets city",
+            "text": "The oval lawn is ringed by roads and buildings, creating an openness rare in the old town — and, precisely because there is no cover, midday sun and ground radiation are both intense."
           },
           {
-            "title": "Faith Ecology: The convergence of street life and practice",
-            "text": "The platform is where devotees circumambulate, offer flowers, and meditate at dawn — most active then, echoing the Buddhist 'life-protecting' spirit."
+            "title": "Ecology under the canopy",
+            "text": "The tamarind belt is the square's only substantial shade and habitat. Birds use the canopy and feed on the lawn, forming a small urban ecosystem."
           },
           {
-            "title": "square-watching tip",
-            "text": "Morning or evening is when the gilded body is most vivid and the crowd most relaxed. Stand on the park side looking at the spire to observe light and city rhythm."
+            "title": "Visiting tip",
+            "text": "Early morning and late afternoon are the most comfortable hours. Stand on any side of the square and look towards the Grand Palace roofs to watch light and city rhythm at work."
           }
         ],
         "fieldNote": {
-          "title": "Observation tip",
-          "text": "First take in the whole square from the park height, then return to the platform to see the octagonal body and praying crowd up close. Distance shows the overall form; close view reveals the city-faith relation."
+          "title": "How to look",
+          "text": "Start by reading the overall outline from one side — the oval lawn boundary and the Grand Palace roofs to the south frame each other. Then move closer to the lawn and tree line to watch how people, birds and light together make this public space."
         },
         "academicNote": {
           "title": "Academic note",
-          "text": "This section is a science overview based on public interpretation and on-site features. For stricter historical and architectural classification, rely on official materials, on-site signs, and academic research."
+          "text": "This section is an educational summary based on public materials and on-site features. For stricter historical periodisation and architectural classification, refer to the Bangkok National Museum, official sources and academic research."
         }
       },
       {
-        "id": "legend",
-        "title": "Urban legends (local oral tradition)",
-        "content": "About Sanam Luang and the guardian spirit 'Sanam Luang', a local oral tradition tied to city protection is passed down: the spirit is said to guard the peace of this place, and citizens revere the square and pray. Such legends may not appear in official histories, but they let the public sense how this land was imagined and cherished."
-      },
-      {
-        "id": "nat_belief",
-        "title": "Fun Fact: When native spirits meet the foreign Buddha",
-        "content": "In Thailand, Buddhism and the ancient 'Nat' (spirit) belief are not mutually exclusive, but rather ingeniously integrated. Nats were originally spirits of mountains, rivers, or deceased heroes in animism. When Buddhism arrived, these native spirits were not expelled; instead, they were 'recruited' as Buddhist guardian deities. Sanam Luang is a perfect example: the square itself is the supreme symbol of Buddhism (enshrining the Buddha's hair relic), but its name and location are credited to the ancient spirit 'Sularata'. Here, you can see devotees first pay respects to the Buddha, and then pray for worldly peace and wealth before the dedicated Nat shrines at the square's base. This tacit division of labor—'the Buddha governs the afterlife, the spirit governs the present life'—forms the most authentic and vivid folk faith ecology in Thailand."
-      },
-      {
-        "id": "academic",
-        "title": "Academic Reference: The Evolution of the Square",
-        "content": "According to the historical archives of the National Museum Bangkok: 'Sanam Luang, originally named Thung Phra Men, was designated as the royal cremation ground since the establishment of the capital by King Rama I. It was during the reign of King Rama IV that it was officially renamed the Royal Field, encouraging the public to use it for kite flying and agriculture during non-funeral periods, thus cementing its modern role as a public space.'"
+        "id": "folk_belief",
+        "title": "Science note: when local spirits meet Buddhism",
+        "content": "In Thailand, Buddhism and older spirit (phi / thewada) beliefs are not mutually exclusive but have long coexisted and blended. Around the square you will find the City Pillar Shrine and several spirit houses; residents both pay respect to the Buddha and ask local guardian spirits for peace in this life. That tacit division of labour — Buddhism for the next life, spirits for this one — is the most vivid and everyday layer of Thai folk belief, and a key to why this square is simultaneously ceremonial ground and civic living room."
       }
     ],
     "didYouKnow": {
       "title": "Did you know?",
-      "text": "Sanam Luang is more than a downtown golden tower — it is an open-air classroom of city memory and faith: from the founding legend and hair relic to the octagonal gilded body and modern peaceful movements, the story of land and faith is written into the same heart of Bangkok."
+      "text": "Sanam Luang is more than an open lawn in the old town — it is an open-air classroom of civic memory: from royal cremations and the Ploughing Ceremony to century-old tamarind trees and hot-season kites, the story of land and belief is written into the same heart of Bangkok."
     }
   },
   "sitePlaques": {
-    "title": "Reading the On-site Signs & Interpretation",
-    "subtitle": "When you visit Sanam Luang, what's worth reading slowly is often not the check-in board but the official signs explaining 'why this square is here'.",
+    "title": "Reading the On-site Signs",
+    "subtitle": "The signs worth slowing down for at Sanam Luang are the official panels explaining how a royal rice field became the public square at the heart of old Bangkok.",
     "locationLabel": "On-site location",
-    "intro": "The readings below are based on the founding history, relic legend, and structure signs set up by the Bangkok City and the site, translating information visible on-site but not always read into accessible English science notes.",
+    "intro": "The notes below follow the official interpretive panels around the square and the public record of its history, translating information that is visible on-site but easy to walk past without reading.",
     "items": [
       {
-        "id": "monument",
-        "badge": "square history sign",
-        "title": "Sanam Luang & its founding",
-        "koTitle": "สนามหลวง သမိုင်း",
-        "myTitleZh": "Sanam Luang history guide",
-        "location": "Platform main entrance",
-        "body": "These signs state the key background — the meaning of Sanam Luang as a downtown historic landmark and its naming relation with the guardian spirit. Reading the hints is lesson one in using this urban landmark."
+        "id": "overview",
+        "badge": "Square history panel",
+        "title": "What Sanam Luang actually is",
+        "location": "Main entrances",
+        "body": "The name means \"royal field\". This flat ground north of the Grand Palace was kept clear for royal ceremonies and has never been built on, so the panels explain that the openness itself is the monument — which is why the square looks empty on purpose."
       },
       {
-        "id": "signboard",
-        "badge": "Relic guide (MY/EN)",
-        "title": "Hair relic & faith",
-        "koTitle": "ဓာတ်တော် လမ်းညွှန်",
-        "myTitleZh": "Relic guide",
-        "location": "Base platform",
-        "body": "The guide repeatedly emphasizes the hair relic as the faith center and reminds visitors that this square is half history legend, half citizens' faith imagination. It clearly explains 'why it is a shrine'."
+        "id": "ceremony",
+        "badge": "Royal ceremony panel",
+        "title": "The Royal Ploughing Ceremony",
+        "location": "Central ground",
+        "body": "Once a year, usually in May, the Brahmanic Royal Ploughing Ceremony is held here to open the rice-planting season, with ceremonial oxen and auguries for the coming harvest. The panels mark where the procession forms and note that parts of the ground are closed while it is set up."
       },
       {
-        "id": "wooden",
-        "badge": "Octagonal structure interpretation",
-        "title": "Architecture & urban coordinate",
-        "koTitle": "တရားလမ်းကျောင်း လမ်းညွှန်",
-        "myTitleZh": "Architecture guide",
-        "location": "Platform viewpoint",
-        "body": "The map explains 'why this is an urban nexus'. The octagonal gilded body makes Sanam Luang unique in Bangkok's skyline; seen with the colonial buildings, the square's design logic becomes clear."
+        "id": "lawn",
+        "badge": "Use of the square",
+        "title": "A lawn that belongs to the city",
+        "location": "Northern lawn",
+        "body": "On ordinary days this is a public lawn: office workers at lunch, families in the late afternoon, and kite-flyers in the hot season, when open ground and a steady breeze make it one of the few places in the old town where a kite can really be flown."
       },
       {
-        "id": "dongporu",
-        "badge": "Urban-movement marker",
-        "title": "Modern peaceful demonstration site",
-        "koTitle": "ဆန္ဒပြ နေရာ",
-        "myTitleZh": "Demonstration site guide",
-        "location": "Park side",
-        "body": "Erected by the city, it marks Sanam Luang's historical role as a rallying point for the 1988 and 2007 major historical events, echoing the 'city and faith' motif. It reminds every visitor: this junction connects the quietest faith and the loudest city memory."
+        "id": "surroundings",
+        "badge": "Nearby landmarks",
+        "title": "Old Bangkok on foot",
+        "location": "Square edges",
+        "body": "The square sits inside a walkable cluster of old-town landmarks: the Grand Palace and Wat Phra Kaew to the south, the National Museum and National Theatre to the west, the City Pillar Shrine and the Ministry of Defence nearby. The panels help you read the palace walls and the surrounding roofs as one continuous historic core."
       }
     ]
   },
   "gallery": {
     "title": "Photo Gallery",
-    "subtitle": "From the gilded spire and octagonal body to Grand Palace Park and the colonial buildings — see the visual beauty of Sanam Luang.",
+    "subtitle": "From open lawns and century-old tamarinds to the golden roofs of the Grand Palace and old-town streets — the space and light of Sanam Luang at a glance.",
     "photoAlt": "Sanam Luang (Bangkok, Thailand)",
     "photoAlts": [
-      "Panorama of Sanam Luang, gilded spire and downtown in one frame.",
-      "Quiet platform at dawn, perfect for slow body-detail shots.",
-      "Octagonal gilded spire in golden dusk light, city backdrop like a painting.",
-      "Close-up of the base platform and praying devotees, full of city feel.",
-      "Overhead shot: downtown traffic below your feet and the gilded spire together.",
-      "High vantage: square and park greenery as landscape.",
-      "Open view from the platform, city skyline stretching ahead.",
-      "Warm family stroll through the platform, ideal for slow family visits.",
-      "Blue-and-white guide signs echoing the city theme.",
-      "Platform as a leading line, framing the spire and skyline together.",
-      "Platform side, one of the best photo spots for group shots.",
-      "Bangkok City Hall in the distance, echoing the square.",
-      "Warm-toned spire at dusk, western afterglow gilding the surface."
+      "Panorama of Sanam Luang, with the oval lawn and the Grand Palace roofs to the south.",
+      "The empty lawn at dawn, ideal for slow shots of ground and sky.",
+      "Rows of century-old tamarind trees along the square's edge, the densest shade in the old town.",
+      "The golden roofs of the Grand Palace and Wat Phra Kaew, visible in full from the square.",
+      "Low-angle shot from the central walkway, framing the lawn boundary against the sky.",
+      "Mynas and spotted doves feeding on the lawn — the square's everyday urban wildlife.",
+      "The open view across the square, with old-town rooftops and the skyline beyond.",
+      "Children running on the lawn, a gentle scene for family visits.",
+      "Warm light 60 minutes before sunset on the lawn, the softest light of the day.",
+      "Residents doing morning exercise, showing the everyday life of this public space.",
+      "One of the square's most photogenic corners for group portraits, with the Grand Palace roofs behind.",
+      "Standing water after rain reflects the lawn and walkways, adding depth to a photo.",
+      "Dusk at the square, with long shadows cast across the lawn by the western light."
     ],
     "viewAll": "View location on Google Maps",
     "showMore": "Show more photos",
@@ -573,56 +536,67 @@
   "reviews": {
     "title": "Visitor Reviews",
     "declaration": "Visitor feedback is available on Google Maps (external link).",
-    "featuredTitle": "Visitor Quotes",
-    "featuredSubtitle": "A few short lines that capture the spirit of Sanam Luang.",
+    "ratingTitle": "Google Maps Rating",
+    "ratingValue": "4.6",
+    "ratingOutOf": "/ 5.0",
+    "reviewCount": "27,260",
+    "reviewCountLabel": "reviews",
+    "ratingContext": "\"State park\" category · Sanam Luang (สนามหลวง), Bangkok, Thailand",
+    "sourceLabel": "Source",
+    "sourceName": "Google Maps public listing",
+    "sourceNote": "Rating and review count are synced from the Google Maps public listing of Sanam Luang (September 2026) and are shown for reference only; they are not our own reviews.",
+    "sourceUrl": "https://maps.app.goo.gl/U8tk6HUgtabaEVnV8",
+    "featuredTitle": "The Royal Field in a few lines",
+    "featuredSubtitle": "How this square changes across a day — compiled by this guide from public sources and on-site observation, not quoted from visitors.",
     "moreReviews": "View on Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/U8tk6HUgtabaEVnV8",
     "featured": [
       {
-        "text": "Looking up from the downtown junction, the gilded spire is right above the traffic — that quiet in the bustle is special, and at dusk the light makes it feel like floating above the city.",
-        "source": "Independent traveler · Bangkok"
+        "text": "Early morning is when the square is emptiest, and the golden roofs across the lawn catch the first light. The openness of standing on the grass is the part most visitors remember — it is also the coolest and quietest stretch of the day.",
+        "source": "Editorial note · this guide"
       },
       {
-        "text": "A free and open city square, steps from Grand Palace Park — the most underrated corner of downtown Bangkok.",
-        "source": "Photography enthusiast · Mandalay"
+        "text": "Free and wide open, only steps from the Grand Palace — the most underrated corner of old Bangkok, and an easy place to sit and watch the sky at dusk.",
+        "source": "Editorial note · this guide"
       },
       {
-        "text": "Walking the platform with my child, he watched the gilded body and heard the relic story; even my parents walked easily.",
-        "source": "Family · Bangkok"
-      }
-    ],
-    "items": [
-      {
-        "name": "Aung",
-        "date": "May 2026",
-        "rating": 5,
-        "text": "Visited at dawn; the backlit gilded spire is so photogenic, and the moment on the platform was completely silent — strongly recommend sunrise, best light."
-      },
-      {
-        "name": "Mi",
-        "date": "Apr 2026",
-        "rating": 5,
-        "text": "The octagonal body is healing; about 10 min from Central Station, strong city vibe, mind the sun."
-      },
-      {
-        "name": "Ko",
-        "date": "Mar 2026",
-        "rating": 4,
-        "text": "Worth it as a city landmark; weekends are crowded — weekdays or mornings are more comfortable."
-      },
-      {
-        "name": "Su",
-        "date": "Feb 2026",
-        "rating": 5,
-        "text": "About 10 min walk from Central Station to the platform; the city and corner shrines along the way are pleasant for a half-day stroll."
+        "text": "Children can run on the big lawn for over an hour with the palace roofs right behind them, while the Ploughing Ceremony story makes a natural conversation starter. The ground is flat, so grandparents walk it easily too.",
+        "source": "Editorial note · this guide"
       }
     ]
   },
   "mapSection": {
-    "title": "How to Get There",
-    "subtitle": "Sanam Luang Road × Grand Palace Road, Bangkok 11141, Thailand (Plus Code: Q5F5+WG) · Tel +95 1 371 561",
+    "title": "Location & How to Visit Sanam Luang in Bangkok",
+    "subtitle": "QF4V+88R, Ratchadamnoen Klang Rd, Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok 10200, Thailand · Free public open space",
     "openMaps": "Open in Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/U8tk6HUgtabaEVnV8"
+    "mapsUrl": "https://maps.app.goo.gl/U8tk6HUgtabaEVnV8",
+    "embedSrc": "https://www.google.com/maps?q=Sanam%20Luang%20Bangkok&output=embed",
+    "authorityNote": "For official updates and regional tourism information, visit",
+    "authorityLinkLabel": "Thailand / Bangkok Official Tourism Portal",
+    "authorityUrl": "https://www.tourismthailand.org/"
+  },
+  "sources": {
+    "title": "Sources & References",
+    "subtitle": "This independent guide compiles publicly available official and reference materials. Rating, location, and visitor information are cited below so you can verify them yourself.",
+    "ratingTitle": "Rating & Reviews",
+    "ratingText": "The 4.6 rating and 27,260 reviews shown on this site are taken from the public Google Maps listing of Sanam Luang (\"State park\" category, Bangkok, Thailand).",
+    "ratingSourceLabel": "Source",
+    "ratingSourceName": "Google Maps public listing",
+    "ratingSyncedLabel": "Last synced",
+    "ratingSyncedValue": "September 2026",
+    "authorityTitle": "Official & Reference Portals",
+    "authorityText": "For official updates and regional tourism information, visit the following authoritative portals:",
+    "imageTitle": "Image Copyright",
+    "imageText": "All images displayed on this website remain the property and copyright of their original photographers. Images are used for non-commercial visitor-information purposes only; if you are a rights holder and would like an image credited or removed, please contact us.",
+    "dataTitle": "Data Notes",
+    "dataPoints": [
+      "Location, plus code, and postal code follow the Google Maps public listing of Sanam Luang.",
+      "Coordinates (13.7543884, 100.4907973) are the map pin of the square's centre.",
+      "Opening hours, ticket rules, and ceremony schedules may change without notice — always confirm on site or via official channels.",
+      "Visitor quotes are summarised from publicly visible visitor feedback and are not paid endorsements."
+    ],
+    "lastUpdatedLabel": "Last updated",
+    "lastUpdatedValue": "September 2026"
   },
   "footer": {
     "siteName": "Sanam Luang (Bangkok, Thailand)",
@@ -661,8 +635,10 @@
       }
     ],
     "disclaimer": "This website is an independent non-profit visitor-information project. We are not affiliated with any government agency or official organization.",
-    "dataSource": "Information cited on this site is cross-checked against public materials from the Ministry of Hotels and Tourism and the Bangkok Region Government, with no commercial endorsements.",
-    "dataSourceLabel": "Data Source"
+    "dataSource": "Information cited on this site is cross-checked against public materials from the Tourism Authority of Thailand and the Bangkok Metropolitan Administration, with no commercial endorsements.",
+    "dataSourceLabel": "Data Source",
+    "imageRightsTitle": "Image Copyright",
+    "imageRights": "All images displayed on this website remain the property and copyright of their original photographers."
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -736,22 +712,22 @@
         {
           "icon": "🎟️",
           "label": "Tickets",
-          "value": "Foreign visitor ticket"
+          "value": "The square is free"
         },
         {
           "icon": "🚻",
           "label": "Restrooms",
-          "value": "Platform entrance & nearby shops"
+          "value": "Shops & museums nearby"
         },
         {
           "icon": "🏧",
           "label": "Exchange / ATM",
-          "value": "Dense in downtown"
+          "value": "Dense in nearby streets"
         },
         {
           "icon": "♿",
           "label": "Accessibility",
-          "value": "Reachable via flat platform"
+          "value": "Level, very gently sloped"
         }
       ]
     },
@@ -761,20 +737,20 @@
         "title": "Transport & Infrastructure",
         "items": [
           {
-            "q": "Is there parking near Sanam Luang?",
-            "a": "The square has no dedicated large lot; park at a nearby mall or hotel then walk about 5–15 minutes."
+            "q": "What is the easiest way to reach Sanam Luang?",
+            "a": "Take the MRT Blue Line to Sanam Chai station — it puts you in the centre of the old town, about 10–15 minutes' walk from the square. Alternatively take a Chao Phraya express boat to Tha Chang (N9) or Tha Phra Chan pier and walk in. Old-town traffic is heavy, so driving is not recommended."
           },
           {
-            "q": "Are wheelchairs or strollers allowed?",
-            "a": "Sanam Luang has a flat platform; wheelchairs and strollers can reach most areas via the main path. But the downtown junction is busy — stay on the platform with company."
+            "q": "Is there parking near the square?",
+            "a": "There is no dedicated car park, and old-town streets are narrow. Use paid parking at nearby shopping centres or office buildings and walk in. On holidays and ceremony days spaces are extremely tight."
           },
           {
-            "q": "Are there restrooms or food inside?",
-            "a": "As an open religious site, restrooms and snacks concentrate at the entrance shops and nearby; resupply water and food there before entering the platform."
+            "q": "Are there toilets or drinking water on the square?",
+            "a": "The square itself has no public toilets or drinking fountains. The nearest are in convenience stores, malls and museums around the perimeter. Sort out supplies before you enter."
           },
           {
-            "q": "Is there exchange or an ATM nearby?",
-            "a": "The square is in the downtown commercial core; banks, exchange counters, and ATMs are dense — visitors can get cash on the way in."
+            "q": "Is it accessible with a wheelchair or pram?",
+            "a": "Walkways around the square are even and almost flat, and main entrances and surrounding pavements have kerb ramps, so wheelchairs and prams are broadly workable. There is no fixed seating or shade inside, however, and some pavements are uneven — allow extra time."
           }
         ]
       },
@@ -783,30 +759,30 @@
         "title": "History & Science",
         "items": [
           {
-            "q": "What does the name 'Sanam Luang' mean?",
-            "a": "'Sanam Luang' derives from the guardian spirit (Nat) in Burmese folk belief. Named after the spirit, the square has stood at the city's center since its founding — Bangkok's spiritual coordinate."
+            "q": "What is Sanam Luang?",
+            "a": "Sanam Luang (สนามหลวง) is a large oval public green space in Bangkok's old town, immediately north of the Grand Palace. It has been the core site of royal ceremony since the founding of Bangkok in 1782 and today serves national ceremonies, public events and everyday recreation."
           },
           {
-            "q": "What is its special natural and cultural value?",
-            "a": "Sanam Luang is not a man-made theme park but turns a city junction into a public space uniting Buddhist faith, an octagonal gilded body, a hair relic, and city memory. It is both a religious site and a witness to modern Burmese history."
+            "q": "Where does the name 'Sanam Luang' come from?",
+            "a": "Sanam Luang translates literally as 'royal field': sanam means an open ground, luang means royal. Its earlier name was Thung Phra Men, the 'cremation field', because the ground was long used for royal cremations; it was renamed around 1855."
           }
         ]
       },
       {
         "id": "plan",
-        "title": "Planning & Tickets",
+        "title": "Planning & Opening Information",
         "items": [
           {
-            "q": "Is a ticket required?",
-            "a": "Local devotees enter free; foreign visitors buy a ticket at the entrance (a few USD), platform prayer is free — visit anytime (please respect the religious site and avoid late-night noise)."
+            "q": "Do I need a ticket for Sanam Luang?",
+            "a": "No. As a public green space the square is open all day, free, and you can walk onto the lawns and paths freely. Note that the Grand Palace and Wat Phra Kaew next door are separate ticketed sites with their own hours and dress code."
           },
           {
-            "q": "How long does a visit take?",
-            "a": "A relaxed walk takes about 1–2 hours (including platform and photo stops); allow half a day if you also visit Grand Palace Park, Bangkok City Hall, and Bogyoke Market."
+            "q": "How long should I spend there?",
+            "a": "A single circuit with photos takes about 1–1.5 hours. If you also take in the Grand Palace exterior, the National Museum or the City Pillar Shrine, allow half a day."
           },
           {
-            "q": "Can I go in bad weather?",
-            "a": "Yes — the platform is open space, visitable in any weather. But the platform is hot in the sun and slippery in rain; take sun and slip precautions, wear comfortable shoes, and watch the weather."
+            "q": "When is the best time to visit?",
+            "a": "7–9 am and the 60 minutes before sunset are the two best windows: mornings are cool, quiet and cleanly lit, while the late light is warmer and brings out the Grand Palace roofs and lawns. Avoid the harsh 11 am – 3 pm sun."
           }
         ]
       },
@@ -815,76 +791,61 @@
         "title": "Nearby Connections",
         "items": [
           {
-            "q": "What else is worth visiting nearby?",
-            "a": "From Sanam Luang you can link Grand Palace Park, Bangkok City Hall, the Independence Monument, and Bogyoke Aung San Market, even extending to Wat Phra Kaew square 3 km away, into a half-day 'square—park—city' cultural route."
+            "q": "What else can I visit nearby?",
+            "a": "The Grand Palace and Wat Phra Kaew are within walking distance to the south; the Bangkok National Museum, City Pillar Shrine and the way to Wat Pho lie west; Thammasat University and market streets to the north; Democracy Monument and the Tha Maharaj riverside quarter are north-east along Ratchadamnoen Avenue."
+          }
+        ]
+      },
+      {
+        "id": "entity",
+        "title": "Sanam Luang: Location & Essentials",
+        "items": [
+          {
+            "q": "Where is Sanam Luang?",
+            "a": "It is on Rattanakosin Island in Phra Nakhon district, Bangkok, at QF4V+88R, Ratchadamnoen Klang Rd, Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok 10200 — immediately north of the Grand Palace, at 13.7544°N, 100.4908°E."
+          },
+          {
+            "q": "What are the English and Thai names?",
+            "a": "English: Sanam Luang. Thai: สนามหลวง. Its former name was Thung Phra Men (ทุ่งพระเมรุ). In Chinese it is usually rendered 皇家田广场."
+          },
+          {
+            "q": "What are the opening hours?",
+            "a": "As public green space the square is open all day with no admission fee. The adjacent Grand Palace and Wat Phra Kaew are separate ticketed sites, generally open during daytime hours and subject to temporary changes for royal ceremonies — check on-site notices."
+          },
+          {
+            "q": "How is Sanam Luang rated?",
+            "a": "On its public Google Maps page, Sanam Luang holds a rating of about 4.6 out of 5 across more than 27,000 reviews, and is categorised as a State park. These figures are synced from the public page for reference only."
           }
         ]
       }
     ]
   },
-  "recommendations": {
-    "title": "Explore More of Bangkok",
-    "attractionsTitle": "Official & Reference Resources",
-    "toursTitle": "Recommended Experiences",
-    "attractions": [
-      {
-        "name": "Royal Office — Sanam Luang Official Guide",
-        "url": "https://www.royaloffice.th/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%B1%E0%B8%87%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%99%E0%B8%B4%E0%B9%80%E0%B8%A7/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A3%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%E0%B8%8A%E0%B8%A1/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A0%E0%B8%B9%E0%B8%9E%E0%B8%B4%E0%B8%87%E0%B8%84%E0%B9%8C/"
-      },
-      {
-        "name": "Suthep Subdistrict Municipality Tourism Portal (Bangkok)",
-        "url": "https://suthep.go.th/web-oldversion/travel_view.php?cateid=1&id=42"
-      },
-      {
-        "name": "DASTA — Sanam Luang Attraction Page",
-        "url": "https://cbtthailand.dasta.or.th/webapp/relattraction/content/151/"
-      },
-      {
-        "name": "Royal Office — Sanam Luang Reopening Announcement (Jan 2025)",
-        "url": "https://www.royaloffice.th/10/01/2025/%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%8A%E0%B8%A1%E0%B8%A0%E0%B8%B9%E0%B8%9E%E0%B8%B4%E0%B8%87%E0%B8%84%E0%B9%8C-2568/"
-      },
-      {
-        "name": "Fine Arts Department — Bangkok National Archives (Historical Record)",
-        "url": "https://www.finearts.go.th/chiangmaiarchives/view/21727-%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%9E%E0%B8%97%E0%B8%A2%E0%B9%8C%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%AA%E0%B8%B8%E0%B8%82"
-      }
-    ],
-    "tours": [
-      {
-        "name": "Royal Office — Sanam Luang Official Guide",
-        "url": "https://www.royaloffice.th/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%B1%E0%B8%87%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%99%E0%B8%B4%E0%B9%80%E0%B8%A7/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A3%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%E0%B8%8A%E0%B8%A1/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A0%E0%B8%B9%E0%B8%9E%E0%B8%B4%E0%B8%87%E0%B8%84%E0%B9%8C/"
-      },
-      {
-        "name": "DASTA — Sanam Luang Attraction Page",
-        "url": "https://cbtthailand.dasta.or.th/webapp/relattraction/content/151/"
-      }
-    ]
-  },
   "scienceArt": {
-    "title": "square & City: Stupa, Faith & Bangkok",
-    "subtitle": "Look past the surface 'pretty' to find what's truly rare about this square: it is at once a city religious site, a Buddhist faith, and an open-air urban classroom.",
+    "title": "The Square & the City: How Sanam Luang Frames Old Bangkok",
+    "subtitle": "Look past the postcard view and two things stand out: a public lawn that has stayed empty for two centuries, and the palace-and-park skyline that the emptiness was kept to protect.",
     "scienceMuseum": {
-      "name": "Sanam Luang & Buddhist faith",
-      "role": "The faith story hidden in the body",
-      "highlight": "Sanam Luang's hardest core is both visible and invisible. Visible are the octagonal gilded body and the city skyline; invisible is the hair relic of the Buddha and citizens' prayers. Visitors see the landscape; the faithful see the Buddha placed at this city center as a local text.",
+      "name": "Sanam Luang, the royal field",
+      "role": "Why the ground was left open",
+      "highlight": "What is unusual about Sanam Luang is not what stands on it but what does not. The ground north of the Grand Palace has been kept clear since the capital was founded in 1782, used for royal cremations, ceremonies and the ploughing rite rather than for building. Standing on the lawn, the emptiness reads as a deliberate civic decision: the square works as a foreground that makes the palace walls and the golden roofs behind them legible.",
       "points": [
-        "Core: Buddhist faith, urban coordinate, and octagonal body light up this heart of Bangkok.",
-        "Key: a religious site turned into a low-impact, high-empathy urban classroom.",
-        "Meaning: it upgrades the 'urban green' into a faith template the public can pilgrimage to."
+        "Core: a royal field kept unbuilt since 1782, now the city's shared front lawn.",
+        "Function: ceremonial ground for state and royal rites, and a public park the rest of the year.",
+        "Detail: the low skyline is the point — nothing is allowed to block the view of the palace roofs."
       ],
-      "ctaLabel": "Visit Tourism Thailand ↗",
-      "ctaUrl": "https://www.tourism.gov.mm"
+      "ctaLabel": "Tourism Authority of Thailand ↗",
+      "ctaUrl": "https://www.tourismthailand.org"
     },
     "artMuseum": {
-      "name": "Urban symbols in the body",
-      "role": "Sanam Luang's cultural symbol",
-      "highlight": "The octagonal gilded body, Grand Palace Park, and colonial buildings, together with Bangkok, form Sanam Luang's identity system: reading instantly as Bangkok, as Thailand, and as a gentle, transparent urban aesthetic. From the downtown view to the dawn bell, this contrast makes it one of Bangkok's most memorable images.",
+      "name": "The old-town skyline",
+      "role": "Reading the view from the lawn",
+      "highlight": "From the middle of the square the view is a compressed history of Bangkok: the white palace walls and gilded roofs of Wat Phra Kaew to the south, the Ministry of Defence and the National Museum on the edges, and the towers of the modern city rising behind them. It is one of the few places in Bangkok where three centuries of architecture sit in a single frame.",
       "points": [
-        "Imagery: square, park, and city form a strong identity.",
-        "Status: one of Bangkok's most photogenic urban landmarks.",
-        "Narrative: it translates the religious theme into a publicly felt aesthetic."
+        "Best light: early morning from the north-west, when the palace roofs catch the first sun.",
+        "Read it in layers: palace walls, then colonial-era civic buildings, then the modern skyline.",
+        "Photography: the lawn is the viewpoint; the palace is the subject."
       ],
-      "ctaLabel": "Visit Bangkok Region Government ↗",
-      "ctaUrl": "https://www.yangonregion.gov.mm"
+      "ctaLabel": "Bangkok Metropolitan Administration ↗",
+      "ctaUrl": "https://www.bangkok.go.th"
     }
   },
   "outdoorMuseum": {
@@ -894,294 +855,271 @@
       {
         "id": "sunrise",
         "icon": "🌅",
-        "name": "Grand Palace Park · view of square",
-        "location": "Park viewpoint",
-        "background": "From dawn to dusk, the city greenery and gilded spire below are the classic 'park—square' composition; the body silhouettes beautifully backlit.",
-        "historicalLight": "Historical light & shadow: This green space was once a Victorian-era square. The soft morning light penetrates the tropical morning mist and strikes the historic landmark. This is not only the effect of natural light, but also because the square body has been continuously gilded by devotees for hundreds of years, forming an irregular diffuse reflection on the surface, making the square seem to have its own halo against the greenery.",
+        "name": "The lawn · towards the Grand Palace roofs",
+        "location": "South / west lawn",
+        "background": "From dawn to dusk the open lawn gives a clean foreground, with the golden roofs of the Grand Palace and Wat Phra Kaew beyond — Sanam Luang's classic 'lawn and golden roofs' composition, with the roof line sharpest against the light.",
+        "historicalLight": "Historical light: this lawn has been reserved for royal ceremony since Bangkok was founded in 1782. Early light rakes across it and turns the palace roofs into a row of golden silhouettes — gold that comes from centuries of regilding and repair, and looks most saturated against the light.",
         "points": [
-          "Use a 16-35mm wide lens, using the park path as a leading line.",
-          "Use the path to lead the eye to the spire.",
-          "Crouch low to layer body and sky for a steadier frame."
+          "Use a 16-35mm wide lens and let the walkway act as a leading line.",
+          "Use the walkway to draw the eye towards the palace roofs.",
+          "Crouch low so the lawn and sky layer up and the frame steadies."
         ],
         "badge": {
-          "value": "Dawn",
-          "label": "Best shot"
+          "value": "Morning",
+          "label": "Best light"
         }
       },
       {
         "id": "bridge",
         "icon": "🌉",
         "name": "Street corner · urban overlook",
-        "location": "Street corner",
-        "background": "From the street side, frame 'traffic + gilded spire + colonial buildings' together — Sanam Luang's most recognizable spot.",
-        "historicalLight": "Historical light & shadow: King Rama IV's 19th-century expansion made all roads converge here. In the evening, the glass of the old colonial buildings on the west side reflects warm light, intertwining with the traffic flow and headlights at the intersection, forming a strong collision of light and shadow between 'modern speed' and 'ancient faith'.",
+        "location": "Street corners around the square",
+        "background": "Shooting from the street side around the square packs traffic, the golden palace roofs and old-town buildings into one frame — one of Sanam Luang's most recognisable vantage points.",
+        "historicalLight": "Historical light: the old-town street grid took shape during the city's modernisation in the late 19th century, with several avenues meeting here. At dusk, warm light refracts off the glass of the older western buildings and mixes with passing headlights, setting 'modern speed' against 'historical order'.",
         "points": [
-          "Use a 70-200mm telephoto to pull the tension between body and buildings from afar.",
-          "Side light on the body at dawn is softest.",
-          "Watch your step and crowds; don't enter the roadway for composition."
+          "Bring a 70-200mm zoom to compress the street scene against the roofs.",
+          "Side light in the morning gives the roofs the softest texture.",
+          "Watch your footing and the crowds — never step into the roadway for a shot."
         ],
         "badge": {
           "value": "All day",
-          "label": "Most accessible"
+          "label": "Easiest"
         }
       },
       {
         "id": "sea",
-        "icon": "🪷",
-        "name": "Platform & praying crowd",
-        "location": "Base platform",
-        "background": "The devotees circumambulating and the gilded body's colors are the square's most atmospheric window; paired with morning light, the body sparks the imagination.",
-        "historicalLight": "Historical light & shadow: The platform floor tiles have been polished by countless barefoot devotees over a long period of time. When the blue hour comes, the warm light of the square base and the cool tone of the sky form a wonderful reflection on the ground, and every light spot hides the traces of time.",
+        "icon": "🌳",
+        "name": "Tamarind line · shade and people",
+        "location": "Tree belt at the square's edge",
+        "background": "The rows of century-old tamarinds along the edge are the oldest town's densest urban shade. Residents exercising beneath them, birds in the canopy and the open lawn together make up the local view of the square.",
+        "historicalLight": "Historical light: these tamarinds were planted during the late 19th-century improvements and are still standing. The canopy filters harsh afternoon sun into dappled patches on the grass — one of the few comfortable places to linger during the day.",
         "points": [
-          "Shoot in blue hour; sky and body colors balance best.",
-          "Leave large warm sky with the body silhouettes."
+          "Use leaves as a natural frame for the palace roofs beyond.",
+          "Against the light, make the tree shadows the subject to show dapple and texture."
         ],
         "badge": {
-          "value": "Dawn/Dusk",
-          "label": "Most atmospheric"
+          "value": "Morning",
+          "label": "Most comfortable"
         }
       },
       {
         "id": "night",
         "icon": "🌃",
-        "name": "Night lights",
-        "location": "square toward the junction",
-        "background": "After dark, the body lights up, the gilded surface reflects a river of lights — ideal for closing long-exposure night shots and urban portraits.",
-        "historicalLight": "Historical light & shadow: With the development of Bangkok's urban electrification, Sanam Luang's night lighting system has also undergone several changes. Today's floodlighting not only illuminates the square body but also makes This sweeping green expanse look like a glowing lighthouse among the dark-toned colonial buildings around it, declaring the absolute core position of faith in urban changes.",
+        "name": "Night scene and lights",
+        "location": "North / north-east of the square",
+        "background": "After sunset the square lights up and floodlights pick out the Grand Palace roofs, contrasting warm against the cool street lamps and traffic — a dependable vantage for city night photography.",
+        "historicalLight": "Historical light: by night the square shifts from ceremonial ground to a place for evening walks. During blue hour (20–40 minutes after sunset) the sky still holds blue while the palace floodlights are warm — the best balance for night shots.",
         "points": [
-          "Use lights as a leading line toward the distance.",
-          "Raise ISO or use stabilization for night frames."
+          "Use a tripod and a 10–30 second exposure for traffic and light trails.",
+          "Blue hour renders roof detail better than full darkness."
         ],
         "badge": {
           "value": "Night",
-          "label": "Best layers"
+          "label": "Quietest"
         }
       }
     ]
   },
   "education": {
-    "title": "Why is this Bangkok's Urban Landmark?",
-    "subtitle": "Sanam Luang is more than just a green space; it is the spatial hub of Bangkok's politics, religion, and history.",
+    "title": "Why Is This Bangkok's Civic Landmark?",
+    "subtitle": "Sanam Luang is more than a green space: it is the spatial hinge of Bangkok's monarchy, civic life and history.",
     "points": [
       {
-        "title": "A city square still used by citizens",
-        "text": "Sanam Luang isn't a 'hide the square and done' case, but a model that activates city memory through religious-space design and turns it into shared place.",
+        "title": "A square the city still uses every day",
+        "text": "Sanam Luang was not set aside as a monument to be looked at. It was kept open so that it could keep being used, and that is how it works today: ceremony on some days, a public lawn on the rest.",
         "items": [
-          "Devotees give daily prayer and travelers give quiet retreat to this platform and bell.",
-          "Religious space and the city coexist long-term."
+          "Royal ceremony and everyday recreation share the same ground.",
+          "Ground kept unbuilt for over two centuries is itself the landmark."
         ]
       },
       {
-        "title": "Writing faith ethics into visitor behavior",
-        "text": "Signs, platform, and guide systems aren't just navigation but let every visitor, while using the space, casually respect the religious site and others.",
+        "title": "Reading the palace walls from the lawn",
+        "text": "The square's real function is optical as well as ceremonial: it is the open foreground that lets the Grand Palace, Wat Phra Kaew and the surrounding civic buildings be seen as one continuous historic core.",
         "items": [
-          "Visitors are guided to stay on low-impact paths.",
-          "Viewing experience and retreat life don't sacrifice each other."
+          "The low skyline is protected, so the palace roofs stay visible.",
+          "Walking the perimeter is the simplest way to read the old town."
         ]
       },
       {
-        "title": "Translating faith memory into public aesthetics",
-        "text": "Sanam Luang didn't erase the faith background but, through the body and signage, lets the public sense what this land has been through while visiting.",
+        "title": "Keeping royal history in public view",
+        "text": "Sanam Luang did not erase its royal and ceremonial background; it keeps that history in front of the public, so visitors sense what the ground has been used for while they are standing on it.",
         "items": [
-          "Story depth and viewing experience complete in one place.",
-          "Exactly the value a non-profit science site should amplify."
+          "History and everyday use happen in the same place.",
+          "A rare case of a ceremonial ground that is also an ordinary city park."
         ]
       }
     ]
   },
   "plantGuide": {
-    "title": "Sanam Luang's Four-Season City",
-    "subtitle": "Look past the 'pretty tower' to find what's truly rare about Sanam Luang: it turns a city junction into an open-air urban classroom that changes with the seasons.",
+    "title": "Sanam Luang Through the Year",
+    "subtitle": "One public square that changes with the seasons: when the light is best, when the ground is coolest, and when the ceremony comes.",
     "comparison": [
       {
         "icon": "🌸",
-        "badge": "Cool-season colors",
-        "name": "Cool season & urban new green",
-        "summary": "The cool season (Nov–Feb) is Bangkok's most comfortable. Pleasant temperatures and clear air, paired with park new green, form the city's brightest square-platform palette.",
+        "badge": "Cool season",
+        "name": "Cool season & clear air",
+        "summary": "The cool season (Nov–Feb) is the most comfortable time to walk the square: moderate temperatures and clearer air, with the palace roofs at their sharpest against the sky.",
         "points": [
-          "About Nov–Feb, 20–30°C, most comfortable.",
-          "Morning and dusk light is soft, best for photos.",
-          "With the gilded body, most cool-season energy."
+          "About Nov–Feb, roughly 20–30°C, the most comfortable window of the year.",
+          "Morning and dusk light is soft, best for photographs.",
+          "Clearest air of the year, so the palace roofs read sharpest."
         ]
       },
       {
         "icon": "🍂",
-        "badge": "Hot-season colors",
-        "name": "Hot season & clear sky",
-        "summary": "The hot season (Mar–May) has high sky and clear city, but hot midday; the gilded body at dawn and dusk is especially clear.",
+        "badge": "Hot season",
+        "name": "Hot season & kite weather",
+        "summary": "The hot season (Mar–May) is bright and clear but punishing at midday; dawn and dusk are the only comfortable windows, and this is also kite-flying season on the square.",
         "points": [
-          "About Mar–May, dawn and dusk best for visits.",
-          "City skyline is transparent, high photo rate.",
-          "Mind sun protection and water."
+          "About Mar–May; dawn and dusk are the best times to visit.",
+          "Clear, transparent light with a high hit rate for photos.",
+          "Take sun protection and water — the middle of the square has no shade."
         ]
       }
     ],
-    "seasonTitle": "Seasonal Highlights",
-    "seasonSubtitle": "One square, two tempers. Below, the scenes most worth expecting each season.",
+    "seasonTitle": "Seasonal highlights",
+    "seasonSubtitle": "One square, two tempers. Below are the scenes most worth expecting in each season.",
     "seasons": [
       {
         "icon": "🌱",
         "badge": "COOL",
-        "name": "Cool · new green & breeze",
-        "summary": "The cool season before the warm-up is the city's most comfortable, best for slow visits and dawn shots.",
+        "name": "Cool · clear air & breeze",
+        "summary": "Before the heat builds, the square is at its most comfortable, which makes this the best season for slow visits and dawn photographs.",
         "highlights": [
-          "Park new green lines the path.",
-          "Morning and dusk light softest.",
-          "Crowd relaxed, good for quiet."
+          "Softest light at dawn and dusk.",
+          "The clearest views of the palace roofs all year.",
+          "Relaxed crowds, good for quiet walking."
         ]
       },
       {
         "icon": "🌿",
         "badge": "HOT",
-        "name": "Hot · clear sky & golden body",
-        "summary": "High sky and clear city, but hot midday; the gilded body at dawn and dusk is most photogenic.",
+        "name": "Hot · kite season on the lawn",
+        "summary": "Bright, transparent light and a high, clear sky, but hot at midday; dawn and dusk are the comfortable windows, and kites fill the square.",
         "highlights": [
-          "Body outline clearest backlit.",
-          "Dawn and dusk best for visits.",
-          "Mind sun protection and water."
+          "Kite-flying season, when the lawn itself becomes the attraction.",
+          "Dawn and dusk are the best times to visit.",
+          "Take sun protection and water."
         ]
       },
       {
         "icon": "🍁",
         "badge": "RAINY",
-        "name": "Rainy · showers & freshness",
-        "summary": "The rainy season (Jun–Oct) has brief showers; after rain the city is fresh and the body brighter — a different window to view the square.",
+        "name": "Rainy · showers & fresh light",
+        "summary": "The rainy season (Jun–Oct) brings brief, heavy showers; after the rain the air clears and the light on the palace roofs turns dramatic — a different, often emptier window on the square.",
         "highlights": [
-          "After rain the gilded surface reflects strongest.",
-          "Avoid midday sun and standing water.",
-          "Platform slippery, mind your feet."
+          "The most dramatic light comes in the hour after a shower.",
+          "Smaller crowds than in the cool season.",
+          "The lawn can be waterlogged; stay on the paths."
         ]
       },
       {
         "icon": "❄️",
         "badge": "YEAR-ROUND",
-        "name": "Year-round · heart of the city",
-        "summary": "Sanam Luang is open all year, the starting point for understanding Bangkok's urban fabric; dawn and dusk are always the best windows.",
+        "name": "Year-round · the open heart of the city",
+        "summary": "Sanam Luang is open all year and is the natural starting point for old Bangkok; dawn and dusk are always the best windows.",
         "highlights": [
-          "Dawn city waking, platform quietest.",
-          "Dusk gilded warmest, best for slow shots.",
-          "Mind sun protection and street safety."
+          "Dawn, as the city wakes and the square is quietest.",
+          "Dusk, when the light turns the palace roofs warm.",
+          "Take sun protection and mind the traffic on the surrounding roads."
         ]
       },
       {
         "icon": "🌾",
         "badge": "SPECIAL",
         "name": "May · Royal Ploughing Ceremony",
-        "summary": "Every May, Sanam Luang hosts the ancient Brahmanic Royal Ploughing Ceremony. Royal oxen are used to predict the year's harvest, highlighting the nation's deep agricultural roots.",
+        "summary": "Every May, Sanam Luang hosts the ancient Brahmanic Royal Ploughing Ceremony. Ceremonial oxen are used to read the coming harvest, underlining the country's agricultural roots.",
         "highlights": [
-          "Witness Thailand's rich agricultural and royal heritage.",
-          "Elaborate traditional costumes and rituals.",
-          "Note: Parts of the square may be restricted during the ceremony."
+          "See Thailand's agricultural and royal heritage in a single morning.",
+          "Elaborate traditional costume and ritual.",
+          "Note: parts of the square may be closed while the ceremony is staged."
         ]
       }
     ]
   },
   "audience": {
-    "title": "Who Should Come? Upgrade Segment Guides to Custom Itineraries",
-    "subtitle": "Not just 'you'll like it,' but directly telling you how to walk, where to go first, and which Bangkok nodes to link.",
-    "resonanceLabel": "Resonance: ",
-    "routeLabel": "Recommended module: ",
+    "title": "Who Sanam Luang Is For",
+    "subtitle": "Not \"you'll like it\", but how to walk it: where to start, what to pair it with, and when to come.",
+    "resonanceLabel": "Why it fits: ",
+    "routeLabel": "Suggested pairing: ",
     "tipLabel": "Tip: ",
     "items": [
       {
         "icon": "👨‍👩‍👧",
         "group": "Families",
-        "resonance": "Free, open, flat platform — kids can watch the gilded body, hear the relic story, and easily reach the park along the flat side.",
-        "tip": "Spend energy on photo stops, not on crowding; mind midday sun."
+        "resonance": "A flat, open, free lawn with room to run and the palace roofs as a backdrop — easy to combine with kite season in the hot months.",
+        "tip": "Come in the late afternoon, when the light softens and the ground has cooled; there is no shade in the middle of the square."
       },
       {
         "icon": "📷",
         "group": "Photographers & Couples",
-        "resonance": "Dawn city waking and backlit spire are Bangkok's most romantic frames, with very high hit rate.",
-        "tip": "Count arrival, return, and light into the plan so composition isn't beaten by on-site pace."
+        "resonance": "The lawn is the foreground and the palace the subject, so first light on the golden roofs across the open square is the frame most people come for.",
+        "tip": "Arrive about 30–45 minutes before sunrise for the empty-lawn shot; by mid-morning the tour groups have reached the palace."
       },
       {
         "icon": "🌿",
-        "group": "Faith & Culture Lovers",
-        "resonance": "As a faith-and-history sample, the hair relic, octagonal body, and modern urban movements are worth a close look.",
-        "tip": "Avoid the most crowded weekends; choose dawn or a weekday afternoon to really observe details."
+        "group": "History & Culture Lovers",
+        "resonance": "One lawn ties together the palace, the National Museum, the City Pillar Shrine and the ploughing rite, so old Bangkok reads as a single system from here.",
+        "tip": "Walk the square once without a plan, then pick two of the surrounding sites; attempting all of them in one morning is exhausting in the heat."
       },
       {
         "icon": "🗺️",
-        "group": "First-time Visitors to Thailand",
-        "resonance": "Without going far, experience Burmese Buddhist faith and colonial urban heritage in downtown; link taxi, walking, and street food — an ideal start to the 'city and faith' theme.",
-        "tip": "If you can pick only one downtown Bangkok spot, Sanam Luang opens the 'square and city' theme best."
+        "group": "First-time Visitors to Bangkok",
+        "resonance": "The easiest place in the old town to get your bearings: everything historic is within about a 20-minute walk, and the square itself costs nothing.",
+        "tip": "Use the lawn as a base between the Grand Palace and the riverside rather than crossing the old town twice."
       }
     ]
   },
   "lodging": {
-    "title": "Lodging Guide: Stay Close, or Stay Convenient",
-    "subtitle": "Bangkok is a city where 'river, lake, and colonial town' coexist. We don't recommend specific hotels but help you parse two lodging patterns to choose what fits.",
-    "scenarioTitle": "Two choices, how to choose",
+    "title": "Where to Stay Around Sanam Luang",
+    "subtitle": "Bangkok's old town has two practical bases for this square. We do not recommend specific hotels, but here is how the patterns differ.",
+    "scenarioTitle": "Two bases, how to choose",
     "options": [
       {
-        "icon": "🛕",
-        "name": "Downtown (next to square)",
-        "role": "Closest to square & city",
-        "highlight": "Staying downtown puts you a short distance from Sanam Luang, the gilded spire at dawn ideal for travelers focused on 'city stroll + square' with high convenience needs.",
-        "commute": "Commute: to the platform about 5–15 min walk. Walking easy, good for dawn downtown.",
+        "icon": "🏛️",
+        "name": "Old town, beside the square",
+        "role": "Closest to the square",
+        "highlight": "Staying in the old town puts Sanam Luang and the Grand Palace within a short walk, which matters most if you want the square at first light before the coaches arrive.",
+        "commute": "To the square: about 5–15 minutes on foot, on flat walkable streets. The easiest option for a dawn visit.",
         "points": [
-          "To square 5–15 min walk, most convenient.",
-          "City, snacks, and shrines extremely rich.",
-          "More choices, usually better value."
+          "5–15 minutes on foot to the square — the closest you can stay.",
+          "Palace, museums and the City Pillar Shrine all within walking distance.",
+          "Quieter in the evening; fewer late-night food options."
         ]
       },
       {
         "icon": "☕",
-        "name": "Bogyoke / City Hall area",
-        "role": "Best for food & hub",
-        "highlight": "Staying in the Bogyoke / City Hall area puts markets, restaurants, and cafe streets at your door — ideal for 'downtown + transfer' travelers who head to Sanam Luang by day.",
-        "commute": "Commute: walk about 5–15 minutes. Good for self-drivers or independent travelers wanting absolute convenience.",
+        "name": "Khao San / riverside old town",
+        "role": "Best for food and transport links",
+        "highlight": "A short walk north-west of the square, this area keeps markets, cafes and street food on your doorstep, which suits travellers who want to eat late and still walk to the square in the morning.",
+        "commute": "To the square: roughly 15–25 minutes on foot, or a short taxi ride. Good for onward transfers.",
         "points": [
-          "Markets and cafes at hand, good for transfers.",
-          "Food, cafes, night markets extremely rich.",
-          "To Sanam Luang by walk or short ride about 5–15 minutes."
+          "Street food, cafes and markets within a few minutes' walk.",
+          "Boat piers and bus links to the rest of the city.",
+          "Busier and noisier at night than the palace side."
         ]
       },
       {
-        "icon": "🌉",
-        "name": "Bangkok River / port area",
-        "role": "Best for Wat Phra Kaew link",
-        "highlight": "One of Bangkok's commercial and passenger hubs. If your trip is not limited to Sanam Luang and you plan to visit Wat Phra Kaew square, staying here as a transfer is most efficient.",
-        "commute": "Commute: about 15–25 minutes to Sanam Luang. Good for transfers.",
+        "icon": "🛶",
+        "name": "Chao Phraya riverside",
+        "role": "Best if you are combining the river",
+        "highlight": "If Sanam Luang is one stop on a longer itinerary, staying near the Chao Phraya makes sense: express boats reach Tha Chang and Tha Phra Chan piers, both a short walk from the square.",
+        "commute": "To the square: about 15–25 minutes by taxi, or a boat to Tha Chang or Tha Phra Chan and a short walk.",
         "points": [
-          "Transport hub at hand, good for transfers.",
-          "River and colonial heritage experience.",
-          "To Sanam Luang by taxi about 15–25 minutes."
+          "Express boat piers for the palace and the square.",
+          "Riverside views and easy connections north and south.",
+          "Slightly longer to reach the square on foot."
         ]
       }
     ],
     "peakTitle": "Peak-season warning",
-    "peak": "Bangkok's cool season (Nov–Feb) and holidays tighten rooms and raise prices as tourists flood in. Book weeks ahead; if booking near holidays, expand the range to surrounding areas, then travel by taxi or car.",
+    "peak": "Bangkok's cool season (Nov–Feb) and public holidays tighten the old-town room supply and push prices up. Book weeks ahead; if you are travelling over a holiday, widen your search towards the Silom or Sukhumvit lines and take a taxi in.",
     "tipsTitle": "Lodging tips",
     "tips": [
-      "For dawn square shots: prefer downtown, walk to the platform at dawn.",
-      "For convenience and food: choose Bogyoke / City Hall, walk and dine at hand.",
-      "Before booking, confirm breakfast, pool, and shuttle (key for self-drivers).",
-      "Peak seasons and holidays need advance planning to avoid no rooms or high prices."
-    ]
-  },
-  "downloads": {
-    "title": "Academic & Practical Resource Downloads",
-    "items": [
-      {
-        "icon": "📥",
-        "name": "Bangkok Downtown Travel Map (EN).pdf",
-        "desc": "Sanam Luang and surrounding transport & supply points",
-        "url": "#"
-      },
-      {
-        "icon": "📥",
-        "name": "Bangkok City Walking Route Guide.pdf",
-        "desc": "Hardcore walking routes and viewpoints",
-        "url": "#"
-      },
-      {
-        "icon": "🗺️",
-        "name": "GPX track download",
-        "desc": "For walking and trail-running navigation",
-        "url": "#"
-      }
+      "For a dawn visit to the square: stay in the old town on the palace side and walk in.",
+      "For food and convenience: choose the Khao San / riverside old town and eat within a few minutes of your room.",
+      "Before booking, confirm breakfast, air conditioning, and whether the street is quiet at night.",
+      "Over peak season and holidays, book early or widen the search area — old-town rooms sell out first."
     ]
   }
 }

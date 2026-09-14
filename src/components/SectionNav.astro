@@ -3,21 +3,30 @@ import { getI18n } from '../i18n/ui';
 const { lang, messages } = getI18n(Astro.url);
 const n = messages.stickyNav;
 const h = messages.header;
+const nav = messages.nav;
 const items = [
+  { label: nav.weather, href: '#weather' },
   { label: n.facts, href: '#quick-facts' },
-  { label: h.history, href: '#history' },
-  { label: n.transport, href: '#transport' },
+  { label: nav.plaques, href: '#plaques' },
+  { label: nav.heritage, href: '#heritage' },
+  { label: nav.squareCity, href: '#science-art' },
+  { label: nav.season, href: '#season' },
+  { label: nav.routes, href: '#routes' },
   { label: n.route, href: '#route' },
+  { label: n.transport, href: '#transport' },
+  { label: nav.visitGuide, href: '#visit-guide' },
   { label: n.visit, href: '#visit' },
+  { label: nav.facilities, href: '#facilities' },
+  { label: nav.responsibility, href: '#responsibility' },
   { label: n.faq, href: '#faq' },
-];
+].filter((it) => Boolean(it.label));
 ---
 
 <div class="section-nav" id="section-nav" aria-label="Section navigation">
   <div class="max-w-6xl mx-auto px-4 flex items-center gap-1 overflow-x-auto">
-    <span class="shrink-0 text-sm font-semibold mr-1" style="color: var(--text-primary);" aria-hidden="true">🛕</span>
+    <span class="shrink-0 text-sm font-semibold mr-1" style="color: var(--text-primary);" aria-hidden="true">🌳</span>
     {items.map((it) => (
-      <a href={`/${lang}${it.href}`} class="section-nav-link">{it.label}</a>
+      <a href={`/${lang}/${it.href}`} class="section-nav-link">{it.label}</a>
     ))}
   </div>
 </div>

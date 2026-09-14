@@ -1,0 +1,21 @@
+# Cloudflare Workers 部署配置（由 @astrojs/cloudflare 适配器生成产物）
+# 构建：npm run build   →  dist/
+# 本地：npm run preview  →  wrangler dev
+# 部署：npm run deploy   →  wrangler deploy
+
+name = "sanamluangbangkok"
+main = "./dist/_worker.js/index.js"
+compatibility_date = "2025-04-01"
+compatibility_flags = ["nodejs_compat"]
+
+# 静态资源（图片、manifest、sw.js 等）由 Workers Assets 直接提供
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+
+[observability]
+enabled = true
+
+[vars]
+# 站点公开变量（非机密）
+SITE_URL = "https://sanamluangbangkok.com"

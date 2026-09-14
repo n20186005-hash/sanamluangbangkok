@@ -1,0 +1,64 @@
+{
+  "id": "/",
+  "name": "Sanam Luang (Bangkok) - Visitor Guide",
+  "short_name": "Sanam Luang",
+  "description": "Unofficial independent visitor guide to Sanam Luang (สนามหลวง), the historic royal square of Bangkok, Thailand.",
+  "lang": "th",
+  "dir": "ltr",
+  "start_url": "/th",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "portrait-primary",
+  "background_color": "#f7f5ef",
+  "theme_color": "#0f2015",
+  "categories": ["travel", "navigation", "education"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Location & Map",
+      "short_name": "Map",
+      "url": "/th#map"
+    },
+    {
+      "name": "Photo Gallery",
+      "short_name": "Gallery",
+      "url": "/th#gallery"
+    },
+    {
+      "name": "Visitor Reviews",
+      "short_name": "Reviews",
+      "url": "/th#reviews"
+    },
+    {
+      "name": "FAQ",
+      "short_name": "FAQ",
+      "url": "/th#faq"
+    }
+  ]
+}

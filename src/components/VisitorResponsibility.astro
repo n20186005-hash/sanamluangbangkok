@@ -1,0 +1,66 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const v = messages.visitorResponsibility;
+---
+
+<section id="responsibility" class="section-padding" style="background: var(--bg-tertiary);">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">
+      {v.title}
+    </h2>
+    <p class="text-center text-base max-w-3xl mx-auto mb-3" style="color: var(--text-secondary);">{v.subtitle}</p>
+    <p class="text-center text-sm max-w-2xl mx-auto mb-10" style="color: var(--text-muted);">{v.intro}</p>
+
+    <!-- 科普：先了解再进入 -->
+    <h3 class="font-display text-2xl font-semibold mb-6" style="color: var(--text-primary);">{v.knowledgeTitle}</h3>
+    <div class="grid sm:grid-cols-2 gap-5 mb-14">
+      {v.knowledge.map((k) => (
+        <article class="rounded-2xl p-5 sm:p-6 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-2xl leading-none" aria-hidden="true">{k.icon}</span>
+            <h4 class="font-semibold text-base" style="color: var(--text-primary);">{k.title}</h4>
+          </div>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{k.text}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="grid lg:grid-cols-[1.4fr_1fr] gap-6">
+      <!-- 访客责任清单 -->
+      <div class="rounded-3xl p-6 sm:p-8 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <h3 class="font-display text-xl sm:text-2xl font-semibold mb-5" style="color: var(--text-primary);">
+          {v.responsibilityTitle}
+        </h3>
+        <ul class="checklist">
+          {v.responsibility.map((item) => (
+            <li>
+              <span aria-hidden="true">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- 着装与礼仪速查 -->
+      <div class="rounded-3xl p-6 sm:p-8 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <h3 class="font-display text-xl sm:text-2xl font-semibold mb-5" style="color: var(--text-primary);">
+          {v.etiquetteTitle}
+        </h3>
+        <dl class="etiquette-list">
+          {v.etiquette.map((e) => (
+            <div>
+              <dt>
+                <span>{e.label}</span>
+                <span class="etiquette-value">{e.value}</span>
+              </dt>
+              <dd>{e.note}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+
+    <p class="text-xs mt-8" style="color: var(--text-muted);">{v.closingNote}</p>
+  </div>
+</section>

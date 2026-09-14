@@ -1,36 +1,62 @@
 ---
 import { getI18n } from '../i18n/ui';
-const { messages } = getI18n(Astro.url);
+import { entity } from '../config';
+const { messages, lang } = getI18n(Astro.url);
 const r = messages.reviews;
-const stars = (n) => Array.from({ length: 5 }, (_, i) => i < n ? 'star-filled' : 'star-empty');
+const s = messages.sources;
+const panelNote = messages.reviewsPanel?.note;
+
+// 评分与评价数统一取自 config.ts（单一数据源），
+// 后续同步 Google 地图最新数据时只需改 config.ts 一处，页面各处不会再出现新旧不一致。
+const locale = lang === 'zh' ? 'zh-Hans' : lang === 'th' ? 'th-TH' : 'en-US';
+const ratingValue = entity.ratingValue;
+const reviewCount = new Intl.NumberFormat(locale).format(entity.reviewCount);
+const ratingValueNum = Number(ratingValue);
+const wholeStars = Math.floor(ratingValueNum);
+// 4.6 这类带小数的评分若四舍五入成 5 颗满星，会与旁边「4.6 / 5.0」的数字自相矛盾，
+// 这里改为「整星 + 半星」实心展示，避免夸大评分。
+const hasHalfStar = ratingValueNum - wholeStars >= 0.25 && ratingValueNum - wholeStars < 0.75;
+const ratingSourceUrl = r.sourceUrl ?? entity.ratingSourceUrl;
 ---
 
 <section id="reviews" class="section-padding" style="background: var(--bg-primary);">
   <div class="max-w-4xl mx-auto px-4">
     <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">{r.title}</h2>
-    <p class="text-center text-base mb-10" style="color: var(--text-secondary);">{r.declaration}</p>
+    <p class="text-center text-base mb-8" style="color: var(--text-secondary);">{r.declaration}</p>
 
-    <div class="grid md:grid-cols-2 gap-6">
-      {r.items.map((item) => (
-        <div class="rounded-2xl p-6 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white" style="background: var(--accent);">
-                {item.name.charAt(0)}
-              </div>
-              <div>
-                <div class="font-semibold text-sm" style="color: var(--text-primary);">{item.name}</div>
-                <div class="text-xs" style="color: var(--text-muted);">{item.date}</div>
-              </div>
-            </div>
-            <div class="flex gap-0.5 text-lg sm:justify-end">
-              {stars(item.rating).map((c) => <span class={c}>★</span>)}
-            </div>
-          </div>
-          <p class="text-base leading-relaxed" style="color: var(--text-secondary);">{item.text}</p>
+    <!-- 最新 Google 评分（数值取自 config.ts，来源与同步时间下方注明） -->
+    <div class="rounded-3xl p-6 sm:p-8 mb-10 border flex flex-col sm:flex-row sm:items-center gap-6 sm:justify-between" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+      <div class="flex items-center gap-5">
+        <div class="text-center shrink-0">
+          <div class="text-5xl font-bold font-display leading-none" style="color: var(--text-primary);">{ratingValue}</div>
+          <div class="text-xs mt-1" style="color: var(--text-muted);">{r.ratingOutOf}</div>
         </div>
-      ))}
+        <div>
+          <div class="flex gap-0.5 text-xl mb-2" aria-hidden="true">
+            {Array.from({ length: 5 }, (_, i) => (
+              <span class={i < wholeStars ? 'star-filled' : i === wholeStars && hasHalfStar ? 'star-half' : 'star-empty'}>★</span>
+            ))}
+          </div>
+          <div class="font-semibold" style="color: var(--text-primary);">
+            {reviewCount} {r.reviewCountLabel}
+          </div>
+          <div class="text-sm mt-1" style="color: var(--text-secondary);">{r.ratingContext}</div>
+        </div>
+      </div>
+      <div class="text-xs sm:text-sm leading-relaxed sm:text-right sm:max-w-[19rem]" style="color: var(--text-muted);">
+        <span class="font-medium" style="color: var(--text-secondary);">{r.sourceLabel}：</span>
+        <a href={ratingSourceUrl} target="_blank" rel="noopener noreferrer nofollow" class="underline underline-offset-2 hover:opacity-70" style="color: var(--accent);">{r.sourceName} ↗</a>
+        <p class="mt-2">
+          <span class="font-medium" style="color: var(--text-secondary);">{s.ratingSyncedLabel}：</span>{s.ratingSyncedValue}
+        </p>
+      </div>
     </div>
+
+    {panelNote && (
+      <p class="rounded-2xl p-5 sm:p-6 border text-sm leading-relaxed" style="background: var(--card-bg); border-color: var(--border-color); color: var(--text-secondary);">
+        {panelNote}
+      </p>
+    )}
 
     <div class="text-center mt-10">
       <a href={r.mapsUrl} target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto justify-center px-8 py-3 rounded-full font-semibold text-white" style="background: var(--accent);">

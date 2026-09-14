@@ -1,19 +1,46 @@
 ---
 import { getI18n } from '../i18n/ui';
-const { messages } = getI18n(Astro.url);
+import { entity } from '../config';
+const { messages, lang } = getI18n(Astro.url);
 const h = messages.hero;
+const r = messages.reviews;
+// 评分与评价数统一取自 config.ts（单一数据源），
+// 后续同步 Google 地图最新数据只需改 config.ts，不会出现各板块新旧数值不一致。
+const heroReviewCount = new Intl.NumberFormat(
+  lang === 'zh' ? 'zh-Hans' : lang === 'th' ? 'th-TH' : 'en-US',
+).format(entity.reviewCount);
 const facts = h.quickFacts ?? [];
 const factsSource = h.factsSource ?? {};
 const live = h.liveInfo ?? {};
 const planner = h.sunsetPlanner ?? {};
+const heroImg = entity.heroImage;
+const heroAlt = `${entity.attractionFullName} - Main view in ${entity.cityName}, ${entity.countryName}`;
+const ratingSourceUrl = messages.reviews?.sourceUrl ?? entity.ratingSourceUrl;
+const ratingSourceLabel = messages.reviews?.sourceLabel ?? 'Source';
 ---
 
 <section id="overview" class="relative min-h-[84vh] sm:min-h-[90vh] flex items-center justify-center text-center overflow-hidden">
-  <div class="absolute inset-0" style={`background-image: linear-gradient(rgba(15,32,21,0.55), rgba(15,32,21,0.62)), url('/gallery/sanam-luang-1.jpg'); background-size: cover; background-position: center;`}></div>
+  <div class="absolute inset-0 overflow-hidden">
+    <img
+      src={heroImg}
+      alt={heroAlt}
+      class="absolute inset-0 w-full h-full object-cover"
+      width="1920"
+      height="1280"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(rgba(15,32,21,0.55), rgba(15,32,21,0.62));"></div>
+  </div>
   <div class="relative z-10 px-4 sm:px-6 py-16 sm:py-20 max-w-4xl w-full animate-fade-in-up">
-    <span class="inline-flex max-w-full flex-wrap items-center justify-center gap-1 px-3 py-1 mb-5 rounded-full text-xs sm:text-sm font-medium" style="background: rgba(255,255,255,0.15); color: #fff; backdrop-filter: blur(4px);">
-      ⭐ {h.rating} · {h.reviewCount}
+    <span class="inline-flex max-w-full flex-wrap items-center justify-center gap-1 px-3 py-1 mb-2 rounded-full text-xs sm:text-sm font-medium" style="background: rgba(255,255,255,0.15); color: #fff; backdrop-filter: blur(4px);">
+      ⭐ {entity.ratingValue} · {heroReviewCount} {r.reviewCountLabel}
     </span>
+    <p class="text-[11px] sm:text-xs text-white/70 mb-5">
+      {ratingSourceLabel}：
+      <a href={ratingSourceUrl} target="_blank" rel="noopener noreferrer nofollow" class="underline decoration-white/40 underline-offset-2 hover:text-white">{entity.ratingSourceName} ↗</a>
+    </p>
 
     <p class="text-xl sm:text-2xl text-yellow-400/90 mb-2 font-medium tracking-wide drop-shadow-sm" style="font-family: 'Sarabun', sans-serif;">
       สนามหลวง - จัตุรัสประวัติศาสตร์ใจกลางกรุงเทพมหานคร

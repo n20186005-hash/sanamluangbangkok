@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# 说明：/…/privacy-policy/ 、/…/terms-of-service/ 、/…/cookie-settings/
+# 已通过 <meta name="robots" content="noindex, follow"> 排除收录，
+# 这里刻意不使用 Disallow —— 若同时屏蔽抓取，爬虫读不到 noindex，
+# 反而可能以「已屏蔽但被收录」的形式留在索引里。
+
+Sitemap: https://sanamluangbangkok.com/sitemap.xml

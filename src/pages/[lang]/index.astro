@@ -3,10 +3,21 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SectionNav from '../../components/SectionNav.astro';
 import Hero from '../../components/Hero.astro';
+import EntityStatement from '../../components/EntityStatement.astro';
+import NameDisambiguation from '../../components/NameDisambiguation.astro';
 import QuickFactsDashboard from '../../components/QuickFactsDashboard.astro';
+import WeatherForecast from '../../components/WeatherForecast.astro';
 import ComplianceGuide from '../../components/ComplianceGuide.astro';
 import HigashiyamaRoute from '../../components/HigashiyamaRoute.astro';
 import Intro from '../../components/Intro.astro';
+import SitePlaques from '../../components/SitePlaques.astro';
+import ScienceArt from '../../components/ScienceArt.astro';
+import VisitGuide from '../../components/VisitGuide.astro';
+import Heritage from '../../components/Heritage.astro';
+import SeasonalStrategy from '../../components/SeasonalStrategy.astro';
+import RoutePlanner from '../../components/RoutePlanner.astro';
+import Facilities from '../../components/Facilities.astro';
+import VisitorResponsibility from '../../components/VisitorResponsibility.astro';
 import Transport from '../../components/Transport.astro';
 import Lodging from '../../components/Lodging.astro';
 import OutdoorMuseum from '../../components/OutdoorMuseum.astro';
@@ -14,14 +25,26 @@ import Gallery from '../../components/Gallery.astro';
 import FeaturedQuotes from '../../components/FeaturedQuotes.astro';
 import HiddenRules from '../../components/HiddenRules.astro';
 import Reviews from '../../components/Reviews.astro';
+import SourcesSection from '../../components/SourcesSection.astro';
 import MapEmbed from '../../components/MapEmbed.astro';
 import DeepDive from '../../components/DeepDive.astro';
 import FAQ from '../../components/FAQ.astro';
-import { getI18n, languagesList } from '../../i18n/ui';
+import { getI18n, languagesList, xDefaultLang } from '../../i18n/ui';
 
-export function getStaticPaths() {
-  return languagesList.map((lang) => ({ params: { lang } }));
+// 首页按请求在服务端渲染：实时天气模块需要服务端取数并缓存。
+// 其余路由（隐私政策、服务条款、Cookie 设置）仍为构建时静态生成。
+export const prerender = false;
+
+const requestedLang = Astro.url.pathname.split('/').filter(Boolean)[0] ?? '';
+if (!(languagesList as readonly string[]).includes(requestedLang)) {
+  // 语言前缀不存在（如 /fr/）时统一送入 x-default（英文版）的规范 URL，
+  // 目标与 <link rel="alternate" hreflang="x-default"> 一致；
+  // 同时避免 getLangFromUrl 回退到默认语言后，在无效 URL 上渲染出重复内容。
+  return Astro.redirect(`/${xDefaultLang}/`, 301);
 }
+
+// 页面自身只缓存很短时间，天气数据的缓存由数据层负责。
+Astro.response.headers.set('Cache-Control', 'public, max-age=0, s-maxage=600, stale-while-revalidate=1800');
 
 const { messages } = getI18n(Astro.url);
 const faq = messages.faq;
@@ -47,13 +70,24 @@ const faqLd = (() => {
   <Breadcrumbs />
   <SectionNav />
   <Hero />
+  <EntityStatement />
+  <NameDisambiguation />
   <QuickFactsDashboard />
+  <WeatherForecast />
   <Intro />
+  <SitePlaques />
+  <Heritage />
   <DeepDive />
+  <ScienceArt />
+  <SeasonalStrategy />
+  <RoutePlanner />
   <Transport />
   <HigashiyamaRoute />
+  <VisitGuide />
   <HiddenRules />
   <ComplianceGuide />
+  <Facilities />
+  <VisitorResponsibility />
   <Lodging />
   <MapEmbed />
   <FAQ />
@@ -61,4 +95,5 @@ const faqLd = (() => {
   <Gallery />
   <FeaturedQuotes />
   <Reviews />
+  <SourcesSection />
 </BaseLayout>

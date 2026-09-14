@@ -1,0 +1,88 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const r = messages.routePlanner;
+---
+
+<section id="routes" class="section-padding" style="background: var(--bg-tertiary);">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">
+      {r.title}
+    </h2>
+    <p class="text-center text-base max-w-3xl mx-auto mb-10" style="color: var(--text-secondary);">{r.subtitle}</p>
+
+    <!-- 按人群定制 -->
+    <h3 class="font-display text-2xl font-semibold mb-2" style="color: var(--text-primary);">{r.audienceTitle}</h3>
+    <p class="text-sm mb-6" style="color: var(--text-muted);">{r.audienceSubtitle}</p>
+
+    <div class="grid lg:grid-cols-3 gap-6 mb-14">
+      {r.audience.map((a) => (
+        <article class="rounded-3xl p-6 border flex flex-col" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl leading-none" aria-hidden="true">{a.icon}</span>
+            <h4 class="font-display text-xl font-semibold" style="color: var(--text-primary);">{a.group}</h4>
+          </div>
+
+          <dl class="grid grid-cols-2 gap-2 text-xs mb-4">
+            <div class="route-meta">
+              <dt>{r.durationLabel}</dt>
+              <dd>{a.duration}</dd>
+            </div>
+            <div class="route-meta">
+              <dt>{r.bestTimeLabel}</dt>
+              <dd>{a.bestTime}</dd>
+            </div>
+            <div class="route-meta col-span-2">
+              <dt>{r.paceLabel}</dt>
+              <dd>{a.pace}</dd>
+            </div>
+          </dl>
+
+          <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">{a.resonance}</p>
+
+          <div class="text-xs uppercase tracking-[0.16em] mb-2" style="color: var(--text-muted);">{r.stopsLabel}</div>
+          <ol class="route-steps flex-1">
+            {a.stops.map((stop) => <li>{stop}</li>)}
+          </ol>
+
+          <p class="text-sm leading-relaxed mt-4 pt-4 border-t" style="border-color: var(--border-color); color: var(--text-secondary);">
+            <span class="font-semibold" style="color: var(--text-primary);">{r.tipLabel}：</span>{a.tip}
+          </p>
+        </article>
+      ))}
+    </div>
+
+    <!-- 通用路线 -->
+    <h3 class="font-display text-2xl font-semibold mb-2" style="color: var(--text-primary);">{r.generalTitle}</h3>
+    <p class="text-sm mb-6" style="color: var(--text-muted);">{r.generalSubtitle}</p>
+
+    <div class="grid lg:grid-cols-2 gap-6">
+      {r.general.map((g) => (
+        <article class="rounded-3xl p-6 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-3xl leading-none" aria-hidden="true">{g.icon}</span>
+            <h4 class="font-display text-xl font-semibold" style="color: var(--text-primary);">{g.name}</h4>
+          </div>
+          <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs mb-4" style="color: var(--text-muted);">
+            <span>⏱ {g.duration}</span>
+            <span>🕐 {g.bestTime}</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-5" style="color: var(--text-secondary);">{g.summary}</p>
+
+          <ol class="route-timeline">
+            {g.steps.map((step) => (
+              <li>
+                <span class="route-timeline-title">{step.t}</span>
+                <span class="route-timeline-desc">{step.d}</span>
+              </li>
+            ))}
+          </ol>
+
+          <p class="text-xs mt-5 pt-4 border-t" style="border-color: var(--border-color); color: var(--text-muted);">{g.note}</p>
+        </article>
+      ))}
+    </div>
+
+    <p class="text-xs text-center mt-8" style="color: var(--text-muted);">{r.disclaimer}</p>
+  </div>
+</section>

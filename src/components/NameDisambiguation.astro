@@ -1,0 +1,84 @@
+---
+import { getI18n } from '../i18n/ui';
+import { entity } from '../config';
+
+const { lang, messages } = getI18n(Astro.url);
+const n = messages.nameCard;
+const names: { label: string; value: string }[] = n?.names ?? [];
+
+/**
+ * 名称对照与消歧义模块。
+ * 目标搜索需求（来自 GSC）：
+ *   - สนามหลวง ภาษาอังกฤษ / สนามหลวงภาษาอังกฤษ（想知道英文怎么写）
+ *   - พิกัดที่แน่ชัด（想要准确坐标）
+ *   - suan luang bangkok（把 Sanam Luang 与 Suan Luang Rama IX 混淆）
+ * 因此这里明确给出「三语言名称 + 读音 + 含义 + 精确坐标」，并主动做一次消歧义。
+ */
+---
+
+<section id="name" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-4" style="color: var(--text-primary);">{n.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{n.intro}</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-6 items-stretch">
+      <article
+        class="rounded-3xl p-6 sm:p-7 border h-full"
+        style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);"
+      >
+        <h3 class="font-display text-xl sm:text-2xl font-semibold mb-4" style="color: var(--text-primary);">{n.namesTitle}</h3>
+        <dl class="name-pairs">
+          {names.map((item) => (
+            <div class="name-pair">
+              <dt>{item.label}</dt>
+              <dd>{item.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </article>
+
+      <div class="flex flex-col gap-6">
+        <article
+          class="rounded-3xl p-6 sm:p-7 border"
+          style="background: color-mix(in srgb, var(--accent) 8%, var(--card-bg)); border-color: var(--border-color);"
+        >
+          <h3 class="font-display text-lg sm:text-xl font-semibold mb-3 flex items-start gap-2" style="color: var(--text-primary);">
+            <span aria-hidden="true">⚠️</span>
+            <span>{n.disambiguationTitle}</span>
+          </h3>
+          <p class="text-base leading-relaxed" style="color: var(--text-secondary);">{n.disambiguationText}</p>
+        </article>
+
+        <article
+          class="rounded-3xl p-6 sm:p-7 border"
+          style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);"
+        >
+          <h3 class="font-display text-lg sm:text-xl font-semibold mb-3" style="color: var(--text-primary);">{n.locationTitle}</h3>
+          <ul class="fact-rows" style="color: var(--text-secondary);">
+            <li>
+              <span class="fact-label">{n.accessLabel}</span>
+              <span class="fact-value">{n.accessValue}</span>
+            </li>
+            <li>
+              <span class="fact-label">{n.plusCodeLabel}</span>
+              <span class="fact-value">{entity.plusCode}</span>
+            </li>
+            <li>
+              <span class="fact-label">{n.coordsLabel}</span>
+              <span class="fact-value">{entity.latitude}, {entity.longitude}</span>
+            </li>
+          </ul>
+          <a
+            href={`/${lang}/#transport`}
+            class="inline-block mt-4 text-sm font-semibold hover:opacity-70"
+            style="color: var(--accent);"
+          >
+            {n.accessLink}
+          </a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

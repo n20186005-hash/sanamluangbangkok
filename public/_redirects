@@ -1,1 +1,27 @@
-/  /th/  302
+# ---------------------------------------------------------------------------
+# 301 永久重定向：把非规范 URL 收敛到带尾斜线的规范 URL
+#
+# 背景：Google Search Console 显示 /en 与 /en/、/zh 与 /zh/ 被分别收录，
+#       同一页面被拆成两个 URL，权重与排名被稀释。
+# 规则：Cloudflare 会在匹配静态资源之前先执行本文件的规则，
+#       因此下面的 301 会先于 assets 生效。
+# ---------------------------------------------------------------------------
+
+# 根域名 → x-default（英文版），与 <link rel="alternate" hreflang="x-default"> 保持一致
+/            /en/            301
+
+# 语言首页
+/en          /en/            301
+/th          /th/            301
+/zh          /zh/            301
+
+# 法律与工具页（这些页面同时设置了 noindex，这里只做 URL 收敛）
+/en/privacy-policy     /en/privacy-policy/     301
+/th/privacy-policy     /th/privacy-policy/     301
+/zh/privacy-policy     /zh/privacy-policy/     301
+/en/terms-of-service   /en/terms-of-service/   301
+/th/terms-of-service   /th/terms-of-service/   301
+/zh/terms-of-service   /zh/terms-of-service/   301
+/en/cookie-settings    /en/cookie-settings/    301
+/th/cookie-settings    /th/cookie-settings/    301
+/zh/cookie-settings    /zh/cookie-settings/    301

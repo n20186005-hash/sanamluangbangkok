@@ -5,3 +5,8 @@ dist
 .env
 *.ps1
 update_i18n.*
+*.log
+*.err
+
+# 未经压缩的原始照片归档（不参与构建与部署，仅本地保留）
+original-photos/

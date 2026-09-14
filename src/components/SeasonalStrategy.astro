@@ -1,0 +1,54 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const s = messages.seasonStrategy;
+const head = s.tableHead;
+---
+
+<section id="season" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">
+      {s.title}
+    </h2>
+    <p class="text-center text-base max-w-3xl mx-auto mb-4" style="color: var(--text-secondary);">{s.subtitle}</p>
+    <p class="text-center text-xs sm:text-sm max-w-3xl mx-auto mb-10" style="color: var(--text-muted);">{s.basisNote}</p>
+
+    <div class="season-table-wrap">
+      <table class="season-table">
+        <caption class="sr-only">{s.title}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{head.season}</th>
+            <th scope="col">{head.months}</th>
+            <th scope="col">{head.weather}</th>
+            <th scope="col">{head.crowd}</th>
+            <th scope="col">{head.highlight}</th>
+            <th scope="col">{head.advice}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {s.rows.map((row) => (
+            <tr>
+              <th scope="row">
+                <span class="season-badge">
+                  <span aria-hidden="true">{row.icon}</span>
+                  <span>{row.season}</span>
+                </span>
+              </th>
+              <td data-label={head.months}>{row.months}</td>
+              <td data-label={head.weather}>{row.weather}</td>
+              <td data-label={head.crowd}>{row.crowd}</td>
+              <td data-label={head.highlight}>{row.highlight}</td>
+              <td data-label={head.advice}>{row.advice}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-8 rounded-3xl p-6 sm:p-8 border" style="background: color-mix(in srgb, var(--accent) 8%, var(--card-bg)); border-color: var(--border-color);">
+      <h3 class="font-display text-xl sm:text-2xl font-semibold mb-3" style="color: var(--text-primary);">{s.bestTimeTitle}</h3>
+      <p class="text-base leading-relaxed" style="color: var(--text-secondary);">{s.bestTime}</p>
+    </div>
+  </div>
+</section>

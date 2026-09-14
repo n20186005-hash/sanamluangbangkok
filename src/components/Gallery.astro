@@ -1,13 +1,23 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { entity } from '../config';
 const { messages } = getI18n(Astro.url);
 const g = messages.gallery;
 const totalImages = 24;
-const images = Array.from({ length: totalImages }, (_, i) => {
-  const n = String(i + 1);
-  return `/gallery/sanam-luang-${n}.jpg`;
-});
+// 规范命名：sanam-luang-bangkok-{序号}.jpg；列表使用 -640 缩略图，灯箱使用大图
+const fullImages = Array.from({ length: totalImages }, (_, i) => `/gallery/sanam-luang-bangkok-${i + 1}.jpg`);
+const thumbImages = Array.from({ length: totalImages }, (_, i) => `/gallery/sanam-luang-bangkok-${i + 1}-640.jpg`);
+const images = thumbImages;
 const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
+/** 图片 Alt 语义绑定：保证每张图都带上实体全称与所在城市/国家 */
+const altFor = (i: number) => {
+  const base = String(photoAlts[i] ?? g.photoAlt ?? '').trim();
+  const entityAlt = `${entity.attractionFullName} - ${entity.cityName}, ${entity.countryName}`;
+  if (!base) return entityAlt;
+  return base.includes(entity.attractionShortName)
+    ? base
+    : `${base} — ${entity.attractionShortName}, ${entity.cityName}, ${entity.countryName}`;
+};
 ---
 
 <section id="gallery" class="section-padding" style="background: var(--bg-secondary);">
@@ -17,8 +27,8 @@ const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
 
     <div class="gallery-grid" id="gallery-grid">
       {images.map((src, index) => (
-        <button type="button" class="gallery-item" data-index={index} aria-label={photoAlts[index] ?? g.photoAlt}>
-          <img src={src} alt={photoAlts[index] ?? g.photoAlt} loading="lazy" />
+        <button type="button" class="gallery-item" data-index={index} data-full={fullImages[index]} aria-label={altFor(index)}>
+          <img src={src} alt={altFor(index)} loading="lazy" width="640" height="480" decoding="async" />
         </button>
       ))}
     </div>
@@ -55,7 +65,7 @@ const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
     function show(i) {
       current = (i + items.length) % items.length;
       var el = items[current];
-      var src = el.querySelector('img').getAttribute('src');
+      var src = el.getAttribute('data-full') || el.querySelector('img').getAttribute('src');
       var alt = el.querySelector('img').getAttribute('alt');
       img.setAttribute('src', src);
       img.setAttribute('alt', alt);

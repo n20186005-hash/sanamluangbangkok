@@ -1,6 +1,6 @@
 ---
 import { getI18n } from '../i18n/ui';
-const { messages, lang } = getI18n(Astro.url);
+const { messages } = getI18n(Astro.url);
 const sp = messages.sitePlaques;
 const items = sp.items ?? [];
 const { embedded = false } = Astro.props;
@@ -47,23 +47,22 @@ const { embedded = false } = Astro.props;
       {items.map((it) => (
         <div class="flip-card min-h-[280px]" onclick="this.classList.toggle('is-flipped')">
           <div class="flip-card-inner shadow-sm hover:shadow-md transition-shadow rounded-2xl">
-            <!-- Front: Korean Plaque Visual -->
+            <!-- Front: plaque card -->
             <article class="flip-card-front p-6 sm:p-8 border flex flex-col justify-center items-center text-center" style="background: var(--bg-primary); border-color: var(--border-color);">
               <span class="absolute top-2.5 right-3 text-[10px] tracking-[0.22em] uppercase opacity-30" aria-hidden="true">PLAQUE</span>
               <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4" style="background: var(--accent); color: #fff;">{it.badge}</span>
-              <h4 class="font-semibold text-2xl mb-2" style="color: var(--text-primary);">{lang === 'my' ? it.myTitle : it.title}</h4>
-              <p class="text-sm" style="color: var(--text-tertiary);">{lang === 'my' ? it.myTitleZh : ''}</p>
+              <h4 class="font-semibold text-2xl mb-2" style="color: var(--text-primary);">{it.title}</h4>
               <div class="absolute bottom-6 flex items-center gap-4 text-[11px] opacity-50 uppercase tracking-widest">
-                <div class="flex items-center gap-1" title="现场原图对照">
-                  <span>📷</span> 现场原图对照
+                <div class="flex items-center gap-1">
+                  <span>📷</span> {sp.photoLabel}
                 </div>
                 <div class="flex items-center gap-1">
-                  <span>🔄</span> Click to translate
+                  <span>🔄</span> {sp.flipLabel}
                 </div>
               </div>
             </article>
 
-            <!-- Back: Chinese Translation & Explanation -->
+            <!-- Back: explanation -->
             <article class="flip-card-back p-6 sm:p-8 border overflow-y-auto" style="background: var(--bg-tertiary); border-color: var(--border-color);">
               <h4 class="font-semibold text-lg mb-3" style="color: var(--text-primary);">{it.title}</h4>
               {it.location && (
@@ -94,14 +93,13 @@ const { embedded = false } = Astro.props;
             <article class="flip-card-front p-6 sm:p-8 border flex flex-col justify-center items-center text-center" style="background: var(--bg-primary); border-color: var(--border-color);">
               <span class="absolute top-2.5 right-3 text-[10px] tracking-[0.22em] uppercase opacity-30" aria-hidden="true">PLAQUE</span>
               <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4" style="background: var(--accent); color: #fff;">{it.badge}</span>
-              <h4 class="font-semibold text-2xl mb-2" style="color: var(--text-primary);">{lang === 'my' ? it.myTitle : it.title}</h4>
-              <p class="text-sm" style="color: var(--text-tertiary);">{lang === 'my' ? it.myTitleZh : ''}</p>
+              <h4 class="font-semibold text-2xl mb-2" style="color: var(--text-primary);">{it.title}</h4>
               <div class="absolute bottom-6 flex items-center gap-4 text-[11px] opacity-50 uppercase tracking-widest">
-                <div class="flex items-center gap-1" title="现场原图对照">
-                  <span>📷</span> 现场原图对照
+                <div class="flex items-center gap-1">
+                  <span>📷</span> {sp.photoLabel}
                 </div>
                 <div class="flex items-center gap-1">
-                  <span>🔄</span> Click to translate
+                  <span>🔄</span> {sp.flipLabel}
                 </div>
               </div>
             </article>

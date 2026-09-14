@@ -41,6 +41,9 @@
   --tag-bg: var(--color-sand-200);
   --tag-text: var(--color-nature-700);
   --map-border: var(--color-sand-300);
+  --alert-bg: #fdf3f0;
+  --alert-border: #eebcb0;
+  --alert-text: #8a2b1f;
 }
 
 [data-theme="dark"] {
@@ -59,6 +62,9 @@
   --tag-bg: #1e3a28;
   --tag-text: #a0c4a8;
   --map-border: #1e3a28;
+  --alert-bg: #3a1d19;
+  --alert-border: #7b3a30;
+  --alert-text: #ffd3c8;
 }
 
 * {
@@ -126,6 +132,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .star-empty {
   color: var(--border-color);
+}
+/* 半星：4.6 这类小数评分用「整星 + 半星」表示，避免四舍五入成满星而夸大评分 */
+.star-half {
+  display: inline-block;
+  position: relative;
+  color: var(--border-color);
+}
+.star-half::before {
+  content: '★';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #f0b429;
 }
 
 /* Fade in animation */
@@ -547,3 +569,498 @@ h1, h2, h3, h4, h5, h6 {
 a {
   transition: color 0.2s ease;
 }
+
+/* ------------------------------------------------------------------ */
+/* Weather module                                                      */
+/* ------------------------------------------------------------------ */
+.weather-now-icon {
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
+}
+.weather-metric {
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 0.7rem 0.85rem;
+  background: var(--bg-tertiary);
+}
+.weather-metric dt {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.15rem;
+}
+.weather-metric dd {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.forecast-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.75rem 0.35rem;
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+  text-align: center;
+}
+.forecast-day.is-today {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, var(--bg-tertiary));
+}
+.forecast-day-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.forecast-day-date {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.forecast-day-icon {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin: 0.15rem 0;
+}
+.forecast-day-label {
+  font-size: 0.68rem;
+  line-height: 1.25;
+  color: var(--text-secondary);
+  min-height: 1.8em;
+}
+.forecast-day-temp {
+  display: flex;
+  gap: 0.3rem;
+  align-items: baseline;
+  font-variant-numeric: tabular-nums;
+}
+.forecast-day-temp strong {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+.forecast-day-temp em {
+  font-size: 0.78rem;
+  font-style: normal;
+  color: var(--text-muted);
+}
+.forecast-day-rain {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.forecast-day-rain.is-wet {
+  color: var(--color-water-600);
+  font-weight: 600;
+}
+
+/* 建议区：标签、风险提醒与三组动态建议 */
+.advice-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.advice-alert ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.advice-alert {
+  border-left-width: 4px;
+}
+.advice-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.advice-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.advice-list li {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.28rem 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+.advice-list li + li {
+  border-top: 1px dashed var(--border-color);
+}
+.advice-check {
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #2d7a4f;
+}
+[data-theme='dark'] .advice-check {
+  color: #7fc79b;
+}
+
+/* 名称对照卡：三语言名称 → 读音 → 含义 */
+.name-pairs {
+  margin: 0;
+}
+.name-pair {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  padding: 0.6rem 0;
+}
+.name-pair + .name-pair {
+  border-top: 1px dashed var(--border-color);
+}
+.name-pair dt {
+  flex: 0 0 8.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.name-pair dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* 精确位置清单 */
+.fact-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.fact-rows li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+.fact-rows li + li {
+  border-top: 1px dashed var(--border-color);
+}
+.fact-rows .fact-label {
+  flex: 0 0 9.5rem;
+  color: var(--text-muted);
+}
+.fact-rows .fact-value {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 900px) {
+  .forecast-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .forecast-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Seasonal strategy table                                             */
+/* ------------------------------------------------------------------ */
+.season-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+.season-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.season-table thead th {
+  position: sticky;
+  top: 0;
+  text-align: left;
+  padding: 0.9rem 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+.season-table tbody th,
+.season-table tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: top;
+  text-align: left;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+.season-table tbody tr:last-child th,
+.season-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.season-table tbody tr:nth-child(even) td,
+.season-table tbody tr:nth-child(even) th {
+  background: color-mix(in srgb, var(--bg-tertiary) 55%, transparent);
+}
+.season-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+.season-table tbody td[data-label] {
+  min-width: 10rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Route planner                                                       */
+/* ------------------------------------------------------------------ */
+.route-meta {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.5rem 0.65rem;
+  background: var(--bg-tertiary);
+}
+.route-meta dt {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.route-meta dd {
+  margin: 0.1rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+.route-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: route-step;
+}
+.route-steps li {
+  position: relative;
+  padding-left: 1.9rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  counter-increment: route-step;
+}
+.route-steps li::before {
+  content: counter(route-step);
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+}
+.route-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.1rem;
+  border-left: 2px solid var(--border-color);
+}
+.route-timeline li {
+  position: relative;
+  padding: 0 0 1rem 0.9rem;
+}
+.route-timeline li::before {
+  content: '';
+  position: absolute;
+  left: -1.42rem;
+  top: 0.35rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--card-bg);
+}
+.route-timeline li:last-child {
+  padding-bottom: 0;
+}
+.route-timeline-title {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.route-timeline-desc {
+  display: block;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-top: 0.15rem;
+  color: var(--text-secondary);
+}
+
+/* ------------------------------------------------------------------ */
+/* Facilities                                                          */
+/* ------------------------------------------------------------------ */
+.neutral-note {
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border-radius: 0 12px 12px 0;
+  padding: 0.6rem 1rem;
+  color: var(--text-secondary);
+}
+.facility-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------ */
+/* Visitor responsibility                                              */
+/* ------------------------------------------------------------------ */
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.checklist li {
+  display: flex;
+  gap: 0.65rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed var(--border-color);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+.checklist li:last-child {
+  border-bottom: none;
+}
+.checklist li > span:first-child {
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.etiquette-list {
+  margin: 0;
+}
+.etiquette-list > div {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.etiquette-list > div:last-child {
+  border-bottom: none;
+}
+.etiquette-list dt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.etiquette-value {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  white-space: nowrap;
+}
+.etiquette-list dd {
+  margin: 0.25rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* ------------------------------------------------------------------ */
+/* Heritage timeline                                                   */
+/* ------------------------------------------------------------------ */
+.heritage-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.2rem;
+  border-left: 2px solid var(--border-color);
+}
+.heritage-timeline > li {
+  position: relative;
+  padding: 0 0 1.6rem 1.2rem;
+}
+.heritage-timeline > li::before {
+  content: '';
+  position: absolute;
+  left: -1.52rem;
+  top: 0.45rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg-secondary);
+}
+.heritage-timeline > li:last-child {
+  padding-bottom: 0;
+}
+.heritage-year {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+.heritage-body h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.heritage-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+

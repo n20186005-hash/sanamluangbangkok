@@ -1,0 +1,436 @@
+{
+  "reviewsPanel": {
+    "note": "Individual visitor reviews are not republished on this site. The rating and review count above are quoted from the public Google Maps listing of Sanam Luang, are shown for reference only, and are neither written nor verified by us. To read the actual reviews, open the listing on Google Maps."
+  },
+  "nameCard": {
+    "title": "What does สนามหลวง mean in English?",
+    "intro": "Most visitors meet the Thai name first and then look for the English or Chinese version. Here are all three names, the romanisation and the exact coordinates — plus one place that is easy to confuse with this one by name only.",
+    "namesTitle": "The name in three languages",
+    "names": [
+      { "label": "Thai name", "value": "สนามหลวง" },
+      { "label": "Romanisation", "value": "Sanam Luang (RTGS)" },
+      { "label": "English meaning", "value": "Royal Field" },
+      { "label": "Chinese name", "value": "皇家田广场 / 皇家田廣場" },
+      { "label": "Former name", "value": "Thung Phra Men — the royal cremation ground" }
+    ],
+    "disambiguationTitle": "Not to be confused with Suan Luang Rama IX",
+    "disambiguationText": "Searching for \"suan luang\" also turns up a completely different place: Suan Luang Rama IX (สวนหลวง ร.9), a large botanical garden in the Prawet district of eastern Bangkok. It is sometimes also written \"Suan Luang Park\". That is a different destination roughly 20 km away — do not use the coordinates on this page to reach it.",
+    "locationTitle": "Exact location",
+    "accessLabel": "Nearest transport",
+    "accessValue": "MRT Sanam Chai · Tha Chang (N9) pier",
+    "plusCodeLabel": "Google Plus Code",
+    "coordsLabel": "Coordinates",
+    "accessLink": "See all transport options and nearby parking →"
+  },
+  "nav": {
+    "weather": "Weather",
+    "season": "Seasonal guide",
+    "routes": "Routes",
+    "facilities": "Facilities",
+    "responsibility": "Visitor tips",
+    "heritage": "History",
+    "plaques": "On-site signs",
+    "squareCity": "Square & city",
+    "visitGuide": "Visitor guide"
+  },
+  "weather": {
+    "title": "Live Weather & Multi-Day Forecast",
+    "subtitle": "Sanam Luang has almost no shade: full sun by day, and short heavy showers most afternoons. Check the forecast before you set out to decide whether you need an umbrella or should shift your arrival time.",
+    "currentLabel": "Right now",
+    "feelsLike": "Feels like",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "rainChance": "Rain chance",
+    "uvIndex": "UV index",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "forecastTitle": "Next 7 days",
+    "forecastSubtitle": "Daytime high / overnight low, with the most likely weather for each day.",
+    "today": "Today",
+    "adviceTitle": "Should you take an umbrella?",
+    "advice": {
+      "umbrella": "Take an umbrella: afternoon showers are likely, and it doubles as sun cover.",
+      "noUmbrella": "Low chance of rain today — focus on shade and hydration instead.",
+      "heat": "Hot and humid: aim for early morning or late afternoon and carry water.",
+      "uv": "UV is strong — sunscreen, a wide-brimmed hat and sunglasses are worth it.",
+      "rain": "Rain expected: the lawns and walkways can hold water, so wear shoes with grip.",
+      "storm": "Thunderstorms possible: leave open lawns and avoid standing under isolated trees."
+    },
+    "updatedAtLabel": "Updated",
+    "refreshedLabel": "Refreshed automatically every 30 minutes",
+    "unavailableNote": "Weather data is temporarily unavailable. Please refresh the page later, or use the Seasonal Strategy Table below to plan by season.",
+    "sourceNote": "Weather is aggregated from public meteorological forecasts and is provided as travel guidance only — always trust local conditions on the day.",
+    "weekdayShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "codes": {
+      "0": "Clear",
+      "1": "Mainly clear",
+      "2": "Partly cloudy",
+      "3": "Overcast",
+      "45": "Fog",
+      "48": "Rime fog",
+      "51": "Light drizzle",
+      "53": "Drizzle",
+      "55": "Heavy drizzle",
+      "61": "Light rain",
+      "63": "Rain",
+      "65": "Heavy rain",
+      "66": "Freezing rain",
+      "67": "Heavy freezing rain",
+      "71": "Light snow",
+      "73": "Snow",
+      "75": "Heavy snow",
+      "77": "Snow grains",
+      "80": "Rain showers",
+      "81": "Rain showers",
+      "82": "Violent rain showers",
+      "85": "Snow showers",
+      "86": "Heavy snow showers",
+      "95": "Thunderstorm",
+      "96": "Thunderstorm with hail",
+      "99": "Severe thunderstorm with hail",
+      "other": "Changeable"
+    },
+    "unitTemp": "°C",
+    "unitWind": "km/h",
+    "unitMm": "mm"
+  },
+  "seasonStrategy": {
+    "title": "Seasonal Strategy Table",
+    "subtitle": "Bangkok has a tropical savanna climate with only three seasons — cool, hot and rainy. The same square feels, photographs and crowds very differently in each one. Read the table first, then pick your dates and hours.",
+    "basisNote": "Season descriptions are based on long-term 30-year climatological averages for Bangkok. Day-to-day conditions still follow the forecast.",
+    "tableHead": {
+      "season": "Season",
+      "months": "Months",
+      "weather": "Climate",
+      "crowd": "Crowds & light",
+      "highlight": "What to see",
+      "advice": "Planning advice"
+    },
+    "rows": [
+      {
+        "icon": "🌤️",
+        "season": "Cool season",
+        "months": "November – February",
+        "weather": "North-east monsoon, dry and clear. About 20–24°C at night and 30–32°C by day — the most comfortable stretch of the year.",
+        "crowd": "Busiest season; clean light and a high chance of blue skies.",
+        "highlight": "Greenest lawns and tamarind trees; the golden roofs of the Grand Palace look their best against a clear sky.",
+        "advice": "Book accommodation early. Mornings and late afternoons are the peak — arrive 7–9 am or after 4 pm."
+      },
+      {
+        "icon": "🔥",
+        "season": "Hot season",
+        "months": "March – May",
+        "weather": "Hot and dry, often 35–38°C in the afternoon with the strongest UV. Pre-monsoon thunderstorms build around May.",
+        "crowd": "Crowds thin sharply after 10 am, leaving the square open and almost free of photo interruptions.",
+        "highlight": "Cloudless skies and strong light contrast; the hot season is also Thailand's traditional kite-flying season.",
+        "advice": "Avoid 11 am – 3 pm. Sun protection and water are essential; spend midday in a nearby museum or indoor venue."
+      },
+      {
+        "icon": "🌧️",
+        "season": "Rainy season",
+        "months": "June – October",
+        "weather": "South-west monsoon, high humidity. Mostly 30–90 minute downpours between early afternoon and evening rather than all-day rain.",
+        "crowd": "Fewest visitors. Air is clearest after rain, and wet grass reflects light beautifully.",
+        "highlight": "Cloud-break light and reflections in standing water; rainfall usually eases through September–October.",
+        "advice": "Carry a light rain jacket or folding umbrella. Leave open lawns during thunderstorms and choose shoes with grip."
+      },
+      {
+        "icon": "🌾",
+        "season": "Royal ceremony periods",
+        "months": "May each year (Royal Ploughing Ceremony), plus occasional royal rites",
+        "weather": "Overlaps the hot and rainy seasons — prepare for that month's climate.",
+        "crowd": "Crowds and security checks increase noticeably, and some areas may be fenced off temporarily.",
+        "highlight": "National ceremonies such as the Royal Ploughing Ceremony — the square at its most culturally distinctive.",
+        "advice": "Check whether a ceremony falls on your date. Wear respectful, dark or neutral clothing and follow on-site directions."
+      }
+    ],
+    "bestTimeTitle": "Best hours all year round",
+    "bestTime": "Whatever the season, 7–9 am and the 60 minutes before sunset are the two best windows at Sanam Luang: mornings are cool, quiet and cleanly lit, while the late light is warmer and brings out the colours of the Grand Palace roofs and the lawns."
+  },
+  "routePlanner": {
+    "title": "Routes & Visitor Profiles",
+    "subtitle": "Decide how long you want to walk first, then pick a route. Below are three profiles with tailored plans, plus a half-day and a full-day general route.",
+    "durationLabel": "Duration",
+    "paceLabel": "Pace",
+    "bestTimeLabel": "Best time",
+    "stopsLabel": "Stops",
+    "tipLabel": "Tip",
+    "audienceTitle": "Tailored by visitor profile",
+    "audienceSubtitle": "The same square walks very differently with children, with a camera, or with a wheelchair.",
+    "audience": [
+      {
+        "icon": "👨‍👩‍👧",
+        "group": "Families with children",
+        "duration": "2 – 3 hours",
+        "pace": "Slow, including breaks and toilet stops",
+        "bestTime": "7–9 am or after 4 pm",
+        "resonance": "The square is open, flat and free, so children can run on the lawn while learning how the Royal Ploughing Ceremony connects to Thai agriculture.",
+        "stops": [
+          "North lawn: let the children run and take photos first",
+          "Towards the Grand Palace and Wat Phra Kaew wall: view the golden roofs from the square instead of queueing to enter",
+          "Bangkok National Museum or the Thammasat University side: air-conditioned shelter when it gets hot",
+          "Convenience stores or market streets around the square: water, toilets and snacks"
+        ],
+        "tip": "There is almost no shade, and both prams and children suffer in the sun — keep 11 am – 3 pm for indoor time or a hotel break."
+      },
+      {
+        "icon": "📷",
+        "group": "Photography & nature",
+        "duration": "2.5 – 4 hours (including blue hour)",
+        "pace": "Waiting for light, with repeat returns to the same spot",
+        "bestTime": "1 hour around sunrise; 60 minutes before sunset to 30 minutes after",
+        "resonance": "The wide lawn gives an unusually clean foreground, while the golden roofs of the Grand Palace and Wat Phra Kaew make an instantly recognisable backdrop — best at dawn and blue hour.",
+        "stops": [
+          "South-west corner: lawn as foreground, Grand Palace roofs head-on",
+          "Central walkway: low angle across the square's oval boundary and the sky",
+          "Tamarind tree line: use branches as a natural frame for backlit silhouettes",
+          "Towards Democracy Monument to the north: city lights and traffic trails after sunset"
+        ],
+        "tip": "There is no shelter, so bring sun protection for yourself and your gear. After rain the wet ground reflects beautifully."
+      },
+      {
+        "icon": "♿",
+        "group": "Low mobility & accessible visits",
+        "duration": "1 – 1.5 hours",
+        "pace": "Slowest, with frequent sitting breaks",
+        "bestTime": "Early morning or late afternoon, avoiding peak heat",
+        "resonance": "Walkways around the square are even and almost flat, and the main entrances plus surrounding pavements have kerb ramps — workable for wheelchairs, walkers and visitors with limited stamina.",
+        "stops": [
+          "MRT Sanam Chai station: lifts and step-free access from the platform",
+          "South entrance: level ground leading straight onto the perimeter walkway",
+          "East walkway: find shade and sit for a quiet panorama of the square",
+          "Nearby malls or cafés: air-conditioned rest and accessible toilets"
+        ],
+        "tip": "The square has no fixed seating or shade, so bring a folding stool and water. Some Bangkok pavements are uneven — allow extra time for moving between stops."
+      }
+    ],
+    "generalTitle": "General routes",
+    "generalSubtitle": "If this is your first visit, either of these two routes covers the essentials without missing the highlights.",
+    "general": [
+      {
+        "icon": "🕐",
+        "name": "Half-day essentials",
+        "duration": "About 3 hours",
+        "bestTime": "7–10 am, or after 4 pm until sunset",
+        "summary": "The square as the anchor, linked with the Grand Palace exterior to the south, the National Museum to the west and the old town to the north — the most complete view for the least walking.",
+        "steps": [
+          { "t": "Start at MRT Sanam Chai or Tha Chang pier", "d": "Arrive by rail or river to avoid old-town traffic; walk about 10–15 minutes to the square." },
+          { "t": "Enter Sanam Luang and walk the perimeter", "d": "One full lap takes in the Grand Palace and Wat Phra Kaew roofs, the lawns and the tamarind trees from every angle." },
+          { "t": "View the Grand Palace and Wat Phra Kaew from the south-west", "d": "You can see the whole complex from the square without queueing for an entrance ticket." },
+          { "t": "Walk to the Bangkok National Museum or the City Pillar Shrine", "d": "About 10 minutes west of the square — cool, indoor and rich in historical context." },
+          { "t": "Finish on the north side of the square", "d": "Top up water and use the toilet at a nearby store, then return as the late light changes." }
+        ],
+        "note": "Expect roughly 2–3 km of walking; wear comfortable shoes and carry water."
+      },
+      {
+        "icon": "🗓️",
+        "name": "Full-day deep dive",
+        "duration": "About 6 – 7 hours (including a lunch break)",
+        "bestTime": "Start at 7 am, break at midday, finish around sunset",
+        "summary": "Place Sanam Luang inside the wider Rattanakosin historic island: palaces and temples in the morning, air-conditioned rest at midday, and back to the square for sunset.",
+        "steps": [
+          { "t": "Morning: Sanam Luang at its quietest", "d": "7–9 am has the fewest people and cleanest light — shoot the panorama before walking the circuit." },
+          { "t": "Late morning: Grand Palace, Wat Phra Kaew and Wat Pho", "d": "Walk from the square; note the dress code and opening hours, and allow 2.5–3 hours." },
+          { "t": "Midday: lunch and heat avoidance in the old town", "d": "11:30 am – 2 pm is the harshest sun — rest in an air-conditioned restaurant or café." },
+          { "t": "Afternoon: National Museum, City Pillar Shrine, Thammasat area", "d": "Mostly indoor galleries that explain the founding of Bangkok and its royal ceremonies." },
+          { "t": "Evening: Democracy Monument, then back to the square for sunset", "d": "Walk along Ratchadamnoen Avenue and return to the lawn 60 minutes before sunset." },
+          { "t": "Night: finish at Tha Maharaj or a riverside night market", "d": "Walk or take a short ride to the river for dinner and close the day." }
+        ],
+        "note": "The full-day route involves 5–7 km of walking. Split it into two blocks and always rest at midday."
+      }
+    ],
+    "disclaimer": "Durations are reference values for walking and stops and exclude ticket queues. Adjust to the day's weather and your own energy."
+  },
+  "facilities": {
+    "title": "Visitor Services & Nearby Facilities",
+    "subtitle": "This section describes only the types of facilities available and roughly where they are, so you can plan your day. This is an independent non-profit project: we do not recommend or rate any specific business.",
+    "neutralNote": "We describe what types of facilities exist and in which direction — no brands, shop names or price promises.",
+    "itemsTitle": "Facilities visitors ask about",
+    "items": [
+      {
+        "icon": "🚻",
+        "name": "Toilets",
+        "availability": "Nearby",
+        "detail": "The square itself has no public toilets. The nearest options are in convenience stores, malls, museums and temple grounds just outside the perimeter walkway.",
+        "tip": "Go before you enter the square. Toilets inside temple grounds may require removing shoes and keeping quiet."
+      },
+      {
+        "icon": "🅿️",
+        "name": "Parking",
+        "availability": "Limited & tight",
+        "detail": "Old-town streets are narrow and the square has no dedicated car park. Use paid parking in nearby shopping centres or office buildings, then walk in.",
+        "tip": "Traffic is heavy on holidays and ceremony days. Driving is not recommended — prefer rail or river transport."
+      },
+      {
+        "icon": "🍜",
+        "name": "Food & drink",
+        "availability": "Widely available",
+        "detail": "Streets, markets and malls around the square have local kitchens, noodle stalls, cafés and chain fast food, from budget to mid-range.",
+        "tip": "Expect queues at the lunch peak; eat off-peak and, in hot weather, be careful about food storage and drinking water."
+      },
+      {
+        "icon": "🛏️",
+        "name": "Accommodation",
+        "availability": "Widely available",
+        "detail": "The old town is dominated by mid-range hotels, hostels and boutique guesthouses; the riverside has more upscale options and rail corridors are best for connections.",
+        "tip": "In the cool-season high season (November–February) book well ahead. To shoot the morning panorama, stay within walking distance of the square."
+      },
+      {
+        "icon": "🏪",
+        "name": "Shops & convenience stores",
+        "availability": "Nearby",
+        "detail": "Convenience stores are dense in the commercial streets around the square and sell water, cold drinks, rain gear, sunscreen and basic medicine.",
+        "tip": "There are no vending machines on the square — stock up on water and rain gear before you go in."
+      },
+      {
+        "icon": "⛽",
+        "name": "Fuel",
+        "availability": "Requires driving out",
+        "detail": "There are no petrol stations inside the old town; the nearest fuel stops are on the outer ring roads and need a drive.",
+        "tip": "If you are driving, fill up outside the old town rather than hunting for a station in narrow streets."
+      },
+      {
+        "icon": "🔌",
+        "name": "EV charging",
+        "availability": "Mainly in malls",
+        "detail": "EV chargers are concentrated in the underground car parks of nearby shopping centres and office buildings; street parking has no charging.",
+        "tip": "Check parking and charging tariffs first. On holidays bays turn over slowly, so allow extra time."
+      },
+      {
+        "icon": "🏧",
+        "name": "ATMs & currency exchange",
+        "availability": "Nearby",
+        "detail": "Banks, ATMs and exchange counters are spread through the commercial streets around the square, each with different opening hours.",
+        "tip": "Exchange rates and fees vary a lot between counters — compare first and keep the receipt."
+      },
+      {
+        "icon": "🚰",
+        "name": "Drinking water",
+        "availability": "Bring your own",
+        "detail": "There are no drinking-water fountains on the square; convenience stores and markets are the easiest place to refill.",
+        "tip": "Bangkok is hot all year — carry at least one litre of water and avoid long exposure around midday."
+      },
+      {
+        "icon": "🏥",
+        "name": "Medical & pharmacy",
+        "availability": "Requires a ride",
+        "detail": "Pharmacies are scattered through the old town, while general hospitals sit in the surrounding districts and need a ride.",
+        "tip": "Bring your own medication, sunscreen and insect repellent. At the first sign of heat exhaustion, move to shade and rehydrate."
+      }
+    ],
+    "note": "Opening hours, fees and parking availability change frequently — always defer to on-site signage and staff guidance."
+  },
+  "visitorResponsibility": {
+    "title": "Understanding the Site & Visitor Responsibility",
+    "subtitle": "Sanam Luang is both a national ceremonial ground and a public green space for residents. Understanding why it matters is worth more than any single photo.",
+    "intro": "This section is short and specific: what makes the square environmentally distinctive, and the few things every visitor can easily do.",
+    "knowledgeTitle": "Understand first, then enter",
+    "knowledge": [
+      {
+        "icon": "👑",
+        "title": "This is national ceremonial ground",
+        "text": "The square has been the core site of royal ceremony since Bangkok was founded and still hosts royal cremations and the Ploughing Ceremony. Temporary closures during ceremonies are normal management — please follow on-site directions and walk around."
+      },
+      {
+        "icon": "🌳",
+        "title": "Tamarind trees and the value of urban greenery",
+        "text": "The tamarind trees along the edges are over a century old. They shelter birds, squirrels and insects and form one of the few large canopies left in the old town. Please do not climb, break branches or carve into the trunks."
+      },
+      {
+        "icon": "🐦",
+        "title": "Keep your distance from wildlife",
+        "text": "Mynas and spotted doves are common here, and monitor lizards occasionally cross the lawn edges. Do not feed, chase or catch them — close contact disturbs the animals and carries risk."
+      },
+      {
+        "icon": "🔇",
+        "title": "Keep the volume down out of respect",
+        "text": "The square is simultaneously an exercise ground, a classroom and a tourist site. Avoid loudspeakers, low drone flights and high-volume live streaming."
+      }
+    ],
+    "responsibilityTitle": "Visitor responsibility checklist",
+    "responsibility": [
+      "Take your litter with you or use the sorting bins — especially cigarette butts, plastic bottles and food packaging.",
+      "Sitting on the lawn is fine, but keep off fenced areas and do not damage turf or flower beds.",
+      "Dress appropriately: avoid sleeveless tops and very short shorts that are unsuitable for royal grounds.",
+      "During ceremonies, chanting or moments of silence, stop taking photos and talking, and stand quietly.",
+      "Ask permission before photographing people, especially monks, guards and children.",
+      "Leave open lawns during thunderstorms and never shelter under an isolated tree.",
+      "Watch for heat exhaustion — dizziness, nausea or stopping sweating means you should move to shade and rehydrate immediately.",
+      "If you see damaged facilities, an injured person or a suspicious item, contact on-site staff or security."
+    ],
+    "etiquetteTitle": "Dress code & etiquette at a glance",
+    "etiquette": [
+      { "label": "Shoulders & knees", "value": "Covered", "note": "Inside temples or royal areas avoid sleeveless tops, bare shoulders and shorts above the knee." },
+      { "label": "Shoes", "value": "Comfortable", "note": "This is a walking site — wear shoes you can walk in. Remove them before entering temple halls." },
+      { "label": "Hat & umbrella", "value": "Bring them", "note": "There is no shade, so a sun hat and folding umbrella are the two most useful items." },
+      { "label": "Volume", "value": "Quiet", "note": "Silence notification sounds and avoid loud conversation during ceremonies and in religious areas." }
+    ],
+    "closingNote": "This site is an independent non-profit educational project with no affiliation to any government or commercial body. Its content exists to help visitors understand and respect this public space."
+  },
+  "heritage": {
+    "title": "History and Local Legends",
+    "subtitle": "From a royal cremation ground to the country's open-air living room — the name, shape and uses of Sanam Luang record more than 240 years of Bangkok's urban history.",
+    "etymologyTitle": "Where the name comes from",
+    "etymologyText": "\"Sanam Luang (สนามหลวง)\" translates literally as \"royal field\": sanam means an open ground or field, and luang means royal or exalted. Its older name was \"Thung Phra Men (ทุ่งพระเมรุ)\", the \"cremation-field\", because for a long period after Bangkok became the capital this was where royal cremations for kings and senior members of the royal family were held. The change of name is itself a piece of history: only when the ground stopped being tied to mourning alone did it become a \"royal field\" genuinely shared by everyone.",
+    "timelineTitle": "Key moments since the founding of Bangkok",
+    "timeline": [
+      {
+        "year": "1782",
+        "title": "Bangkok is founded and the ground becomes a royal cremation site",
+        "text": "Rama I moved the capital from Thonburi to the east bank of the Chao Phraya and set aside this open land north of the new Grand Palace for royal cremation rites — then known as Thung Phra Men."
+      },
+      {
+        "year": "Around 1855",
+        "title": "Renamed Sanam Luang and opened to public use",
+        "text": "Under Rama IV the ground was formally renamed the \"royal field\" and opened to the public between ceremonies. It gradually shifted from a funeral ground to a civic space combining ceremony and public life."
+      },
+      {
+        "year": "Late 19th century",
+        "title": "Tamarind trees planted as the city's green frame",
+        "text": "Rama V improved the square and had rows of tamarind trees planted along its edges. Those trees survive today and form the densest single canopy of century-old trees in the old town."
+      },
+      {
+        "year": "20th century",
+        "title": "Kites, morning exercise and public life",
+        "text": "Kite flying in the hot season became an old Bangkok tradition: the square is windy and open, making it a natural arena for kite fighting and gatherings. It also became the city's exercise and assembly ground."
+      },
+      {
+        "year": "Every May",
+        "title": "The Royal Ploughing Ceremony",
+        "text": "This Brahmanic national ceremony is held on the square to divine the coming year's rain and harvest — still the most visible expression of the relationship between Thai agriculture and the monarchy."
+      },
+      {
+        "year": "2017",
+        "title": "Royal cremation of King Bhumibol Adulyadej",
+        "text": "The square hosted the royal cremation of King Rama IX, with an enormous purpose-built cremation pavilion that drew global attention and reconfirmed the square's status as the nation's ceremonial ground."
+      },
+      {
+        "year": "2019 – 2020",
+        "title": "MRT Sanam Chai station opens",
+        "text": "The Blue Line extended into the old town, making Sanam Chai the most convenient way to reach the square — and connecting this historic ground to the modern rail network."
+      }
+    ],
+    "legendTitle": "Stories told locally",
+    "legendIntro": "The following are folk explanations and local memory rather than documented history, but they help explain how Thais see this square. A verification note follows.",
+    "legends": [
+      {
+        "icon": "🪁",
+        "title": "The origin of the kites",
+        "text": "An old Bangkok story holds that hot-season kite flying began as a way of \"reporting back to the sky\" — after funerals and ceremonies, people flew kites to ask the wind to turn and the rains to arrive on time. Kite flying thus moved from ritual accessory to seasonal public pastime."
+      },
+      {
+        "icon": "🌾",
+        "title": "Divination by sacred oxen",
+        "text": "At the Ploughing Ceremony the sacred oxen are observed choosing among trays of offerings to divine the year: rice means an abundant harvest, beans mean plentiful fruit and vegetables, and drinking water means ample rain. The rite still takes place and remains a classic Thai answer to climatic uncertainty."
+      },
+      {
+        "icon": "🌳",
+        "title": "What the tamarind trees are said to be for",
+        "text": "Local accounts say the tamarinds along the edge were planted in rows to shade ceremony-goers and to make the ground read visually \"more like a field\". Individual planting dates are hard to verify, but these old trees are certainly the square's most tangible historical layer."
+      }
+    ],
+    "verificationNote": "Keep history and legend separate: for documented facts see the National Museum, the Tourism Authority of Thailand and Bangkok Metropolitan Administration public materials; folk accounts remain unverified and are presented here only as local cultural background.",
+    "readMoreTitle": "Want to go deeper",
+    "readMoreText": "For official and academic sources, see the authoritative portals listed in the Sources & References section at the bottom of this page."
+  }
+}

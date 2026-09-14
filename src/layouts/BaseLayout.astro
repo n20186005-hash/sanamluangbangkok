@@ -3,85 +3,110 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import NoticeBanner from '../components/NoticeBanner.astro';
 import Footer from '../components/Footer.astro';
-import { getLangFromUrl, buildAlternates, htmlLangAttr, getI18n } from '../i18n/ui';
-import { ogLocale, siteConfig } from '../config';
+import { getLangFromUrl, buildAlternates, buildHreflangAlternates, htmlLangAttr, getI18n } from '../i18n/ui';
+import { entity, locationLabel, ogLocale, siteConfig } from '../config';
 
 interface Props {
   title: string;
   description: string;
   path?: string;
+  /** 法律条款、Cookie 设置等工具页：不参与搜索收录，避免占用索引配额 */
+  noindex?: boolean;
 }
 
-const { title, description, path = '' } = Astro.props;
+const { title, description, path = '', noindex = false } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const htmlLang = htmlLangAttr(lang);
 const alts = buildAlternates(path);
+const hreflangAlts = buildHreflangAlternates(path);
 const canonical = alts[lang] ?? alts.th;
 const { messages } = getI18n(Astro.url);
-const attractionName = messages.header?.siteName ?? messages.footer?.siteName ?? messages.meta.title;
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'TouristAttraction',
-  name: attractionName,
-  description: messages.meta.description,
-  url: canonical,
-  image: 'https://sanamluangbangkok.com/gallery/sanam-luang-1.jpg',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'QF4V+88R, Ratchadamnoen Klang Rd, Phra Borom Maha Ratchawang, Phra Nakhon',
-    addressLocality: 'Bangkok',
-    addressRegion: 'Bangkok',
-    postalCode: '10200',
-    addressCountry: 'TH',
-  },
-  telephone: '+6622222222',
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 13.7543884,
-    longitude: 100.4907973,
-  },
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '08:30',
-      closes: '15:30',
-    },
-  ],
-  isAccessibleForFree: true,
-  offers: [
-    {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-      url: canonical,
-      description: messages.meta.description,
-    },
-  ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.6',
-    reviewCount: '27114',
-  },
-  sameAs: [
-    'https://maps.app.goo.gl/U8tk6HUgtabaEVnV8',
-    'https://en.wikipedia.org/wiki/Sanam_Luang'
+const heroImageUrl = `${siteConfig.baseUrl}${entity.heroImage}`;
+const ogImageAlt = `${entity.attractionFullName} in ${entity.cityName}`;
+const siteName = `${entity.attractionShortName} (${entity.cityName})`;
+
+const breadcrumbLd = {
+  '@type': 'BreadcrumbList',
+  '@id': `${siteConfig.baseUrl}/#breadcrumb`,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: messages.breadcrumb.home, item: `${siteConfig.baseUrl}/${lang}/` },
+    { '@type': 'ListItem', position: 2, name: messages.breadcrumb.region, item: `${siteConfig.baseUrl}/${lang}/#overview` },
+    { '@type': 'ListItem', position: 3, name: messages.breadcrumb.city, item: `${siteConfig.baseUrl}/${lang}/#transport` },
+    { '@type': 'ListItem', position: 4, name: messages.breadcrumb.current, item: canonical },
   ],
 };
-  const breadcrumbLd = (() => {
-    const bc = messages.breadcrumb;
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: bc.home, item: `${siteConfig.baseUrl}/${lang}` },
-        { '@type': 'ListItem', position: 2, name: bc.region, item: `${siteConfig.baseUrl}/${lang}#overview` },
-        { '@type': 'ListItem', position: 3, name: bc.city, item: `${siteConfig.baseUrl}/${lang}#transport` },
-        { '@type': 'ListItem', position: 4, name: bc.current, item: canonical },
+
+// 用 @graph 把「景点实体 + 面包屑」声明为互相引用的实体图。
+// 实体本身（@id = 站点根 + #park）在所有语言版本中保持同一身份，
+// 因此 url 固定指向 x-default 版本，避免同一 @id 出现多个互相冲突的 url。
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Park',
+      '@id': `${siteConfig.baseUrl}/#park`,
+      name: entity.attractionShortName,
+      alternateName: [
+        'สนามหลวง',
+        '皇家田广场',
+        '皇家田廣場',
+        'Royal Field',
+        'Royal Field Bangkok',
+        'Thung Phra Men',
       ],
-    };
-  })();
+      description:
+        `${entity.attractionShortName} (สนามหลวง) is a historic public square and park in ${entity.districtName}, ${entity.cityName}, ` +
+        `located directly in front of the Grand Palace and Wat Phra Kaew. Free to enter, it is used for royal ceremonies ` +
+        `and as a public recreation ground.`,
+      url: alts.xDefault,
+      image: [heroImageUrl],
+      isAccessibleForFree: true,
+      publicAccess: true,
+      hasMap: entity.mapsShareUrl,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: entity.streetAddress,
+        addressLocality: entity.districtName,
+        addressRegion: entity.stateProvince,
+        postalCode: entity.postalCode,
+        addressCountry: entity.countryCode2Letter,
+      },
+      containedInPlace: {
+        '@type': 'AdministrativeArea',
+        name: entity.districtName,
+        containedInPlace: {
+          '@type': 'City',
+          name: entity.cityName,
+          containedInPlace: { '@type': 'Country', name: entity.countryName },
+        },
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: entity.latitude,
+        longitude: entity.longitude,
+      },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '00:00',
+          closes: '23:59',
+        },
+      ],
+      // 刻意不输出 aggregateRating：页面展示的 4.6 / 27,260 是引自 Google 地图公开页面的数据，
+      // 而 Google 结构化数据政策不允许把第三方平台的评分聚合成本站的 aggregateRating
+      // （评论摘要的明确禁止项），可能触发结构化数据人工处置。
+      // 评分改为「页面可见文字 + 来源链接 + 同步时间」呈现，见 Reviews 组件。
+      sameAs: [
+        entity.mapsShareUrl,
+        entity.govtTourismUrl,
+        'https://en.wikipedia.org/wiki/Sanam_Luang',
+      ],
+    },
+    breadcrumbLd,
+  ],
+};
 ---
 
 <!doctype html>
@@ -101,32 +126,51 @@ const jsonLd = {
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    {/* 法律条款 / Cookie 设置等页面：保留 follow 让权重仍可传递，但不进入索引 */}
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="zh" href={alts.zh} />
-    <link rel="alternate" hreflang="en" href={alts.en} />
-    <link rel="alternate" hreflang="my" href={alts.my} />
-    <link rel="alternate" hreflang="shn" href={alts.shn} />
-    <link rel="alternate" hreflang="mnw" href={alts.mnw} />
-    <link rel="alternate" hreflang="ja" href={alts.ja} />
-    <link rel="alternate" hreflang="ko" href={alts.ko} />
-    <link rel="alternate" hreflang="x-default" href={alts.xDefault} />
+    <link rel="preload" as="image" href={entity.heroImage} fetchpriority="high" />
+    {Object.entries(hreflangAlts).map(([hl, href]) => (
+      <link rel="alternate" hreflang={hl} href={href} />
+    ))}
 
+    <!-- Open Graph -->
+    <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={ogLocale[lang] ?? lang} />
-    <meta property="og:image" content="https://sanamluangbangkok.com/gallery/sanam-luang-1.jpg" />
+    <meta property="og:image" content={heroImageUrl} />
+    <meta property="og:image:secure_url" content={heroImageUrl} />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://sanamluangbangkok.com/gallery/sanam-luang-1.jpg" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={heroImageUrl} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
+
+    <!-- Geo entity binding -->
+    <meta name="geo.region" content={entity.countryCode2Letter} />
+    <meta name="geo.placename" content={`${entity.cityName}, ${entity.countryName}`} />
+    <meta name="geo.position" content={`${entity.latitude};${entity.longitude}`} />
+    <meta name="ICBM" content={`${entity.latitude}, ${entity.longitude}`} />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0f2015" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content={siteName} />
 
     <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXX" />
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
 
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)}></script>
 
     <script is:inline>
       (function () {
@@ -148,5 +192,12 @@ const jsonLd = {
       <slot />
     </main>
     <Footer />
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {});
+        });
+      }
+    </script>
   </body>
 </html>

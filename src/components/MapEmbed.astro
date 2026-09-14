@@ -1,8 +1,10 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { entity } from '../config';
 const { messages } = getI18n(Astro.url);
 const m = messages.mapSection;
-const embedUrl = 'https://www.google.com/maps?q=Sanam%20Luang%20Bangkok&output=embed';
+const embedUrl = m.embedSrc ?? entity.mapsEmbedSrc;
+const authorityUrl = m.authorityUrl ?? entity.govtTourismUrl;
 ---
 
 <section id="map" class="section-padding" style="background: var(--bg-secondary);">
@@ -18,10 +20,18 @@ const embedUrl = 'https://www.google.com/maps?q=Sanam%20Luang%20Bangkok&output=e
         height="420"
         style="border:0;"
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
         title={m.title}
       ></iframe>
     </div>
+
+    <p class="text-center text-xs sm:text-sm mt-6" style="color: var(--text-secondary);">
+      {m.authorityNote}{' '}
+      <a href={authorityUrl} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:opacity-70" style="color: var(--accent);">
+        {m.authorityLinkLabel}
+      </a>.
+    </p>
 
     <div class="text-center mt-8 flex flex-wrap justify-center gap-3">
       <a href={m.mapsUrl} target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto justify-center px-8 py-3 rounded-full font-semibold text-white" style="background: var(--accent);">
