@@ -31,6 +31,14 @@ import DeepDive from '../../components/DeepDive.astro';
 import FAQ from '../../components/FAQ.astro';
 import { getI18n, languagesList, xDefaultLang } from '../../i18n/ui';
 
+// 首页是 [lang] 动态路由：必须显式枚举 th / zh / en 三个语言参数，
+// Astro 才会在构建时为 /th/ /zh/ /en/ 注册路由（否则部署后就是 404）。
+// 注意 prerender = false 只决定「是否在构建时生成 HTML 内容」，
+// 不影响路由注册；没有 getStaticPaths() 就等于没有这三条路由。
+export function getStaticPaths() {
+  return languagesList.map((lang) => ({ params: { lang } }));
+}
+
 // 首页按请求在服务端渲染：实时天气模块需要服务端取数并缓存。
 // 其余路由（隐私政策、服务条款、Cookie 设置）仍为构建时静态生成。
 export const prerender = false;
