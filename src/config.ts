@@ -57,11 +57,11 @@ export const entity = {
   govtTourismUrl: 'https://www.tourismthailand.org/',
   /** 谷歌地图公开评分（最新同步） */
   ratingValue: '4.6',
-  reviewCount: 27260,
+  reviewCount: 27322,
   /** 评分与评价数的采集来源与同步时间（页面需注明来源） */
   ratingSourceName: 'Google Maps',
   ratingSourceUrl: 'https://maps.app.goo.gl/U8tk6HUgtabaEVnV8',
-  ratingSyncedAt: '2026-09',
+  ratingSyncedAt: '2026-10',
   /** 主视觉图与图片版权说明 */
   heroImage: '/gallery/sanam-luang-bangkok-1.jpg',
   /** OG/Twitter 分享图（1200×630 由主视觉裁切而来） */

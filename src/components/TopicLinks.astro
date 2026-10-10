@@ -1,0 +1,27 @@
+---
+import { getI18n } from '../i18n/ui';
+import { TOPIC_SLUGS, TOPIC_KEY_BY_SLUG } from '../lib/topics';
+
+const { lang, messages } = getI18n(Astro.url);
+const title = messages.topicLinks?.title ?? 'Guides';
+const subtitle = messages.topicLinks?.subtitle ?? '';
+const items = TOPIC_SLUGS.map((slug) => {
+  const t = messages.topics?.[TOPIC_KEY_BY_SLUG[slug]];
+  return { slug, title: t?.h1 ?? t?.title ?? slug, description: t?.description ?? '' };
+});
+---
+
+<section class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="font-display text-3xl font-semibold mb-3 text-center" style="color: var(--text-primary);">{title}</h2>
+    {subtitle && <p class="text-center text-lg mb-10" style="color: var(--text-secondary);">{subtitle}</p>}
+    <div class="grid sm:grid-cols-3 gap-6">
+      {items.map((it) => (
+        <a href={`/${lang}/${it.slug}/`} class="block bg-white/5 rounded-2xl border border-white/10 p-6 hover:opacity-90">
+          <div class="font-semibold text-lg mb-2" style="color: var(--text-primary);">{it.title}</div>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{it.description}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

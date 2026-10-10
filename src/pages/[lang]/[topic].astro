@@ -1,0 +1,20 @@
+---
+import TopicPage from '../../components/TopicPage.astro';
+import { languagesList } from '../../i18n/ui';
+import { TOPIC_SLUGS } from '../../lib/topics';
+
+// 二级专题页同属 [lang] 动态段：必须显式枚举 语言 × 专题，
+// Astro 才会在构建时为 /th|zh|en /{slug}/ 注册路由。
+export function getStaticPaths() {
+  return languagesList.flatMap((lang) =>
+    TOPIC_SLUGS.map((slug) => ({ params: { lang, topic: slug } })),
+  );
+}
+
+// 专题页为纯静态内容（无实时天气），构建时生成 HTML。
+export const prerender = true;
+
+const { topic } = Astro.params;
+---
+
+<TopicPage slug={topic!} />

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sanam Luang Bangkok: Royal Field Park Guide, Location & Nearby Attractions",
-    "description": "Plan your visit to Sanam Luang (สนามหลวง), Bangkok's iconic Royal Field park located right next to the Grand Palace. View 4.6-star ratings, map directions, photos & opening info."
+    "title": "Sanam Luang Bangkok – Royal Field Park, Hours & Visitor Guide",
+    "description": "Explore Sanam Luang in Bangkok, Thailand. Find opening hours, free admission, directions, nearby Grand Palace attractions, history and visitor tips."
   },
   "header": {
     "siteName": "Sanam Luang (สนามหลวง)",
@@ -57,9 +57,9 @@
   "hero": {
     "title": "Sanam Luang (Bangkok, Thailand)",
     "subtitle": "A vast oval-shaped public square located just north of the Grand Palace in Bangkok. Historically used as the royal cremation ground, it now serves as the central stage for major royal ceremonies (such as the Royal Ploughing Ceremony) and public gatherings. Surrounded by the Grand Palace, Wat Phra Kaew, and the National Museum, it is the perfect starting point to explore Bangkok's history.",
-    "rating": "4.6 (27,260)",
-    "reviewCount": "27,260 reviews",
-    "hours": "Open all day · Free (the adjacent Grand Palace and Wat Phra Kaew require separate tickets)",
+    "rating": "4.6 (27,322)",
+    "reviewCount": "27,322 reviews",
+    "hours": "Open 05:00–22:00 · Free (the adjacent Grand Palace and Wat Phra Kaew require separate tickets)",
     "openMaps": "View location on Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/U8tk6HUgtabaEVnV8",
     "legend": {
@@ -93,7 +93,7 @@
       {
         "icon": "🕓",
         "label": "Hours",
-        "value": "24 Hours"
+        "value": "05:00–22:00"
       }
     ],
     "navCta": {
@@ -199,7 +199,7 @@
     "panels": [
       {
         "q": "Is there an entrance fee for Sanam Luang?",
-        "a": "No. As public green space the square is open all day, free, with the lawns and walkways open to everyone. The adjacent Grand Palace and Wat Phra Kaew are separate ticketed sites with their own admission.",
+        "a": "No. As public green space the square is open 05:00–22:00, free, with the lawns and walkways open to everyone. The adjacent Grand Palace and Wat Phra Kaew are separate ticketed sites with their own admission.",
         "items": [
           "The square itself is free, has no ticket office and needs no booking.",
           "The Grand Palace and Wat Phra Kaew are separate attractions requiring tickets and a dress code."
@@ -539,12 +539,12 @@
     "ratingTitle": "Google Maps Rating",
     "ratingValue": "4.6",
     "ratingOutOf": "/ 5.0",
-    "reviewCount": "27,260",
+    "reviewCount": "27,322",
     "reviewCountLabel": "reviews",
     "ratingContext": "\"State park\" category · Sanam Luang (สนามหลวง), Bangkok, Thailand",
     "sourceLabel": "Source",
     "sourceName": "Google Maps public listing",
-    "sourceNote": "Rating and review count are synced from the Google Maps public listing of Sanam Luang (September 2026) and are shown for reference only; they are not our own reviews.",
+    "sourceNote": "Rating and review count are synced from the Google Maps public listing of Sanam Luang (October 2026) and are shown for reference only; they are not our own reviews.",
     "sourceUrl": "https://maps.app.goo.gl/U8tk6HUgtabaEVnV8",
     "featuredTitle": "The Royal Field in a few lines",
     "featuredSubtitle": "How this square changes across a day — compiled by this guide from public sources and on-site observation, not quoted from visitors.",
@@ -579,11 +579,11 @@
     "title": "Sources & References",
     "subtitle": "This independent guide compiles publicly available official and reference materials. Rating, location, and visitor information are cited below so you can verify them yourself.",
     "ratingTitle": "Rating & Reviews",
-    "ratingText": "The 4.6 rating and 27,260 reviews shown on this site are taken from the public Google Maps listing of Sanam Luang (\"State park\" category, Bangkok, Thailand).",
+    "ratingText": "The 4.6 rating and 27,322 reviews shown on this site are taken from the public Google Maps listing of Sanam Luang (\"State park\" category, Bangkok, Thailand).",
     "ratingSourceLabel": "Source",
     "ratingSourceName": "Google Maps public listing",
     "ratingSyncedLabel": "Last synced",
-    "ratingSyncedValue": "September 2026",
+    "ratingSyncedValue": "October 2026",
     "authorityTitle": "Official & Reference Portals",
     "authorityText": "For official updates and regional tourism information, visit the following authoritative portals:",
     "imageTitle": "Image Copyright",
@@ -596,7 +596,7 @@
       "Visitor quotes are summarised from publicly visible visitor feedback and are not paid endorsements."
     ],
     "lastUpdatedLabel": "Last updated",
-    "lastUpdatedValue": "September 2026"
+    "lastUpdatedValue": "October 2026"
   },
   "footer": {
     "siteName": "Sanam Luang (Bangkok, Thailand)",
@@ -774,7 +774,7 @@
         "items": [
           {
             "q": "Do I need a ticket for Sanam Luang?",
-            "a": "No. As a public green space the square is open all day, free, and you can walk onto the lawns and paths freely. Note that the Grand Palace and Wat Phra Kaew next door are separate ticketed sites with their own hours and dress code."
+            "a": "No. As a public green space the square is open 05:00–22:00, free, and you can walk onto the lawns and paths freely. Note that the Grand Palace and Wat Phra Kaew next door are separate ticketed sites with their own hours and dress code."
           },
           {
             "q": "How long should I spend there?",
@@ -810,7 +810,7 @@
           },
           {
             "q": "What are the opening hours?",
-            "a": "As public green space the square is open all day with no admission fee. The adjacent Grand Palace and Wat Phra Kaew are separate ticketed sites, generally open during daytime hours and subject to temporary changes for royal ceremonies — check on-site notices."
+            "a": "As public green space the square is open 05:00–22:00 with no admission fee. The adjacent Grand Palace and Wat Phra Kaew are separate ticketed sites, generally open during daytime hours and subject to temporary changes for royal ceremonies — check on-site notices."
           },
           {
             "q": "How is Sanam Luang rated?",

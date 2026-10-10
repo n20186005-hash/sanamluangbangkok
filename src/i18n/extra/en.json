@@ -432,5 +432,92 @@
     "verificationNote": "Keep history and legend separate: for documented facts see the National Museum, the Tourism Authority of Thailand and Bangkok Metropolitan Administration public materials; folk accounts remain unverified and are presented here only as local cultural background.",
     "readMoreTitle": "Want to go deeper",
     "readMoreText": "For official and academic sources, see the authoritative portals listed in the Sources & References section at the bottom of this page."
+  },
+  "topicLinks": {
+    "title": "Guides & deeper reading",
+    "subtitle": "Practical guides to help you plan the visit."
+  },
+  "topics": {
+    "howToGetThere": {
+      "title": "How to Get to Sanam Luang — Transport, MRT & Parking",
+      "description": "Directions to Sanam Luang (the Royal Field) in Bangkok: MRT Sanam Chai, the Chao Phraya Express Boat to Tha Chang, airport transfers from Suvarnabhumi and Don Mueang, buses, taxis and where to park.",
+      "h1": "How to Get to Sanam Luang",
+      "intro": "Sanam Luang is the open ceremonial square directly in front of the Grand Palace in Phra Nakhon, Bangkok's old city. The square itself is closed to traffic, so the easiest way to arrive is by MRT, river boat or taxi dropped nearby, then a short walk in.",
+      "sections": [
+        { "heading": "By MRT (subway)", "body": "Take the Blue Line to Sanam Chai Station. Use Exit 1 and walk north along Sanam Chai Road for about 5 minutes; the square opens up on your right. This is the most reliable option and avoids Bangkok traffic." },
+        { "heading": "By Chao Phraya Express Boat", "body": "River services stop at Tha Chang Pier (pier N9), about a 10-minute walk from the square. Orange-flag boats are the cheap commuter option; tourist boats also call here." },
+        { "heading": "From Suvarnabhumi Airport (BKK)", "body": "Take the Airport Rail Link to Phaya Thai, then a taxi or Grab for the final leg, roughly 20 to 30 minutes depending on traffic. A direct taxi from the airport takes about 45 to 60 minutes. Always confirm the meter or agree a fare before departing." },
+        { "heading": "From Don Mueang Airport (DMK)", "body": "DMK is north of the city. A taxi or Grab to Sanam Luang usually takes 30 to 45 minutes; during peak hours allow more. The SRT Dark Red Line reaches Krung Thep Aphiwat, where you can change to a taxi for the last stretch." },
+        { "heading": "By bus, taxi or Grab", "body": "Public buses run along Ratchadamnoen Klang Road, but routes and numbers change, so check the latest on the BMTA or a maps app. Taxis and Grab can drop you on Sanam Chai Road or near Tha Chang; ask to be set down a short walk from the square because the frontage road is closed." },
+        { "heading": "Parking", "body": "There is no public parking on the square itself. Use paid lots near the Grand Palace, ICONSIAM (then a boat to Tha Chang), or park-and-ride at an MRT station and ride in. Arrive early on weekends and ceremony days, when the area fills up." }
+      ],
+      "faq": {
+        "title": "Getting here — frequently asked questions",
+        "subtitle": "Practical questions about reaching Sanam Luang.",
+        "categories": [
+          { "title": "On the way", "items": [
+            { "q": "What is the nearest MRT station?", "a": "Sanam Chai Station on the Blue Line, about a 5-minute walk north via Sanam Chai Road." },
+            { "q": "Which boat pier is closest?", "a": "Tha Chang Pier (N9) on the Chao Phraya, roughly a 10-minute walk away." },
+            { "q": "Can I drive right up to the square?", "a": "No — the square and the road in front of the Grand Palace are closed to traffic. Use nearby paid parking and walk, or take the MRT." }
+          ] },
+          { "title": "From the airports", "items": [
+            { "q": "How do I get here from Suvarnabhumi (BKK)?", "a": "Airport Rail Link to Phaya Thai, then taxi or Grab for about 20 to 30 minutes, or a direct taxi of 45 to 60 minutes. Confirm the meter or fare first." },
+            { "q": "How long from Don Mueang (DMK)?", "a": "A taxi or Grab usually takes 30 to 45 minutes; add time in rush hour. The SRT Dark Red Line to Krung Thep Aphiwat plus a taxi is an alternative." }
+          ] }
+        ]
+      },
+      "relatedTitle": "More guides"
+    },
+    "history": {
+      "title": "Sanam Luang History — Bangkok's Royal Field Since 1782",
+      "description": "The history of Sanam Luang (the Royal Field): kept clear since the 1782 founding of Bangkok, used for royal cremations at Thung Phra Men, the Royal Ploughing Ceremony and major state ceremonies.",
+      "h1": "The History of Sanam Luang",
+      "intro": "Long before it became a photo spot beside the Grand Palace, the open ground of Sanam Luang was deliberately kept empty as the city's great ceremonial field — a role it has played for more than two centuries.",
+      "sections": [
+        { "heading": "1782: the founding of Bangkok", "body": "When King Rama I moved the capital from Thonburi to the east bank of the Chao Phraya in 1782, he laid out the new Grand Palace. The broad flat land just north of it was left open on purpose, reserved for the kingdom's great gatherings rather than built over." },
+        { "heading": "Thung Phra Men — the royal cremation ground", "body": "For much of its history the field was called Thung Phra Men (the royal cremation ground), because royal funeral pyres were raised here for monarchs, queens and senior royals. The name Sanam Luang came into use later." },
+        { "heading": "The Royal Ploughing Ceremony", "body": "Each May the Raek Na ceremony is held here to mark the start of the rice-growing season. Drawn from ancient Khmer and Indian tradition, it is presided over by the monarch or a royal representative and watched by crowds." },
+        { "heading": "Coronations, cremations and state events", "body": "Beyond ploughing rites, the field has hosted coronation celebrations, the royal cremation of King Bhumibol Adulyadej in 2017, and the Trooping of the Colours. It remains the stage for the nation's defining moments." },
+        { "heading": "From royal ground to public park", "body": "Through the 20th century the field also became a place for public gatherings, Songkran festivities and everyday recreation. Today it is managed as a public park, open to everyone from 05:00 to 22:00, while still closing for major royal ceremonies." }
+      ],
+      "faq": {
+        "title": "History — frequently asked questions",
+        "subtitle": "Common questions about the background of Sanam Luang.",
+        "categories": [
+          { "title": "Background", "items": [
+            { "q": "Why is it called the Royal Field?", "a": "Sanam Luang means royal field or royal ground in Thai. The name reflects its original purpose: open royal land kept clear for ceremonies rather than for buildings." },
+            { "q": "How old is Sanam Luang?", "a": "The ground has been kept open since Bangkok became the capital in 1782 — more than two centuries. Its earlier name, Thung Phra Men, refers to its use as the royal cremation ground." },
+            { "q": "What ceremonies take place here?", "a": "The Royal Ploughing Ceremony each May, royal cremations, coronation events and major state ceremonies. The square may close to the public during these occasions." }
+          ] }
+        ]
+      },
+      "relatedTitle": "More guides"
+    },
+    "nearbyAttractions": {
+      "title": "Things to Do Near Sanam Luang — Nearby Attractions & Walk",
+      "description": "What to see around Sanam Luang: the Grand Palace and Wat Phra Kaew, Wat Pho, Wat Suthat and the Giant Swing, the Bangkok National Museum, Democracy Monument and a half-day walking route.",
+      "h1": "Nearby Attractions Around Sanam Luang",
+      "intro": "Sanam Luang sits in the densest cluster of Bangkok's historic sights. Most are within a 5 to 20 minute walk, so you can see the highlights on foot in half a day.",
+      "sections": [
+        { "heading": "The Grand Palace & Wat Phra Kaew", "body": "Immediately south of the square, this is Bangkok's most important royal compound and home to the Emerald Buddha. It is a separate ticketed site with its own opening hours; dress conservatively (covered shoulders and knees)." },
+        { "heading": "Wat Pho (Temple of the Reclining Buddha)", "body": "About a 10-minute walk south, Wat Pho holds the enormous Reclining Buddha and is considered Thailand's first public university. A separate entrance fee applies." },
+        { "heading": "Wat Suthat & the Giant Swing (Sao Ching Cha)", "body": "Roughly 15 minutes east along Bamrung Muang Road, Wat Suthat is one of the city's most beautiful temples, fronted by the towering red Giant Swing used in a former Brahmin ceremony." },
+        { "heading": "Bangkok National Museum", "body": "A 10-minute walk west, the National Museum holds the kingdom's premier collection of Thai art and royal regalia — the best place to go deeper into the history you see around the square." },
+        { "heading": "Democracy Monument", "body": "About 15 to 20 minutes along Ratchadamnoen Klang Road, this 1932 monument marks Thailand's transition to constitutional monarchy and anchors a lively local-food stretch." },
+        { "heading": "A half-day walking route", "body": "Start at Sanam Chai MRT, see the Grand Palace and Wat Phra Kaew, cross to Wat Pho, return across the square to Wat Suthat and the Giant Swing, then walk Ratchadamnoen to Democracy Monument. Allow 4 to 5 hours including entry lines and a riverside break at Tha Chang." }
+      ],
+      "faq": {
+        "title": "Nearby — frequently asked questions",
+        "subtitle": "Planning your visit to the sights around Sanam Luang.",
+        "categories": [
+          { "title": "Planning", "items": [
+            { "q": "What is within walking distance?", "a": "The Grand Palace, Wat Phra Kaew and Wat Pho are all within about 10 to 15 minutes on foot; Wat Suthat, the Giant Swing and the National Museum are close too." },
+            { "q": "Do the nearby temples charge entry?", "a": "Yes. The Grand Palace/Wat Phra Kaew and Wat Pho both have separate entrance fees and dress codes; the square itself is free." },
+            { "q": "How long for a half-day route?", "a": "Plan 4 to 5 hours to cover the Grand Palace, Wat Phra Kaew, Wat Pho, Wat Suthat and Democracy Monument on foot, with time for queues and a riverside rest." }
+          ] }
+        ]
+      },
+      "relatedTitle": "More guides"
+    }
   }
 }
