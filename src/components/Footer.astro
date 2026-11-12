@@ -1,66 +1,16 @@
 ---
 import { getI18n } from '../i18n/ui';
-const { lang, messages } = getI18n(Astro.url);
-const f = messages.footer;
-const links = f.officialLinksList;
+const { lang } = getI18n(Astro.url);
+const lines = {
+  th: {rights:'© 2026 สนามหลวง · สงวนลิขสิทธิ์',disclaimer:'เว็บไซต์นี้เป็นโครงการข้อมูลท่องเที่ยวอิสระ ไม่มีความเกี่ยวข้องกับหน่วยงานรัฐบาลหรือองค์กรทางการใด ๆ'},
+  en: {rights:'© 2026 Sanam Luang · All rights reserved.',disclaimer:'This website is an independent travel information project. We are not affiliated with any government agency or official organization.'},
+  zh: {rights:'© 2026 皇家田广场 · 版權所有。',disclaimer:'本网站是一个独立的旅游信息项目。我们与任何政府机构或官方组织均无关联。'},
+}[lang as 'th'|'en'|'zh'];
 ---
 
-<footer class="section-padding" style="background: var(--bg-tertiary); border-top: 1px solid var(--border-color);">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="mission-block mb-10">
-      <h3 class="mission-title">🎯 {f.mission.title}</h3>
-      <p class="mission-text">{f.mission.text}</p>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      <div>
-        <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--text-primary);" set:html={f.siteName}></h3>
-        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{f.rights}</p>
-      </div>
-
-      <div>
-        <h4 class="font-semibold mb-3" style="color: var(--text-primary);">{f.officialResourcesTitle}</h4>
-        <ul class="space-y-2 text-sm">
-          {links.map((link) => (
-            <li>
-              <a href={link.url} target="_blank" rel="noopener noreferrer" class="hover:opacity-70 break-words" style="color: var(--accent);">
-                {link.name} ↗
-              </a>
-            </li>
-          ))}
-          <li class="pt-2 border-t" style="border-color: var(--border-color);">
-            <a href={f.mapsUrl} target="_blank" rel="noopener noreferrer" class="hover:opacity-70 font-medium" style="color: var(--accent);">
-              {f.mapsLabel}
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="font-semibold mb-3" style="color: var(--text-primary);">{f.legalLinksTitle}</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href={`/${lang}/privacy-policy/`} class="hover:opacity-70" style="color: var(--text-secondary);">{f.privacy}</a></li>
-          <li><a href={`/${lang}/terms-of-service/`} class="hover:opacity-70" style="color: var(--text-secondary);">{f.terms}</a></li>
-          <li><a href={`/${lang}/cookie-settings/`} class="hover:opacity-70" style="color: var(--text-secondary);">{f.cookies}</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="mt-10 pt-6 border-t text-xs" style="border-color: var(--border-color); color: var(--text-muted);">
-      <div class="mb-3">
-        <span class="inline-block px-2 py-1 rounded text-[10px] font-medium tracking-wider" style="background: var(--accent); color: white; opacity: 0.9;">
-          非官方独立非营利项目 / UNOFFICIAL INDEPENDENT NON-PROFIT
-        </span>
-      </div>
-      <p class="leading-relaxed" set:html={f.disclaimer}></p>
-      {f.dataSourceLabel && f.dataSource && (
-        <p class="mt-3 leading-relaxed"><span class="font-medium" style="color: var(--text-secondary);">{f.dataSourceLabel}：</span> <span set:html={f.dataSource}></span></p>
-      )}
-      {f.imageRights && (
-        <p class="mt-3 leading-relaxed"><span class="font-medium" style="color: var(--text-secondary);">{f.imageRightsTitle}：</span> <span>{f.imageRights}</span></p>
-      )}
-      <p class="mt-3 leading-relaxed">
-        <a href={`/${lang}/#sources`} class="underline underline-offset-2 hover:opacity-70" style="color: var(--accent);">{messages.sources?.title}</a>
-      </p>
-    </div>
+<footer class="section-padding" style="background:var(--bg-tertiary);border-top:1px solid var(--border-color)">
+  <div class="max-w-6xl mx-auto px-4 text-center text-sm space-y-3" style="color:var(--text-secondary)">
+    <p>{lines.rights}</p>
+    <p>{lines.disclaimer}</p>
   </div>
 </footer>

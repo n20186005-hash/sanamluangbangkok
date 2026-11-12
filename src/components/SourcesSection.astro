@@ -5,6 +5,7 @@ const { messages } = getI18n(Astro.url);
 const s = messages.sources;
 const f = messages.footer;
 const links = f.officialLinksList ?? [];
+const nonprofitSource = messages.nonprofitBanner?.dataSource;
 const ratingSourceUrl = messages.reviews?.sourceUrl ?? entity.ratingSourceUrl;
 ---
 
@@ -67,6 +68,14 @@ const ratingSourceUrl = messages.reviews?.sourceUrl ?? entity.ratingSourceUrl;
           ))}
         </ul>
       </article>
+    </div>
+    <div class="mt-8 max-w-3xl mx-auto text-sm leading-relaxed" style="color:var(--text-secondary)">
+      <p>{nonprofitSource}</p>
+      <nav class="flex flex-wrap gap-4 mt-5" aria-label={f.legalLinksTitle}>
+        <a href={`/${getI18n(Astro.url).lang}/privacy-policy/`} class="underline" style="color:var(--accent)">{f.privacy}</a>
+        <a href={`/${getI18n(Astro.url).lang}/terms-of-service/`} class="underline" style="color:var(--accent)">{f.terms}</a>
+        <a href={`/${getI18n(Astro.url).lang}/cookie-settings/`} class="underline" style="color:var(--accent)">{f.cookies}</a>
+      </nav>
     </div>
   </div>
 </section>

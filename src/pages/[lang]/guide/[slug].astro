@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { canonicalUrl, languagesList } from '../../../i18n/ui';
+import { routeDestinations, routeDestinationSlugs, type RouteDestinationSlug } from '../../../lib/routeDestinations';
+import { routeEnrichment } from '../../../lib/routeEnrichment';
+
+export const prerender = true;
+export function getStaticPaths() {
+  return languagesList.flatMap(lang => routeDestinationSlugs.map(slug => ({params:{lang,slug}})));
+}
+const lang = Astro.params.lang as 'th'|'en'|'zh';
+const slug = Astro.params.slug as RouteDestinationSlug;
+const destination = routeDestinations[slug];
+const name = destination.name[lang];
+const enrich = routeEnrichment(slug,lang)!;
+const mapSearchName = slug === 'riverfront-dining' ? 'Chao Phraya River Riverside Dining Bangkok Thailand' : `${destination.name.en} Phra Nakhon Bangkok Thailand`;
+const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapSearchName)}`;
+const fileTitle:Record<string,string>={
+ 'grand-palace':'A roof of a building at the Grand Palace, Bangkok, sunrise, 2017.jpg',
+ 'wat-phra-kaew':'Temple of the Emerald Buddha.jpg',
+ 'bangkok-national-museum':'Bangkok National Museum.jpg',
+ 'bangkok-city-pillar':'Bangkok city pillar shrine 20240917.jpg',
+ 'wat-pho':'Wat Pho, Bangkok, Tailandia, 2013-08-22, DD 02.jpg',
+ 'democracy-monument':'2016 Bangkok, Dystrykt Phra Nakhon, Pomnik Demokracji (03).jpg',
+ 'sanam-chai-mrt':'MRT Blue Line, Sanam Chai Station.jpg',
+ 'tha-chang-pier':'Tha Chang Pier, Chao Phraya River, Bangkok (6906961094).jpg',
+ 'thammasat-university':'Thammasat University Tha Phra Chan Campus 01.JPG',
+ 'tha-maharaj':'Siriraj Hospital from Tha Maharaj.jpg',
+ 'riverfront-dining':'Lunch at Rongros, Bangkok (Jan 2021) - img 02.jpg',
+};
+const imageSource=`https://commons.wikimedia.org/wiki/File:${encodeURIComponent(fileTitle[slug]).replace(/%20/g,'_')}`;
+const places:Record<string,{area:string;access:Record<'th'|'en'|'zh',string>;fee:Record<'th'|'en'|'zh',string>}>= {
+ 'grand-palace':{area:'Na Phra Lan Road, Phra Nakhon',access:{th:'เข้าชมตามรอบและประกาศของสำนักพระราชวัง',en:'Ticketed daytime visits; check royal closures',zh:'日间购票参观，皇家活动期间可能调整'},fee:{th:'มีค่าเข้าชมสำหรับนักท่องเที่ยว',en:'Paid admission for international visitors',zh:'外国游客需购票'}},
+ 'wat-phra-kaew':{area:'Grand Palace precinct, Na Phra Lan Road',access:{th:'ตามระเบียบเข้าชมพระบรมมหาราชวัง',en:'Follows Grand Palace visiting arrangements',zh:'依大皇宫参观规定开放'},fee:{th:'รวมอยู่ในบัตรเข้าชมพระบรมมหาราชวัง',en:'Included in the relevant Grand Palace ticket',zh:'包含于适用的大皇宫门票'}},
+ 'bangkok-national-museum':{area:'Na Phra That Road, Phra Nakhon',access:{th:'โดยทั่วไปพุธ–อาทิตย์ ตรวจเวลาปัจจุบัน',en:'Generally Wednesday–Sunday; verify current hours',zh:'通常周三至周日开放，须核对最新时间'},fee:{th:'มีค่าบัตรเข้าชมตามประเภทผู้ชม',en:'Museum admission varies by visitor category',zh:'依访客类别收取博物馆门票'}},
+ 'bangkok-city-pillar':{area:'Lak Mueang Road, Phra Nakhon',access:{th:'สถานที่สักการะ ตรวจเวลาประจำวัน',en:'Active shrine; confirm daily visiting hours',zh:'仍在使用的神庙，核对每日开放时间'},fee:{th:'พื้นที่สักการะทั่วไปไม่เก็บบัตรเข้าชม',en:'No general admission ticket for worship',zh:'一般参拜不需购买景点门票'}},
+ 'wat-pho':{area:'Sanam Chai Road, Phra Nakhon',access:{th:'เข้าชมตามประกาศวัดประจำวัน',en:'Open to visitors according to temple notices',zh:'以寺院每日公告为准'},fee:{th:'มีค่าเข้าชมสำหรับนักท่องเที่ยว',en:'Visitor admission charge applies',zh:'游客参观通常收费'}},
+ 'sanam-chai-mrt':{area:'Sanam Chai Road, MRT Blue Line',access:{th:'ตามตารางเดินรถ MRT สายสีน้ำเงิน',en:'During MRT Blue Line operating hours',zh:'按 MRT 蓝线营运时间开放'},fee:{th:'ค่าโดยสารคิดตามเส้นทาง',en:'Metro fare based on journey',zh:'按照乘坐区间支付地铁票价'}},
+ 'tha-chang-pier':{area:'Maharaj Road, Chao Phraya riverbank',access:{th:'ตามเวลาของเรือแต่ละสาย',en:'Service hours vary by boat route',zh:'根据不同船运线路的时刻表'},fee:{th:'ค่าเรือตามเส้นทางและผู้ให้บริการ',en:'Boat fare varies by operator and route',zh:'船票视运营商和航线而定'}},
+ 'thammasat-university':{area:'Tha Phra Chan, Phra Nakhon',access:{th:'เขตมหาวิทยาลัย ตรวจสิทธิ์เข้าแต่ละอาคาร',en:'Campus access varies by building and event',zh:'校园各建筑和活动有不同出入规则'},fee:{th:'ไม่มีบัตรชมอาคารภายนอกสาธารณะ',en:'No ticket for publicly accessible exterior views',zh:'在公共区域观看建筑外观无需门票'}},
+ 'democracy-monument':{area:'Ratchadamnoen Klang Avenue, Phra Nakhon',access:{th:'ชมจากทางเท้าสาธารณะ ไม่เข้าวงเวียน',en:'View from public pavements; do not enter roundabout',zh:'从公共人行道观赏，勿进入车流环岛'},fee:{th:'ชมจากภายนอกฟรี',en:'Free to view from surrounding pavements',zh:'外围公共区域免费观赏'}},
+ 'tha-maharaj':{area:'Maharaj Road, Chao Phraya riverbank',access:{th:'เวลาเปิดขึ้นกับร้านค้าและพื้นที่',en:'Shopping and dining hours depend on individual venues',zh:'各商店及餐厅营业时间不一'},fee:{th:'เข้าพื้นที่ทั่วไปฟรี คิดค่าบริการตามร้าน',en:'General entry free; individual purchases extra',zh:'公共商区一般免费进入，消费另计'}},
+ 'riverfront-dining':{area:'Maharaj Road and Chao Phraya riverbank',access:{th:'ขึ้นกับร้านอาหารและท่าเรือที่เลือก',en:'Hours depend on chosen restaurant and pier',zh:'取决于所选餐厅与码头'},fee:{th:'ไม่มีบัตรเส้นทาง ค่าอาหารคิดแยก',en:'No itinerary ticket; meals and transport extra',zh:'路线本身无需门票，餐食与交通另计'}},
+};
+const place=places[slug];
+const photoLabel=slug==='tha-maharaj'?{th:'วิวโรงพยาบาลศิริราชจากท่ามหาราช',en:'Siriraj Hospital seen from Tha Maharaj',zh:'从 Tha Maharaj 望向对岸诗里拉医院'}[lang]:slug==='riverfront-dining'?{th:'วิวริมแม่น้ำจากร้าน Rongros',en:'River view from Rongros restaurant',zh:'从 Rongros 餐厅眺望的河岸景色'}[lang]:name;
+const words = {
+  th:{home:'กลับสนามหลวง',section:'เกี่ยวกับสถานที่',history:'ภูมิหลังและความสำคัญ',observe:'สถาปัตยกรรมและจุดสังเกต',visit:'คำแนะนำสำหรับผู้มาเยือน',route:'วิธีเดินทางและแผนที่',maps:'ค้นหาสถานที่นี้บน Google Maps',more:'สถานที่ที่เกี่ยวข้อง',faq:'คำถามที่พบบ่อย',q1:'สถานที่นี้อยู่ที่สนามหลวงโดยตรงหรือไม่?',a1:'เป็นจุดหมายในเส้นทางเที่ยวเมืองเก่ารอบสนามหลวง ระยะทางและทางเข้าขึ้นกับแต่ละแห่ง ควรดูหมุดแผนที่ก่อนออกเดินทาง',q2:'จะไปถึงที่นี่อย่างไร?',q3:'ควรตรวจอะไรในวันเดินทาง?',a3:'ตรวจเวลาเปิด การเข้าชม และสภาพถนนหรือท่าเรือในวันนั้น โดยเฉพาะวันที่มีพระราชพิธี',note:'คู่มือการเดินทางในย่านเมืองเก่า ไม่ใช่ประกาศจากผู้ดูแลสถานที่',manager:'เกี่ยวกับสถานที่และผู้ดูแล',photo:'จุดถ่ายภาพแนะนำ',steps:'เส้นทางเดินทีละขั้น',basics:'ข้อมูลพื้นฐาน',area:'พื้นที่',hours:'เวลาเปิด',fee:'ค่าเข้าชม',checking:'ตรวจประกาศสถานที่ก่อนเดินทาง',source:'ข้อมูลผู้ดูแลและภาพ',review:'รีวิวจากผู้มาเยือน',reviewText:'อ่านรีวิวใหม่และคะแนนของสถานที่จริงบน Google Maps ก่อนตัดสินใจเดินทาง',sleep:'ที่พักใกล้เคียง',sleepText:'หากเที่ยวต่อในเมืองเก่า ควรเปรียบเทียบที่พักย่านพระนครหรือใกล้สถานี MRT ตามการเดินทางกลับของคุณ'},
+  en:{home:'Back to Sanam Luang',section:'Explore this destination',history:'Background and significance',observe:'Architecture and what to notice',visit:'Visitor advice',route:'Getting here and location',maps:'Search this destination on Google Maps',more:'Related stops',faq:'Frequently asked questions',q1:'Is this directly on Sanam Luang?',a1:'This is a stop on an Old Town itinerary around the field. Exact walking distance and entrance depend on the destination; check the map pin before setting off.',q2:'How should I approach this place?',q3:'What should I check on the day?',a3:'Confirm opening arrangements, access and any road or pier restrictions, especially during official ceremonies.',note:'An independent visitor guide to Bangkok Old Town',manager:'About this site and its management',photo:'Where to take photos',steps:'Step-by-step walking route',basics:'Essential information',area:'Area',hours:'Opening and access',fee:'Admission',checking:'Confirm current venue notices before departure',source:'Management and image sources',review:'Visitor reviews',reviewText:'Check the latest rating and authentic visitor experiences for this specific place on Google Maps.',sleep:'Where to stay nearby',sleepText:'For several Old Town stops, compare Phra Nakhon or MRT-connected accommodation based on your evening return plans.'},
+  zh:{home:'返回皇家田广场',section:'探索这处景点',history:'历史背景与地位',observe:'建筑特色与观察重点',visit:'实用游览建议',route:'交通方式与地点',maps:'在 Google Maps 搜索此景点',more:'相关游览节点',faq:'常见问题',q1:'这处地点就在皇家田广场内吗？',a1:'这是围绕皇家田广场规划的老城行程节点，实际步行距离和入口取决于具体地点，请先核对地图地点名称。',q2:'具体应怎样步行抵达？',q3:'出发当天应核对哪些信息？',a3:'核实景点开放安排、门票或限制进入信息，以及皇家仪式期间的道路与码头管制。',note:'曼谷老城独立旅游指南',manager:'关于景点与管理主体',photo:'推荐摄影机位',steps:'分步骤步行路线',basics:'景点基本资料',area:'所在区域',hours:'开放与参观',fee:'门票费用',checking:'出发前核实景点最新公告',source:'管理方及图片来源',review:'游客评价',reviewText:'请在该景点 Google Maps 页面查看最新评分及真实游客反馈。',sleep:'周边住宿建议',sleepText:'若连续游览老城，可考虑拍那空区或地铁沿线住宿，并比较晚间返程便利性。'},
+}[lang];
+const related = routeDestinationSlugs.filter(s => s !== slug).slice(0,6);
+---
+
+<BaseLayout title={`${name} | ${words.section}`} description={destination.about[lang]} path={`guide/${slug}`} breadcrumb={[{name:words.home,url:canonicalUrl(lang)},{name,url:canonicalUrl(lang,`guide/${slug}`)}]}>
+  <article class="section-padding max-w-4xl mx-auto px-4" style="color:var(--text-primary)">
+    <a href={`/${lang}/#routes`} class="text-sm underline" style="color:var(--accent)">← {words.home}</a>
+    <h1 class="font-display text-3xl sm:text-4xl font-semibold mt-6 mb-5">{name}</h1>
+    <p class="text-lg mb-5" style="color:var(--text-secondary)">{destination.about[lang]}</p>
+    <a href={mapUrl} target="_blank" rel="noopener noreferrer" class="inline-block rounded-xl px-5 py-3 font-semibold mb-10" style="background:var(--accent);color:var(--bg-primary)">{words.maps} ↗</a>
+    <figure class="mb-10"><img src={`/nearby/${slug}.jpg`} alt={photoLabel} loading="lazy" class="rounded-2xl w-full max-h-[470px] object-cover"/><figcaption class="text-xs mt-2" style="color:var(--text-muted)">{photoLabel} · <a href={imageSource} target="_blank" rel="noopener noreferrer" class="underline">Wikimedia Commons ↗</a></figcaption></figure>
+    <section class="mb-10"><h2 class="text-2xl font-semibold mb-3">{words.section}</h2><p style="color:var(--text-secondary)">{destination.about[lang]}</p></section>
+    <section class="mb-10 rounded-2xl border p-6" style="border-color:var(--border-color);background:var(--card-bg)"><h2 class="text-2xl font-semibold mb-3">{words.manager}</h2><p style="color:var(--text-secondary)">{enrich.management}</p>{enrich.source&&<a class="text-sm underline mt-3 inline-block" href={enrich.source} target="_blank" rel="noopener noreferrer" style="color:var(--accent)">{words.source} ↗</a>}</section>
+    <section class="mb-10"><h2 class="text-2xl font-semibold mb-3">{words.basics}</h2><dl class="grid sm:grid-cols-2 gap-3">{[[words.area,`${place.area}, Bangkok, Thailand`],[words.hours,place.access[lang]],[words.fee,place.fee[lang]],[words.route,name]].map(([key,value])=><div class="rounded-xl border p-4" style="border-color:var(--border-color)"><dt class="text-sm mb-1" style="color:var(--accent)">{key}</dt><dd style="color:var(--text-secondary)">{value}</dd></div>)}</dl></section>
+    <section class="mb-10"><h2 class="text-2xl font-semibold mb-3">{words.history}</h2><p style="color:var(--text-secondary)">{enrich.history}</p></section>
+    <section class="mb-10"><h2 class="text-2xl font-semibold mb-3">{words.observe}</h2><p style="color:var(--text-secondary)">{destination.see[lang]}</p></section>
+    <section class="mb-10"><h2 class="text-2xl font-semibold mb-3">{words.visit}</h2><p style="color:var(--text-secondary)">{destination.visit[lang]}</p></section>
+    <section class="mb-10"><h2 class="text-2xl font-semibold mb-3">{words.steps}</h2><ol class="list-decimal pl-6 space-y-3" style="color:var(--text-secondary)">{enrich.steps.map(step=><li>{step}</li>)}</ol></section>
+    <section class="mb-10"><h2 class="text-2xl font-semibold mb-3">{words.photo}</h2><p style="color:var(--text-secondary)">{enrich.photo}</p></section>
+    <section class="mb-10"><h2 class="text-2xl font-semibold mb-3">{words.route}</h2><p class="mb-3" style="color:var(--text-secondary)">{enrich.steps.join(' → ')}</p><a href={mapUrl} target="_blank" rel="noopener noreferrer" class="underline" style="color:var(--accent)">{words.maps} ↗</a></section>
+    <section class="mb-10"><h2 class="text-2xl font-semibold mb-3">{words.sleep}</h2><p style="color:var(--text-secondary)">{words.sleepText}</p></section>
+    <section class="mb-10"><h2 class="text-2xl font-semibold mb-3">{words.review}</h2><p style="color:var(--text-secondary)">{words.reviewText}</p><a class="underline mt-3 inline-block" style="color:var(--accent)" href={mapUrl} target="_blank" rel="noopener noreferrer">Google Maps ↗</a></section>
+    <section class="mb-10"><h2 class="text-2xl font-semibold mb-4">{words.faq}</h2><h3 class="font-semibold mb-2">{words.q1}</h3><p class="mb-4" style="color:var(--text-secondary)">{words.a1}</p><h3 class="font-semibold mb-2">{words.q2}</h3><p class="mb-4" style="color:var(--text-secondary)">{enrich.steps.join(' → ')}</p><h3 class="font-semibold mb-2">{words.q3}</h3><p style="color:var(--text-secondary)">{words.a3}</p></section>
+    <section class="border-t pt-8" style="border-color:var(--border-color)"><h2 class="text-2xl font-semibold mb-5">{words.more}</h2><div class="grid sm:grid-cols-2 gap-3">{related.map(s=><a class="rounded-xl p-4 border hover:opacity-80" style="border-color:var(--border-color)" href={`/${lang}/guide/${s}/`}>{routeDestinations[s].name[lang]} ↗</a>)}</div></section>
+    <p class="text-xs mt-9" style="color:var(--text-muted)">{words.note}</p>
+  </article>
+</BaseLayout>

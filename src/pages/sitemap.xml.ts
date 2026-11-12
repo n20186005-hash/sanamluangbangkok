@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { buildHreflangAlternates, canonicalUrl, languagesList } from '../i18n/ui';
+import { routeDestinationSlugs } from '../lib/routeDestinations';
 
 // 语言首页 + 三个二级专题页参与搜索收录：
 // 隐私政策 / 服务条款 / Cookie 设置页已设置 noindex，不进 sitemap。
@@ -8,6 +9,7 @@ const INDEXABLE_PATHS = [
   'how-to-get-to-sanam-luang',
   'sanam-luang-history',
   'sanam-luang-nearby-attractions',
+  ...routeDestinationSlugs.map(slug => `guide/${slug}`),
 ];
 
 export const prerender = true;

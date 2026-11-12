@@ -1,0 +1,19 @@
+---
+import {getI18n} from '../i18n/ui';
+import {routeDestinations,routeDestinationSlugs} from '../lib/routeDestinations';
+const {lang}=getI18n(Astro.url);
+const heading={th:'เที่ยวต่อใกล้สนามหลวง',en:'Explore nearby Sanam Luang',zh:'皇家田广场周边游览'}[lang as 'th'|'en'|'zh'];
+const lead={th:'เปิดหน้าคู่มือแยกสำหรับสถานที่ในเส้นทางครึ่งวันและเต็มวัน',en:'Dedicated guides to the stops on our half-day and full-day walking routes.',zh:'进入半日与全日路线中各景点的独立攻略，查看历史、交通和拍照建议。'}[lang as 'th'|'en'|'zh'];
+---
+<section class="section-padding" style="background:var(--bg-secondary)">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="font-display text-3xl font-semibold mb-3 text-center" style="color:var(--text-primary)">{heading}</h2>
+    <p class="text-center mb-8" style="color:var(--text-secondary)">{lead}</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {routeDestinationSlugs.map(slug=><a href={`/${lang}/guide/${slug}/`} class="rounded-2xl border p-5 hover:opacity-80" style="background:var(--card-bg);border-color:var(--border-color)">
+        <h3 class="font-semibold mb-2" style="color:var(--text-primary)">{routeDestinations[slug].name[lang as 'th'|'en'|'zh']} ↗</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary)">{routeDestinations[slug].about[lang as 'th'|'en'|'zh']}</p>
+      </a>)}
+    </div>
+  </div>
+</section>

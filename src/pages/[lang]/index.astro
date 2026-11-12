@@ -30,6 +30,7 @@ import MapEmbed from '../../components/MapEmbed.astro';
 import DeepDive from '../../components/DeepDive.astro';
 import FAQ from '../../components/FAQ.astro';
 import TopicLinks from '../../components/TopicLinks.astro';
+import NearbyGuideGrid from '../../components/NearbyGuideGrid.astro';
 import { getI18n, languagesList, xDefaultLang } from '../../i18n/ui';
 
 // 首页是 [lang] 动态路由：必须显式枚举 th / zh / en 三个语言参数，
@@ -101,6 +102,7 @@ const faqLd = (() => {
   <MapEmbed />
   <FAQ />
   <TopicLinks />
+  <NearbyGuideGrid />
   <OutdoorMuseum />
   <Gallery />
   <FeaturedQuotes />

@@ -3,6 +3,13 @@ import { getI18n } from '../i18n/ui';
 const { messages } = getI18n(Astro.url);
 const intro = messages.intro;
 const om = messages.officialManagement;
+const community = messages.nonprofitBanner;
+const mission = messages.footer.mission;
+const independentTitle = {
+  th: 'เกี่ยวกับคู่มืออิสระ',
+  en: 'About this independent guide',
+  zh: '关于本独立指南',
+}[getI18n(Astro.url).lang];
 ---
 
 <section id="about" class="section-padding" style="background: var(--bg-secondary);">
@@ -11,6 +18,13 @@ const om = messages.officialManagement;
       <div>
         <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-5" style="color: var(--text-primary);">{intro.title}</h2>
         <p class="text-lg leading-relaxed mb-8" style="color: var(--text-secondary);">{intro.description}</p>
+
+        <div class="rounded-2xl p-6 border mb-6" style="background:var(--card-bg);border-color:var(--border-color)">
+          <h3 class="font-semibold mb-3" style="color:var(--text-primary)">🧭 {independentTitle}</h3>
+          <p class="text-base leading-relaxed mb-3" style="color:var(--text-secondary)">{community.text}</p>
+          <h3 class="font-semibold mb-3 mt-5" style="color:var(--text-primary)">{mission.title}</h3>
+          <p class="text-base leading-relaxed" style="color:var(--text-secondary)">{mission.text}</p>
+        </div>
 
         {om.title && (
           <div class="rounded-2xl p-6 border" style="background: var(--bg-tertiary); border-color: var(--border-color);">

@@ -1,7 +1,11 @@
 ---
 import { getI18n } from '../i18n/ui';
-const { messages } = getI18n(Astro.url);
+import { generalRouteLinks, routeDestinations } from '../lib/routeDestinations';
+const { messages, lang } = getI18n(Astro.url);
 const r = messages.routePlanner;
+const isSanamLuangStop = (routeIndex:number, stepIndex:number) =>
+  (routeIndex === 0 && [1,4].includes(stepIndex)) || (routeIndex === 1 && [0,4].includes(stepIndex));
+const linkLabel = {th:'เปิดคู่มือสถานที่',en:'Open place guide',zh:'查看景点专页'}[lang as 'th'|'en'|'zh'];
 ---
 
 <section id="routes" class="section-padding" style="background: var(--bg-tertiary);">
@@ -57,7 +61,7 @@ const r = messages.routePlanner;
     <p class="text-sm mb-6" style="color: var(--text-muted);">{r.generalSubtitle}</p>
 
     <div class="grid lg:grid-cols-2 gap-6">
-      {r.general.map((g) => (
+      {r.general.map((g, routeIndex) => (
         <article class="rounded-3xl p-6 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
           <div class="flex items-center gap-3 mb-2">
             <span class="text-3xl leading-none" aria-hidden="true">{g.icon}</span>
@@ -70,10 +74,14 @@ const r = messages.routePlanner;
           <p class="text-sm leading-relaxed mb-5" style="color: var(--text-secondary);">{g.summary}</p>
 
           <ol class="route-timeline">
-            {g.steps.map((step) => (
+            {g.steps.map((step, stepIndex) => (
               <li>
                 <span class="route-timeline-title">{step.t}</span>
                 <span class="route-timeline-desc">{step.d}</span>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  {isSanamLuangStop(routeIndex,stepIndex) && <a href={`/${lang}/#overview`} class="text-xs underline underline-offset-2" style="color:var(--accent)">{messages.breadcrumb.current} ↗</a>}
+                  {(generalRouteLinks[routeIndex]?.[stepIndex] ?? []).map(slug => <a href={`/${lang}/guide/${slug}/`} aria-label={`${linkLabel}: ${routeDestinations[slug].name[lang as 'th'|'en'|'zh']}`} class="text-xs underline underline-offset-2" style="color:var(--accent)">{routeDestinations[slug].name[lang as 'th'|'en'|'zh']} ↗</a>)}
+                </div>
               </li>
             ))}
           </ol>
