@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { canonicalUrl, languagesList } from '../../../i18n/ui';
+import { routeDestinations, routeDestinationSlugs } from '../../../lib/routeDestinations';
+
+export const prerender = true;
+export function getStaticPaths() {
+  return languagesList.map(lang => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as 'th' | 'en' | 'zh';
+const copy = {
+  th: {
+    home: 'กลับหน้าสนามหลวง', title: 'คู่มือเที่ยวใกล้สนามหลวง',
+    intro: 'รวมคู่มือจุดแวะเที่ยวตามเส้นทางครึ่งวันและเต็มวันรอบสนามหลวง แต่ละหน้าอธิบายประวัติ สถาปัตยกรรม ผู้ดูแลสถานที่ การเดินทาง จุดถ่ายภาพและข้อควรรู้ก่อนออกเดินทาง',
+    routes: 'สถานที่ในเส้นทาง', detail: 'อ่านคู่มือสถานที่', back: 'กลับไปดูแผนการเดินเที่ยว',
+    note: 'เวลาเปิด ค่าเข้าชม และทางเข้าอาจเปลี่ยนได้ โปรดตรวจสอบประกาศของสถานที่ก่อนเดินทาง',
+  },
+  en: {
+    home: 'Back to Sanam Luang', title: 'Nearby attractions and walking guides',
+    intro: 'Explore the individual stops on our half-day and full-day Sanam Luang walking routes. Each destination guide covers its background, architecture, management, directions, photography spots and practical visitor advice.',
+    routes: 'Places to explore', detail: 'Read destination guide', back: 'View the walking itineraries',
+    note: 'Opening hours, admission and entrances may change. Check each destination’s current notices before travelling.',
+  },
+  zh: {
+    home: '返回皇家田广场', title: '皇家田广场周边景点与步行攻略',
+    intro: '汇集皇家田广场半日及全日路线中的独立景点指南。每篇介绍历史背景、建筑特色、管理主体、交通方式、拍照机位和实用游览建议。',
+    routes: '周边景点专页', detail: '查看景点攻略', back: '查看一般路线与行程安排',
+    note: '开放时间、票价和入口安排可能调整，请出发前查询各景点最新公告。',
+  },
+}[lang];
+---
+
+<BaseLayout
+  title={`${copy.title} | Sanam Luang`}
+  description={copy.intro}
+  path="guide"
+  breadcrumb={[{ name: copy.home, url: canonicalUrl(lang) }, { name: copy.title, url: canonicalUrl(lang, 'guide') }]}
+>
+  <main class="section-padding" style="background:var(--bg-primary);color:var(--text-primary)">
+    <div class="max-w-6xl mx-auto px-4">
+      <a href={`/${lang}/`} class="text-sm underline" style="color:var(--accent)">← {copy.home}</a>
+      <header class="max-w-3xl mt-7 mb-10">
+        <h1 class="font-display text-3xl sm:text-5xl font-semibold mb-5">{copy.title}</h1>
+        <p class="text-lg leading-relaxed" style="color:var(--text-secondary)">{copy.intro}</p>
+      </header>
+
+      <h2 class="font-display text-2xl font-semibold mb-6">{copy.routes}</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {routeDestinationSlugs.map(slug => {
+          const place = routeDestinations[slug];
+          return <article class="rounded-2xl border overflow-hidden flex flex-col" style="background:var(--card-bg);border-color:var(--border-color)">
+            <a href={`/${lang}/guide/${slug}/`} aria-label={`${copy.detail}: ${place.name[lang]}`}>
+              <img src={`/nearby/${slug}.jpg`} alt={place.name[lang]} loading="lazy" width="900" height="600" class="w-full h-48 object-cover" />
+            </a>
+            <div class="p-5 flex flex-col flex-1">
+              <h3 class="text-xl font-semibold mb-3"><a href={`/${lang}/guide/${slug}/`}>{place.name[lang]}</a></h3>
+              <p class="text-sm leading-relaxed mb-5 flex-1" style="color:var(--text-secondary)">{place.about[lang]}</p>
+              <a href={`/${lang}/guide/${slug}/`} class="font-semibold text-sm underline underline-offset-4" style="color:var(--accent)">{copy.detail} ↗</a>
+            </div>
+          </article>;
+        })}
+      </div>
+      <div class="mt-10 rounded-2xl p-6" style="background:var(--bg-secondary)">
+        <p class="text-sm mb-4" style="color:var(--text-secondary)">{copy.note}</p>
+        <a href={`/${lang}/#routes`} class="font-semibold underline" style="color:var(--accent)">← {copy.back}</a>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

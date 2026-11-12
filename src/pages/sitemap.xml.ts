@@ -9,6 +9,7 @@ const INDEXABLE_PATHS = [
   'how-to-get-to-sanam-luang',
   'sanam-luang-history',
   'sanam-luang-nearby-attractions',
+  'guide',
   ...routeDestinationSlugs.map(slug => `guide/${slug}`),
 ];
 
