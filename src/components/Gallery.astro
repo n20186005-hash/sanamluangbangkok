@@ -3,6 +3,7 @@ import { getI18n } from '../i18n/ui';
 import { entity } from '../config';
 const { messages } = getI18n(Astro.url);
 const g = messages.gallery;
+const s = messages.sources;
 const totalImages = 24;
 // 规范命名：sanam-luang-bangkok-{序号}.jpg；列表使用 -640 缩略图，灯箱使用大图
 const fullImages = Array.from({ length: totalImages }, (_, i) => `/gallery/sanam-luang-bangkok-${i + 1}.jpg`);
@@ -37,6 +38,10 @@ const altFor = (i: number) => {
       <a href={g.mapsUrl} target="_blank" rel="noopener noreferrer" class="btn-cta btn-cta-primary">
         📍 {g.viewAll}
       </a>
+    </div>
+    <div class="max-w-3xl mx-auto text-sm mt-7 rounded-xl border p-4" style="border-color:var(--border-color);color:var(--text-secondary)">
+      <h3 class="font-semibold mb-2" style="color:var(--text-primary)">© {s.imageTitle}</h3>
+      <p>{s.imageText}</p>
     </div>
   </div>
 </section>

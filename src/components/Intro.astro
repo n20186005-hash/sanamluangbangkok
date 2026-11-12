@@ -1,10 +1,13 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { entity } from '../config';
 const { messages } = getI18n(Astro.url);
 const intro = messages.intro;
 const om = messages.officialManagement;
 const community = messages.nonprofitBanner;
 const mission = messages.footer.mission;
+const f = messages.footer;
+const s = messages.sources;
 const independentTitle = {
   th: 'เกี่ยวกับคู่มืออิสระ',
   en: 'About this independent guide',
@@ -32,6 +35,14 @@ const independentTitle = {
             <p class="text-base leading-relaxed" style="color: var(--text-secondary);">{om.text}</p>
           </div>
         )}
+        <div class="rounded-2xl p-6 border mt-6" style="background:var(--card-bg);border-color:var(--border-color)">
+          <h3 class="font-semibold mb-2" style="color:var(--text-primary)">{s.authorityTitle}</h3>
+          <p class="text-sm leading-relaxed mb-3" style="color:var(--text-secondary)">{s.authorityText}</p>
+          <ul class="grid sm:grid-cols-2 gap-2 text-sm">
+            <li><a class="underline" style="color:var(--accent)" href={entity.govtTourismUrl} target="_blank" rel="noopener noreferrer">{entity.countryName} / {entity.cityName} Official Tourism Portal ↗</a></li>
+            {(f.officialLinksList ?? []).map(link => <li><a class="underline" style="color:var(--accent)" href={link.url} target="_blank" rel="noopener noreferrer">{link.name} ↗</a></li>)}
+          </ul>
+        </div>
       </div>
 
       <div class="space-y-6">

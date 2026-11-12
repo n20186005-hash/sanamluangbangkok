@@ -1,6 +1,6 @@
 ---
 import { getI18n } from '../i18n/ui';
-const { lang } = getI18n(Astro.url);
+const { lang, messages } = getI18n(Astro.url);
 const lines = {
   th: {rights:'© 2026 สนามหลวง · สงวนลิขสิทธิ์',disclaimer:'เว็บไซต์นี้เป็นโครงการข้อมูลท่องเที่ยวอิสระ ไม่มีความเกี่ยวข้องกับหน่วยงานรัฐบาลหรือองค์กรทางการใด ๆ'},
   en: {rights:'© 2026 Sanam Luang · All rights reserved.',disclaimer:'This website is an independent travel information project. We are not affiliated with any government agency or official organization.'},
@@ -9,8 +9,15 @@ const lines = {
 ---
 
 <footer class="section-padding" style="background:var(--bg-tertiary);border-top:1px solid var(--border-color)">
-  <div class="max-w-6xl mx-auto px-4 text-center text-sm space-y-3" style="color:var(--text-secondary)">
-    <p>{lines.rights}</p>
-    <p>{lines.disclaimer}</p>
+  <div class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row justify-between items-center lg:items-start gap-6 text-center lg:text-left text-sm" style="color:var(--text-secondary)">
+    <div class="space-y-3">
+      <p>{lines.rights}</p>
+      <p>{lines.disclaimer}</p>
+    </div>
+    <nav class="flex flex-wrap justify-center lg:justify-end gap-x-5 gap-y-2 lg:shrink-0" aria-label={messages.footer.legalLinksTitle}>
+      <a href={`/${lang}/privacy-policy/`} class="underline underline-offset-2 hover:opacity-70">{messages.footer.privacy}</a>
+      <a href={`/${lang}/terms-of-service/`} class="underline underline-offset-2 hover:opacity-70">{messages.footer.terms}</a>
+      <a href={`/${lang}/cookie-settings/`} class="underline underline-offset-2 hover:opacity-70">{messages.footer.cookies}</a>
+    </nav>
   </div>
 </footer>
